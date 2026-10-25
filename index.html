@@ -2,335 +2,328 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b1220">
-  <meta name="description" content="الموقع الشخصي ليوسف عمر رياض، طالب الهندسة المدنية بجامعة الفيوم.">
-  <title>يوسف عمر رياض | مهندس مدني المستقبل</title>
-  <style>
-    :root {
-      --bg: #0b1220;
-      --panel: #131f32;
-      --panel2: #1a2940;
-      --text: #f4f7fb;
-      --muted: #a9b8cc;
-      --teal: #50d6c5;
-      --gold: #e6bd75;
-      --border: rgba(255,255,255,.1);
-    }
-
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Tahoma, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.8;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1080px, 90%); margin: auto; }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(11,18,32,.94);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav-inner {
-      min-height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .brand { font-size: 19px; font-weight: bold; }
-    .brand span { color: var(--teal); }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav-links a:hover { color: var(--teal); }
-
-    .hero {
-      padding: 76px 0 65px;
-      background:
-        radial-gradient(ellipse at 10% 10%, #174b58 0, transparent 45%),
-        linear-gradient(140deg, #111e34, #0b1220 75%);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.4fr .8fr;
-      align-items: center;
-      gap: 38px;
-    }
-
-    .tag {
-      display: inline-block;
-      color: var(--teal);
-      border: 1px solid #50d6c54d;
-      background: #50d6c511;
-      border-radius: 30px;
-      padding: 5px 13px;
-      font-size: 13px;
-    }
-
-    h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.35; margin: 18px 0 10px; }
-    h1 span { color: var(--teal); }
-    .lead { color: var(--muted); font-size: 18px; max-width: 570px; }
-
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 19px;
-      border-radius: 10px;
-      font-weight: bold;
-      border: 1px solid var(--border);
-    }
-
-    .btn-primary { background: var(--teal); color: #071722; }
-    .btn-secondary { background: #ffffff08; }
-    .btn:hover { transform: translateY(-2px); }
-
-    .profile { text-align: center; }
-
-    .avatar {
-      width: 210px;
-      height: 210px;
-      margin: auto;
-      border-radius: 50%;
-      border: 3px solid var(--teal);
-      background: linear-gradient(145deg, #1b4051, #1b2940);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--teal);
-      font-size: 66px;
-      font-weight: bold;
-      box-shadow: 0 0 45px #50d6c51c;
-      overflow: hidden;
-    }
-
-    .avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .profile small { color: var(--muted); }
-
-    section { padding: 65px 0; }
-    .section-title { font-size: 29px; margin: 0 0 8px; }
-    .section-intro { color: var(--muted); margin: 0 0 28px; }
-
-    .about-box, .card {
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: 17px;
-      background: var(--panel);
-    }
-
-    .about-box p { color: var(--muted); margin: 0; }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 17px;
-    }
-
-    .card { transition: .2s; }
-    .card:hover { border-color: #50d6c57a; transform: translateY(-3px); }
-    .card-icon { font-size: 27px; }
-    .card h3 { margin: 9px 0; }
-    .card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
-
-    .label {
-      display: inline-block;
-      margin: 8px 4px 0 0;
-      border-radius: 7px;
-      padding: 3px 9px;
-      background: #50d6c512;
-      color: var(--teal);
-      font-size: 12px;
-    }
-
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skill {
-      padding: 9px 14px;
-      border-radius: 10px;
-      background: var(--panel2);
-      border: 1px solid var(--border);
-    }
-
-    .contact-box {
-      background: linear-gradient(130deg, #153443, #131f32);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .contact-box p { color: var(--muted); }
-
-    footer {
-      padding: 23px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 700px) {
-      .nav-inner { align-items: flex-start; flex-direction: column; padding: 13px 0; }
-      .nav-links { width: 100%; gap: 17px; overflow-x: auto; padding-bottom: 4px; white-space: nowrap; }
-      .hero { padding: 48px 0; }
-      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
-      .profile { grid-row: 1; }
-      .avatar { width: 155px; height: 155px; font-size: 49px; }
-      .lead { font-size: 16px; }
-      section { padding: 45px 0; }
-      .cards { grid-template-columns: 1fr; }
-      .section-title { font-size: 25px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<meta name="description" content="الموقع الشخصي ليوسف عمر رياض، طالب الهندسة المدنية.">
+<title>يوسف عمر رياض | Civil Engineer Portfolio</title>
+<style>
+:root{
+  --bg:#0b1220;--panel:#131f32;--panel2:#1b2a40;
+  --text:#f4f7fb;--muted:#aab9ce;--accent:#50d6c5;
+  --gold:#e6bd75;--border:rgba(255,255,255,.1);
+}
+body.light{
+  --bg:#f3f6fa;--panel:#fff;--panel2:#e8eef5;
+  --text:#172438;--muted:#596a80;--accent:#087f78;
+  --gold:#9a6a17;--border:rgba(20,40,60,.13);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:Arial,Tahoma,sans-serif;line-height:1.8;transition:.2s}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.container{width:min(1080px,91%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:var(--bg);
+border-bottom:1px solid var(--border)}
+.nav{min-height:68px;display:flex;align-items:center;
+justify-content:space-between;gap:12px}
+.brand{font-weight:bold;font-size:18px;white-space:nowrap}
+.brand span{color:var(--accent)}
+.links{display:flex;gap:17px;align-items:center;font-size:13px}
+.links a:hover{color:var(--accent)}
+.theme{background:var(--panel);color:var(--text);
+border:1px solid var(--border);border-radius:10px;padding:8px 11px}
+.hero{padding:65px 0;background:
+radial-gradient(ellipse at 10% 10%,#174b5860,transparent 50%),
+linear-gradient(140deg,var(--panel),var(--bg));
+border-bottom:1px solid var(--border)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .7fr;
+align-items:center;gap:35px}
+.tag{display:inline-block;padding:5px 12px;border-radius:30px;
+color:var(--accent);border:1px solid var(--border);font-size:13px}
+h1{font-size:clamp(31px,5vw,49px);line-height:1.4;margin:18px 0 8px}
+.highlight{color:var(--accent)}
+.lead{color:var(--muted);font-size:17px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:10px 17px;border-radius:10px;
+border:1px solid var(--border);font-weight:bold}
+.primary{background:var(--accent);color:#071722;border:0}
+.profile{text-align:center}
+.avatar{width:175px;height:175px;margin:auto;border-radius:50%;
+border:3px solid var(--accent);background:var(--panel2);
+display:flex;align-items:center;justify-content:center;
+overflow:hidden;color:var(--accent);font-size:50px;font-weight:bold}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.profile small{color:var(--muted)}
+section{padding:53px 0}
+.heading{font-size:28px;margin:0}
+.subheading{color:var(--muted);margin:4px 0 24px}
+.panel,.card{background:var(--panel);border:1px solid var(--border);
+border-radius:16px;padding:22px}
+.panel p,.card p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card{transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card-icon{font-size:29px}
+.card h3{margin:8px 0}
+.pill{display:inline-block;background:var(--panel2);color:var(--accent);
+padding:3px 9px;border-radius:7px;font-size:12px}
+.skills{display:flex;flex-wrap:wrap;gap:9px}
+.skill{background:var(--panel);border:1px solid var(--border);
+border-radius:9px;padding:8px 12px}
+.calculator{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:grid;gap:6px;margin:12px 0}
+.field input,.field select{width:100%;min-width:0;padding:11px;
+background:var(--bg);color:var(--text);border:1px solid var(--border);
+border-radius:9px}
+.result{background:var(--panel2);border-radius:12px;padding:15px;
+margin-top:12px;overflow-wrap:anywhere}
+.result strong{color:var(--accent);font-size:23px}
+.small{font-size:12px;color:var(--muted)}
+.contact{text-align:center;background:var(--panel);
+border:1px solid var(--border);border-radius:18px;padding:27px}
+footer{text-align:center;border-top:1px solid var(--border);
+padding:20px;color:var(--muted);font-size:13px}
+@media(max-width:720px){
+ .nav{align-items:flex-start;padding:12px 0;flex-wrap:wrap}
+ .links{order:3;width:100%;overflow-x:auto;padding-bottom:5px;gap:18px}
+ .hero{padding:42px 0}
+ .hero-grid{grid-template-columns:1fr;gap:24px}
+ .profile{grid-row:1}
+ .avatar{width:140px;height:140px;font-size:40px}
+ .grid{grid-template-columns:1fr}
+ .calculator{grid-template-columns:1fr}
+ section{padding:39px 0}
+ .heading{font-size:24px}
+ .lead{font-size:15px}
+}
+</style>
 </head>
 <body>
-
 <nav>
-  <div class="container nav-inner">
-    <a class="brand" href="#home">Youssef<span>.Engineer</span></a>
-    <div class="nav-links">
-      <a href="#about">من أنا</a>
-      <a href="#projects">مشاريعي</a>
-      <a href="#skills">مهاراتي</a>
-      <a href="#contact">تواصل معي</a>
-    </div>
+ <div class="container nav">
+  <a class="brand" href="#home">YOUSSEF<span>.ENGINEER</span></a>
+  <button class="theme" id="themeBtn" type="button">☀️ المظهر</button>
+  <div class="links">
+   <a href="#about">من أنا</a>
+   <a href="#projects">المشاريع</a>
+   <a href="#skills">المهارات</a>
+   <a href="#tools">الحاسبات</a>
+   <a href="#contact">التواصل</a>
   </div>
+ </div>
 </nav>
 
 <header class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <span class="tag">طالب هندسة مدنية | أتعلم وأتطور</span>
-      <h1>أهلاً، أنا<br><span>يوسف عمر رياض</span></h1>
-      <p class="lead">
-        طالب بقسم الهندسة المدنية بكلية الهندسة،
-        جامعة الفيوم. أسعى لتطوير مهاراتي الهندسية
-        والتعرّف على عالم التصميم والإنشاءات.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#projects">استكشف مشاريعي ↓</a>
-        <a class="btn btn-secondary" href="#contact">تواصل معي</a>
-      </div>
-    </div>
-
-    <div class="profile">
-      <div class="avatar">
-        <!-- ضع صورتك باسم profile.jpg بجوار index.html -->
-        <img src="profile.jpg" alt="صورة يوسف عمر رياض"
-             onerror="this.style.display='none'">
-        <span>YR</span>
-      </div>
-      <h3>يوسف عمر رياض</h3>
-      <small>الهندسة المدنية • جامعة الفيوم</small>
-    </div>
+ <div class="container hero-grid">
+  <div>
+   <span class="tag">طالب هندسة مدنية | جامعة الفيوم</span>
+   <h1>أهلاً، أنا<br><span class="highlight">يوسف عمر رياض</span></h1>
+   <p class="lead">أبني معرفتي في الهندسة المدنية خطوة بخطوة،
+   وأهتم بالإنشاءات والمساحة والتصميم والتكنولوجيا.</p>
+   <div class="actions">
+    <a class="btn primary" href="#projects">استكشف المشاريع ↓</a>
+    <a class="btn" href="#contact">تواصل معي</a>
+   </div>
   </div>
+  <div class="profile">
+   <div class="avatar">
+    <img src="profile.jpg" alt="صورة يوسف"
+     onerror="this.style.display='none'">
+    <span>YR</span>
+   </div>
+   <h3>يوسف عمر رياض</h3>
+   <small>الهندسة المدنية • جامعة الفيوم</small>
+  </div>
+ </div>
 </header>
 
 <main>
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">من أنا؟</h2>
-      <p class="section-intro">نبذة عن رحلتي في الهندسة المدنية</p>
-      <div class="about-box">
-        <p>
-          أنا طالب هندسة مدنية مهتم بفهم أساسيات التصميم الإنشائي
-          ومواد البناء والمساحة والجيوتقنية. أعمل على بناء معرفتي
-          خطوة بخطوة، وتطوير مهاراتي من خلال الدراسة والتطبيق
-          والمشروعات التعليمية. هدفي اكتساب خبرة تساعدني على
-          المشاركة في مشروعات هندسية مميزة في المستقبل.
-        </p>
-      </div>
-    </div>
-  </section>
+<section id="about">
+ <div class="container">
+  <h2 class="heading">من أنا؟</h2>
+  <p class="subheading">رحلتي في الهندسة والتعلم</p>
+  <div class="panel">
+   أنا طالب في قسم الهندسة المدنية بكلية الهندسة، جامعة الفيوم.
+   أعمل على تطوير معرفتي في مجالات الإنشاءات والمساحة وخواص مواد
+   البناء والجيوتقنية. أؤمن بأن التعلم والتطبيق المستمر هما أساس
+   بناء مهندس ناجح، وأسعى إلى إنشاء مشروعات تعليمية وتوثيق تطوري
+   الأكاديمي والمهني من خلال هذا الموقع.
+  </div>
+ </div>
+</section>
 
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">المشاريع والاهتمامات</h2>
-      <p class="section-intro">
-        مساحة لعرض أعمالك الدراسية والمشروعات التي تنفذها.
-      </p>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">🏗️</div>
-          <h3>المنشآت الإنشائية</h3>
-          <p>عرض الرسومات والمشروعات التعليمية المتعلقة بالمنشآت والهياكل الإنشائية.</p>
-          <span class="label">إنشاءات</span>
-        </article>
-        <article class="card">
-          <div class="card-icon">📐</div>
-          <h3>المساحة والجيوديسيا</h3>
-          <p>تجميع التطبيقات والتمارين التعليمية في القياسات والإحداثيات والمساحة.</p>
-          <span class="label">مساحة</span>
-        </article>
-        <article class="card">
-          <div class="card-icon">🧱</div>
-          <h3>مواد البناء والجيوتقنية</h3>
-          <p>ملاحظات ومشروعات دراسية عن التربة ومواد البناء وخواصها.</p>
-          <span class="label">هندسة مدنية</span>
-        </article>
-      </div>
-    </div>
-  </section>
+<section id="projects">
+ <div class="container">
+  <h2 class="heading">المشاريع الهندسية</h2>
+  <p class="subheading">أمثلة تعليمية يمكنك استبدالها بأعمالك الحقيقية</p>
+  <div class="grid">
+   <article class="card">
+    <div class="card-icon">🏗️</div>
+    <h3>المنشآت الإنشائية</h3>
+    <p>مساحة لعرض نماذج الجمالونات والرسومات الإنشائية
+    والمشروعات الدراسية.</p>
+    <span class="pill">إنشاءات</span>
+   </article>
+   <article class="card">
+    <div class="card-icon">📐</div>
+    <h3>المساحة والجيوديسيا</h3>
+    <p>تطبيقات الإحداثيات وحساب المسافات والزوايا
+    والتمارين المساحية.</p>
+    <span class="pill">مساحة</span>
+   </article>
+   <article class="card">
+    <div class="card-icon">🧱</div>
+    <h3>التربة ومواد البناء</h3>
+    <p>ملاحظات ومشروعات تعليمية في الجيوتقنية
+    وخواص مواد البناء.</p>
+    <span class="pill">جيوتقنية</span>
+   </article>
+  </div>
+ </div>
+</section>
 
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title">المهارات ومجالات التعلم</h2>
-      <p class="section-intro">يمكنك تحديث هذه القائمة مع تطور خبرتك.</p>
-      <div class="skills">
-        <span class="skill">أساسيات الهندسة المدنية</span>
-        <span class="skill">الرسم الهندسي</span>
-        <span class="skill">المساحة</span>
-        <span class="skill">التحليل الإنشائي</span>
-        <span class="skill">HTML وCSS</span>
-        <span class="skill">التعلم المستمر</span>
-      </div>
-    </div>
-  </section>
+<section id="skills">
+ <div class="container">
+  <h2 class="heading">المهارات ومجالات التعلم</h2>
+  <p class="subheading">حدّث هذه القائمة كلما اكتسبت مهارة جديدة</p>
+  <div class="skills">
+   <span class="skill">أساسيات الهندسة المدنية</span>
+   <span class="skill">الرسم الهندسي</span>
+   <span class="skill">المساحة</span>
+   <span class="skill">التحليل الإنشائي</span>
+   <span class="skill">HTML</span>
+   <span class="skill">CSS</span>
+   <span class="skill">JavaScript</span>
+  </div>
+ </div>
+</section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <h2 class="section-title">لنتواصل معًا</h2>
-        <p>
-          يسعدني التواصل مع زملاء الهندسة والمهتمين
-          بالتعلم والمشروعات الهندسية.
-        </p>
-        <!-- استبدل الرابط برابط حسابك الحقيقي -->
-        <a class="btn btn-primary"
-           href="https://github.com/you301270"
-           target="_blank" rel="noopener">
-          زُر حسابي على GitHub ↗
-        </a>
-      </div>
+<section id="tools">
+ <div class="container">
+  <h2 class="heading">الحاسبات الهندسية</h2>
+  <p class="subheading">أدوات تعليمية بسيطة تعمل داخل الموقع</p>
+  <div class="calculator">
+   <div class="panel">
+    <h3>حاسبة حجم الخرسانة</h3>
+    <p>أدخل الأبعاد بالمتر لحساب حجم شكل متوازي المستطيلات.</p>
+    <div class="field">
+     <label for="length">الطول (متر)</label>
+     <input id="length" type="number" min="0" step="any" value="5">
     </div>
-  </section>
+    <div class="field">
+     <label for="width">العرض (متر)</label>
+     <input id="width" type="number" min="0" step="any" value="3">
+    </div>
+    <div class="field">
+     <label for="height">الارتفاع أو السمك (متر)</label>
+     <input id="height" type="number" min="0" step="any" value="0.15">
+    </div>
+    <button class="btn primary" id="concreteBtn" type="button">احسب الحجم</button>
+    <div class="result" aria-live="polite">
+     الحجم: <strong id="concreteResult">2.25 م³</strong>
+     <div class="small">لا يشمل الهالك أو أي إضافات تصميمية.</div>
+    </div>
+   </div>
+
+   <div class="panel">
+    <h3>محوّل الوحدات</h3>
+    <p>حوّل الأطوال بين المتر والملليمتر والسنتيمتر والكيلومتر.</p>
+    <div class="field">
+     <label for="unitValue">القيمة</label>
+     <input id="unitValue" type="number" step="any" value="1">
+    </div>
+    <div class="field">
+     <label for="fromUnit">من</label>
+     <select id="fromUnit">
+      <option value="m">متر (m)</option>
+      <option value="cm">سنتيمتر (cm)</option>
+      <option value="mm">ملليمتر (mm)</option>
+      <option value="km">كيلومتر (km)</option>
+     </select>
+    </div>
+    <div class="field">
+     <label for="toUnit">إلى</label>
+     <select id="toUnit">
+      <option value="mm">ملليمتر (mm)</option>
+      <option value="m">متر (m)</option>
+      <option value="cm">سنتيمتر (cm)</option>
+      <option value="km">كيلومتر (km)</option>
+     </select>
+    </div>
+    <button class="btn primary" id="convertBtn" type="button">حوّل الوحدات</button>
+    <div class="result" aria-live="polite">
+     الناتج: <strong id="unitResult">1000 mm</strong>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="contact">
+   <h2 class="heading">لنتواصل معًا</h2>
+   <p class="subheading">يسعدني التواصل مع المهتمين بالهندسة والتعلم والمشروعات.</p>
+   <a class="btn primary" href="https://github.com/you301270"
+    target="_blank" rel="noopener">حسابي على GitHub ↗</a>
+   <p class="small">أضف روابط LinkedIn والبريد الإلكتروني بعد تجهيزها.</p>
+  </div>
+ </div>
+</section>
 </main>
 
 <footer>
-  © <span id="year"></span> يوسف عمر رياض — صُنع بشغف للهندسة والتعلم.
+ © <span id="year"></span> يوسف عمر رياض • صُنع بشغف للهندسة والتعلم
 </footer>
 
 <script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+const $ = id => document.getElementById(id);
+
+$("year").textContent = new Date().getFullYear();
+
+$("themeBtn").addEventListener("click", () => {
+ document.body.classList.toggle("light");
+ $("themeBtn").textContent =
+  document.body.classList.contains("light") ? "🌙 المظهر" : "☀️ المظهر";
+});
+
+function calculateConcrete(){
+ const l = Number($("length").value);
+ const w = Number($("width").value);
+ const h = Number($("height").value);
+ if (![l,w,h].every(Number.isFinite) ||
+     [l,w,h].some(v => v <= 0)){
+  $("concreteResult").textContent = "أدخل أبعادًا موجبة";
+  return;
+ }
+ $("concreteResult").textContent =
+  (l*w*h).toLocaleString("en-US",{maximumFractionDigits:4})+" م³";
+}
+$("concreteBtn").addEventListener("click",calculateConcrete);
+["length","width","height"].forEach(id =>
+ $(id).addEventListener("input",calculateConcrete));
+
+const units = {m:1,cm:0.01,mm:0.001,km:1000};
+function convertUnits(){
+ const value = Number($("unitValue").value);
+ const from = $("fromUnit").value;
+ const to = $("toUnit").value;
+ if ($("unitValue").value.trim()==="" || !Number.isFinite(value)){
+  $("unitResult").textContent = "أدخل قيمة صحيحة";
+  return;
+ }
+ const result = value*units[from]/units[to];
+ $("unitResult").textContent =
+  result.toLocaleString("en-US",{maximumFractionDigits:8})+" "+to;
+}
+$("convertBtn").addEventListener("click",convertUnits);
+["unitValue","fromUnit","toUnit"].forEach(id =>
+ $(id).addEventListener("input",convertUnits));
+calculateConcrete();
+convertUnits();
 </script>
 </body>
 </html>
