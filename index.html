@@ -133,9 +133,6 @@ section { padding: 70px 0; }
 .skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
 .skill { background: var(--panel2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; font-size: 14px; font-weight: 600; }
 
-/* إخفاء التبويبات القديمة */
-.tabs-header { display: none; }
-
 /* تنسيق القائمة المنسدلة لاختيار الحاسبة */
 .calc-selector {
   width: 100%;
@@ -151,13 +148,12 @@ section { padding: 70px 0; }
   cursor: pointer;
 }
 
-/* الحل الجذري لإظهار الحاسبات */
+/* إخفاء الحاسبات وتفعيلها بالجافاسكريبت فقط */
 .tab-pane {
-  display: none !important;
+  display: none;
 }
-
-.tab-pane.active {
-  display: block !important;
+#calc-concrete {
+  display: block;
 }
 
 .calculator-layout { max-width: 600px; margin: auto; }
@@ -179,7 +175,6 @@ section { padding: 70px 0; }
 .contact { text-align: center; background: var(--panel); border: 1px dashed var(--accent); border-radius: 12px; padding: 40px 20px; }
 footer { text-align: center; border-top: 1px solid var(--border); padding: 25px; color: var(--muted); font-size: 14px; font-weight: 600; background: var(--panel); }
 
-/* تنسيقات الطباعة (للحفاظ على نظافة التقرير عند حفظه كـ PDF) */
 @media print {
   body { background: #fff !important; color: #000 !important; }
   nav, header, section:not(#tools), footer, .calc-selector, .btn, .theme { display: none !important; }
@@ -187,7 +182,6 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
   #tools { padding: 0 !important; }
   .heading, .subheading { text-align: center !important; color: #000 !important; }
   .tab-pane { display: none !important; }
-  .tab-pane.active { display: block !important; position: absolute; left: 0; top: 50px; width: 100%; }
   input, select { border: 1px solid #ccc !important; color: #000 !important; background: transparent !important; }
   .result { border: 2px solid #000 !important; color: #000 !important; background: transparent !important; }
   .result strong { color: #000 !important; }
@@ -229,7 +223,6 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
       <div class="actions">
         <a class="btn primary" href="#projects">استكشف أعمالي ↓</a>
         <a class="btn" href="#tools">الحاسبات الهندسية</a>
-        <!-- زر تحميل السيرة الذاتية -->
         <a class="btn" href="cv.pdf" download style="border-color: var(--accent); color: var(--accent);">تحميل السيرة الذاتية 📄</a>
       </div>
     </div>
@@ -265,7 +258,6 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="pill">تصميم إنشائي</span>
         </div>
       </article>
-
       <article class="card">
         <div class="card-img">📐</div>
         <div class="card-body">
@@ -274,7 +266,6 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="pill">مساحة وجيوديسيا</span>
         </div>
       </article>
-
       <article class="card">
         <div class="card-img">🧱</div>
         <div class="card-body">
@@ -300,7 +291,6 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="skill">Excel (للمهندسين)</span>
         </div>
       </div>
-
       <div class="skill-category">
         <h3>🏗️ مجالات التخصص</h3>
         <div class="skills-list">
@@ -310,7 +300,6 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="skill">حصر الكميات (مبدئي)</span>
         </div>
       </div>
-
       <div class="skill-category">
         <h3>🌐 تطوير الويب</h3>
         <div class="skills-list">
@@ -330,8 +319,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
     <p class="subheading">أدوات برمجتها بنفسي لتسريع الحسابات الهندسية الشائعة</p>
     <div class="panel">
       
-      <!-- القائمة المنسدلة لاختيار الحاسبة (الحل الجذري) -->
-      <select id="calcSelector" class="calc-selector" onchange="changeCalculator()">
+      <select id="calcSelector" class="calc-selector">
         <option value="calc-concrete">حاسبة حجم الخرسانة</option>
         <option value="calc-mix">حاسبة خلطة الخرسانة</option>
         <option value="calc-steel">حاسبة وزن الحديد</option>
@@ -343,7 +331,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
       <div class="calculator-layout">
         
         <!-- حاسبة الخرسانة -->
-        <div id="calc-concrete" class="tab-pane active">
+        <div id="calc-concrete" class="tab-pane">
           <div class="field">
             <label>الطول (متر)</label>
             <input id="length" type="number" min="0" step="any" value="5">
@@ -470,4 +458,17 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
                 <option value="mm">ملليمتر (mm)</option>
                 <option value="cm">سنتيمتر (cm)</option>
                 <option value="m">متر (m)</option>
-       
+                <option value="km">كيلومتر (km)</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn primary" id="convertBtn" style="width:100%; margin-top:10px;">إجراء التحويل</button>
+          <div class="result">النتيجة:<strong id="unitResult">1000 mm</strong></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="con
