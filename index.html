@@ -10,6 +10,7 @@
 <meta property="og:title" content="يوسف عمر رياض | الهندسة المدنية">
 <meta property="og:description" content="البورتفوليو الشخصي والمشاريع والحاسبات الهندسية ليوسف عمر رياض.">
 <meta property="og:locale" content="ar_EG">
+<!-- استبدل الرابط التالي برابط GitHub Pages الحقيقي بعد النشر -->
 <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/">
 <title>يوسف عمر رياض | طالب هندسة مدنية</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,450 +30,1393 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,
 .tabs-header{display:flex;gap:9px;margin-bottom:24px;overflow-x:auto;padding:2px 2px 10px}.tab-btn{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:10px 17px;border-radius:9px;font-weight:800;white-space:nowrap;font-size:14px}.tab-btn.active{background:var(--accent);color:var(--accentText);border-color:var(--accent)}.tab-pane{display:none}.tab-pane.active{display:block;animation:fadeUp .3s ease}.calculator-layout{max-width:680px;margin:auto}.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}.field{display:grid;gap:7px;margin:12px 0}.field label{font-weight:700;font-size:14px}.field input,.field select{width:100%;padding:11px 12px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:9px;outline:none}.field input:focus,.field select:focus{border-color:var(--accent)}.result{background:var(--bg);border:1px solid var(--accent);border-radius:11px;padding:18px;margin-top:18px;text-align:center}.result strong{color:var(--accent);font-size:clamp(22px,4vw,29px);display:block;margin:5px 0;overflow-wrap:anywhere}.small{font-size:12px;color:var(--muted)}.warning{color:#ffb8a8;font-size:13px;margin-top:8px;min-height:20px}
 .cv-box{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.cv-box p{margin:4px 0;color:var(--muted)}.contact{text-align:center;background:var(--panel);border:1px dashed var(--accent);border-radius:16px;padding:40px 20px}.contact .actions{justify-content:center}footer{text-align:center;border-top:1px solid var(--border);padding:24px;color:var(--muted);font-size:13px;font-weight:600;background:var(--panel)}
 .whatsapp-float{position:fixed;z-index:60;bottom:22px;right:22px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#20c878;color:white;font-size:26px;box-shadow:0 10px 25px rgba(0,0,0,.28);transition:transform .2s}.whatsapp-float:hover{transform:scale(1.08)}body.en .whatsapp-float{right:auto;left:22px}
-.toast{position:fixed;z-index:100;bottom:88px;left:50%;transform:translateX(-50%) translateY(12px);background:var(--text);color:var(--bg);padding:10px 17px;border-radius:10px;font-size:13px;font-weight:800;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:900px){.links{gap:11px;font-size:13px}.projects-grid,.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{gap:25px}}
-@media(max-width:700px){.nav{flex-wrap:wrap;padding:12px 0}.nav .brand{font-size:18px}.links{order:3;width:100%;overflow-x:auto;justify-content:flex-start;padding:5px 0 8px}.nav-actions{margin-inline-start:auto}.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr;text-align:center}.profile{grid-row:1}.lead{font-size:16px}.actions{justify-content:center}.section{padding:55px 0}.projects-grid,.skills-grid{grid-template-columns:1fr}.card-img{height:150px}.fields-grid{grid-template-columns:1fr}.cv-box{display:block}.cv-box .btn{margin-top:12px}.heading{font-size:28px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-@media print{nav,.whatsapp-float,.toast,.actions,.searchbar,#projects,#skills,#tools,#contact,footer{display:none!important}body{background:white!important;color:#111!important;font-family:Arial,sans-serif}.hero{padding:10px 0;border:0}.hero-grid{display:block}.profile{display:none}.lead,.muted,.subheading{color:#333!important}.section{padding:10px 0}.panel{box-shadow:none;border:1px solid #ccc;background:white;color:#111}.heading,.highlight{color:#111!important}.cv-print-note{display:block!important}}
+.toast{position:fixed;z-index:100;bottom:88px;left:50%;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--border);padding:10px 17px;border-radius:10px;box-shadow:var(--shadow);display:none;max-width:90%;text-align:center}.toast.show{display:block;animation:fadeUp .25s ease}
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.admin-item{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--border);padding:10px 0}.admin-item:last-child{border-bottom:0}.admin-item p{margin:0;color:var(--muted);font-size:12px}.admin-item button{padding:5px 10px}.course-meta{font-size:12px;color:var(--muted);margin-top:auto;padding-top:10px}.course-link{display:inline-block;color:var(--accent);font-weight:800;margin-top:10px}
+#truss3d{height:390px;width:100%;background:#101a32;border-radius:12px;overflow:hidden;position:relative}#truss3d canvas{display:block;width:100%;height:100%}.viewer-fallback{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center;color:var(--accent);font-size:42px}.viewer-fallback span{font-size:13px;color:var(--muted);padding:0 20px}.model-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:15px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes fadeUp{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr .7fr;gap:25px}.projects-grid,.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.links{gap:10px;font-size:12px}.admin-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.nav{padding:12px 0;flex-wrap:wrap}.links{order:3;width:100%;overflow-x:auto;padding:5px 0;white-space:nowrap}.hero{padding:55px 0}.hero-grid{grid-template-columns:1fr}.profile{order:-1}.avatar{width:150px;height:150px}.avatar-fallback{font-size:50px}h1{font-size:37px;letter-spacing:-.5px}.lead{font-size:16px}.projects-grid,.skills-grid{grid-template-columns:1fr}.section{padding:54px 0}.fields-grid{grid-template-columns:1fr}.cv-box{align-items:flex-start}#truss3d{height:310px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media print{nav,.whatsapp-float,.actions,.model-actions,#admin,.searchbar,.tabs-header,footer{display:none!important}body{background:#fff!important;color:#111!important}.panel,.card,.skill-category{box-shadow:none!important;break-inside:avoid}.section{padding:20px 0}.muted,.lead,.card-body p{color:#333!important}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"يوسف عمر رياض","alternateName":"Youssef Omer Riyad","description":"طالب هندسة مدنية بجامعة الفيوم","alumniOf":{"@type":"CollegeOrUniversity","name":"جامعة الفيوم"},"knowsAbout":["Civil Engineering","Surveying","Structural Engineering","Geotechnical Engineering","HTML","CSS","JavaScript"]}
-</script>
 </head>
 <body>
 <nav>
- <div class="container nav">
-  <a class="brand" href="#home" aria-label="Home">Eng<span> Youssef Omer</span></a>
-  <div class="links">
-   <a href="#about" data-i18n="navAbout">من أنا</a><a href="#projects" data-i18n="navProjects">المشاريع</a><a href="#skills" data-i18n="navSkills">المهارات</a><a href="#tools" data-i18n="navTools">الحاسبات</a><a href="#cv" data-i18n="navCV">السيرة الذاتية</a><a href="#contact" data-i18n="navContact">التواصل</a>
+  <div class="container nav">
+    <a href="#home" class="brand">YO<span>.</span> ENGINEERING</a>
+
+    <div class="links">
+      <a href="#home" data-i18n="navHome">الرئيسية</a>
+      <a href="#about" data-i18n="navAbout">عني</a>
+      <a href="#projects" data-i18n="navProjects">المشروعات</a>
+      <a href="#skills" data-i18n="navSkills">المهارات</a>
+      <a href="#tools" data-i18n="navTools">الحاسبات</a>
+      <a href="#courses" data-i18n="navCourses">الكورسات</a>
+      <a href="#contact" data-i18n="navContact">تواصل معي</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="lang" id="langBtn" type="button">EN</button>
+      <button class="theme" id="themeBtn" type="button" aria-label="تغيير المظهر">☀</button>
+    </div>
   </div>
-  <div class="nav-actions"><button class="lang" id="langBtn" type="button">EN</button><button class="theme" id="themeBtn" type="button">☀️ فاتح</button></div>
- </div>
 </nav>
-<header class="hero" id="home">
- <div class="container hero-grid">
-  <div class="reveal">
-   <span class="tag" data-i18n="tag">طالب بقسم الهندسة المدنية | جامعة الفيوم</span>
-   <h1><span data-i18n="hello">أهلاً، أنا</span><br><span class="highlight" data-i18n="name">يوسف عمر رياض</span></h1>
-   <p class="lead" data-i18n="lead">أبني معرفتي في الهندسة المدنية خطوة بخطوة، وأهتم بالإنشاءات والمساحة والتصميم التقني.</p>
-   <div class="actions"><a class="btn primary" href="#projects" data-i18n="explore">استكشف أعمالي ↓</a><a class="btn" href="#tools" data-i18n="calcBtn">الحاسبات الهندسية</a></div>
-  </div>
-  <div class="profile reveal">
-   <div class="avatar"><img id="profileImage" src="profile.jpg" alt="صورة يوسف عمر رياض" onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'"><div class="avatar-fallback" id="avatarFallback" style="display:none">👷🏻‍♂️</div></div>
-   <h3 data-i18n="name">يوسف عمر رياض</h3><small data-i18n="university">جامعة الفيوم - قسم الهندسة المدنية</small>
-   <div class="stat-row"><div class="stat"><b>02 / 05</b><span data-i18n="studyYears">سنوات الدراسة</span></div><div class="stat"><b>4+</b><span data-i18n="toolsCount">حاسبات هندسية</span></div></div>
-  </div>
- </div>
-</header>
+
 <main>
-<section class="section reveal" id="about"><div class="container"><h2 class="heading" data-i18n="aboutTitle">من أنا؟</h2><p class="subheading" data-i18n="aboutSub">مقدمة عن رحلتي الأكاديمية</p><div class="panel" data-i18n="aboutText">أنا طالب في قسم الهندسة المدنية بكلية الهندسة، جامعة الفيوم. أعمل على تطوير معرفتي في مجالات الإنشاءات والمساحة وخواص مواد البناء والجيوتقنية. أؤمن بأن التعلم المستمر والدمج بين البرمجيات الحديثة والمبادئ الهندسية هما أساس بناء مهندس ناجح، وأسعى لتوثيق هذا التطور من خلال مشاريعي وموقعي الشخصي.</div></div></section>
-<section class="section reveal" id="projects"><div class="container"><h2 class="heading" data-i18n="projectsTitle">معرض المشاريع</h2><p class="subheading" data-i18n="projectsSub">أمثلة تطبيقية لدراستي وتدريباتي الهندسية</p>
- <div class="searchbar"><input id="siteSearch" type="search" placeholder="ابحث في الموقع عن مشروع أو مهارة أو حاسبة..." aria-label="Search site"><button class="btn primary" id="searchBtn" data-i18n="search">بحث</button></div><div class="search-results" id="searchResults" aria-live="polite"></div>
- <div class="projects-grid" id="projectGrid">
-  <article class="card searchable" data-search="المنشآت الإنشائية جمالونات رسومات تحليل قوى structural truss"><div class="card-img">🏗️</div><div class="card-body"><h3 data-i18n="proj1">المنشآت الإنشائية</h3><p data-i18n="proj1Text">مساحة لعرض نماذج الجمالونات والرسومات الإنشائية، وتحليل القوى للأعضاء المختلفة.</p><span class="pill" data-i18n="proj1Tag">تصميم إنشائي</span><button class="project-more" data-project="1" data-i18n="details">عرض التفاصيل ←</button></div></article>
-  <article class="card searchable" data-search="المساحة إحداثيات رفع مساحي مسافات زوايا surveying geodesy"><div class="card-img">📐</div><div class="card-body"><h3 data-i18n="proj2">أعمال المساحة</h3><p data-i18n="proj2Text">تطبيقات الإحداثيات، الرفع المساحي، وحساب المسافات والزوايا باستخدام الأجهزة.</p><span class="pill" data-i18n="proj2Tag">مساحة وجيوديسيا</span><button class="project-more" data-project="2" data-i18n="details">عرض التفاصيل ←</button></div></article>
-  <article class="card searchable" data-search="اختبارات المواد تربة خرسانة خواص فيزيائية materials geotechnical"><div class="card-img">🧱</div><div class="card-body"><h3 data-i18n="proj3">اختبارات المواد</h3><p data-i18n="proj3Text">تقارير ومشروعات تعليمية في الجيوتقنية وتحديد الخواص الفيزيائية لمواد البناء.</p><span class="pill" data-i18n="proj3Tag">مواد وتربة</span><button class="project-more" data-project="3" data-i18n="details">عرض التفاصيل ←</button></div></article>
- </div>
-</div></section>
-<section class="section reveal" id="skills"><div class="container"><h2 class="heading" data-i18n="skillsTitle">المهارات التقنية والهندسية</h2><p class="subheading" data-i18n="skillsSub">تم تصنيفها بناءً على التخصصات</p><div class="skills-grid">
- <div class="skill-category searchable" data-search="autocad sap2000 excel software"><h3 data-i18n="skillCat1">💻 برمجيات هندسية</h3><div class="skills-list"><span class="skill">AutoCAD (2D)</span><span class="skill">SAP2000 (أساسيات)</span><span class="skill">Excel (للمهندسين)</span></div></div>
- <div class="skill-category searchable" data-search="هندسة مدنية رسم هندسي مساحة حصر كميات civil engineering"><h3 data-i18n="skillCat2">🏗️ مجالات التخصص</h3><div class="skills-list"><span class="skill" data-i18n="skill1">أساسيات الهندسة المدنية</span><span class="skill" data-i18n="skill2">الرسم الهندسي</span><span class="skill" data-i18n="skill3">المساحة</span><span class="skill" data-i18n="skill4">حصر الكميات (مبدئي)</span></div></div>
- <div class="skill-category searchable" data-search="html css javascript web development"><h3 data-i18n="skillCat3">🌐 تطوير الويب</h3><div class="skills-list"><span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">JavaScript</span><span class="skill">UI/UX Basics</span></div></div>
-</div></div></section>
-<section class="section reveal" id="tools"><div class="container"><h2 class="heading" data-i18n="toolsTitle">لوحة الحاسبات الهندسية</h2><p class="subheading" data-i18n="toolsSub">نتائج تقديرية للتعلم والحصر المبدئي، وليست بديلًا عن الرسومات والمواصفات المعتمدة.</p><div class="panel">
- <div class="tabs-header" role="tablist"><button class="tab-btn active" data-tab="calc-concrete" data-i18n="tabConcrete">حجم الخرسانة</button><button class="tab-btn" data-tab="calc-steel" data-i18n="tabSteel">وزن الحديد</button><button class="tab-btn" data-tab="calc-brick" data-i18n="tabBrick">كميات الطوب</button><button class="tab-btn" data-tab="calc-plaster" data-i18n="tabPlaster">المحارة</button><button class="tab-btn" data-tab="calc-paint" data-i18n="tabPaint">الدهانات</button><button class="tab-btn" data-tab="calc-unit" data-i18n="tabUnit">تحويل الوحدات</button></div>
- <div class="calculator-layout">
-  <div id="calc-concrete" class="tab-pane active"><div class="fields-grid"><div class="field"><label data-i18n="length">الطول (متر)</label><input id="length" type="number" min="0.001" step="any" value="5"></div><div class="field"><label data-i18n="width">العرض (متر)</label><input id="width" type="number" min="0.001" step="any" value="3"></div><div class="field"><label data-i18n="thickness">السمك (متر)</label><input id="height" type="number" min="0.001" step="any" value="0.20"></div><div class="field"><label data-i18n="waste">هالك إضافي (%)</label><input id="concreteWaste" type="number" min="0" max="100" step="any" value="5"></div></div><button class="btn primary" id="concreteBtn" style="width:100%" data-i18n="calcConcrete">احسب حجم الصبة</button><div class="result"><span data-i18n="netVolume">الحجم الصافي</span><strong id="concreteResult">3.000 م³</strong><span class="small" id="concreteExtra">مع الهالك: 3.150 م³</span></div><p class="small" data-i18n="concreteNote">لا يشمل خصم الفتحات أو اختلافات الموقع.</p></div>
-  <div id="calc-steel" class="tab-pane"><div class="fields-grid"><div class="field"><label data-i18n="diameter">قطر السيخ (مم)</label><select id="steelDia"><option value="6">6 مم</option><option value="8">8 مم</option><option value="10">10 مم</option><option value="12" selected>12 مم</option><option value="14">14 مم</option><option value="16">16 مم</option><option value="18">18 مم</option><option value="20">20 مم</option><option value="22">22 مم</option><option value="25">25 مم</option><option value="32">32 مم</option></select></div><div class="field"><label data-i18n="totalLength">الطول الإجمالي للأسياخ (متر)</label><input id="steelLen" type="number" min="0.01" step="any" value="12"></div><div class="field"><label data-i18n="steelWaste">هالك (%)</label><input id="steelWaste" type="number" min="0" max="100" value="5"></div></div><button class="btn primary" id="steelBtn" style="width:100%" data-i18n="calcSteel">احسب الوزن</button><div class="result"><span data-i18n="estimatedWeight">الوزن التقريبي</span><strong id="steelResult">10.67 كجم</strong><span class="small" id="steelExtra">بالوزن مع الهالك: 11.20 كجم</span></div><p class="small" data-i18n="steelNote">المعادلة التقريبية: القطر² ÷ 162 كجم/متر. راجع جدول المورد والمواصفات.</p></div>
-  <div id="calc-brick" class="tab-pane"><div class="fields-grid"><div class="field"><label data-i18n="wallArea">مساحة الحائط الصافية (م²)</label><input id="wallArea" type="number" min="0.01" step="any" value="10"></div><div class="field"><label data-i18n="wallType">نوع البناء</label><select id="wallType"><option value="58">نصف طوبة — تقديريًا 58 طوبة/م²</option><option value="116">طوبة كاملة — تقديريًا 116 طوبة/م²</option></select></div><div class="field"><label data-i18n="brickWaste">هالك (%)</label><input id="brickWaste" type="number" min="0" max="100" value="5"></div></div><button class="btn primary" id="brickBtn" style="width:100%" data-i18n="calcBrick">احسب العدد</button><div class="result"><span data-i18n="brickCount">العدد التقريبي</span><strong id="brickResult">580 طوبة</strong><span class="small" id="brickExtra">مع الهالك: 609 طوبة</span></div><p class="small" data-i18n="brickNote">العدد يتغير حسب مقاس الطوبة والمونة وطريقة الرص.</p></div>
-  <div id="calc-plaster" class="tab-pane"><div class="fields-grid"><div class="field"><label data-i18n="plasterArea">مساحة المحارة (م²)</label><input id="plasterArea" type="number" min="0.01" step="any" value="40"></div><div class="field"><label data-i18n="plasterThick">سمك المحارة (مم)</label><input id="plasterThick" type="number" min="1" max="100" value="15"></div><div class="field"><label data-i18n="plasterWaste">هالك (%)</label><input id="plasterWaste" type="number" min="0" max="100" value="10"></div></div><button class="btn primary" id="plasterBtn" style="width:100%" data-i18n="calcPlaster">احسب حجم المونة</button><div class="result"><span data-i18n="mortarVolume">حجم المونة التقريبي</span><strong id="plasterResult">0.600 م³</strong><span class="small" id="plasterExtra">مع الهالك: 0.660 م³</span></div><p class="small" data-i18n="plasterNote">الحساب للحجم الهندسي فقط ولا يحسب نسب الأسمنت والرمل أو الانكماش.</p></div>
-  <div id="calc-paint" class="tab-pane"><div class="fields-grid"><div class="field"><label data-i18n="paintArea">مساحة الدهان (م²)</label><input id="paintArea" type="number" min="0.01" step="any" value="50"></div><div class="field"><label data-i18n="coverage">تغطية اللتر (م²/لتر/وجه)</label><input id="coverage" type="number" min="0.1" step="any" value="10"></div><div class="field"><label data-i18n="coats">عدد الأوجه</label><input id="coats" type="number" min="1" max="10" step="1" value="2"></div><div class="field"><label data-i18n="paintWaste">هالك (%)</label><input id="paintWaste" type="number" min="0" max="100" value="10"></div></div><button class="btn primary" id="paintBtn" style="width:100%" data-i18n="calcPaint">احسب كمية الدهان</button><div class="result"><span data-i18n="paintAmount">الكمية التقريبية المطلوبة</span><strong id="paintResult">11 لتر</strong><span class="small" id="paintExtra">حسب التغطية المدخلة</span></div><p class="small" data-i18n="paintNote">اعتمد على معدل التغطية المكتوب على عبوة المنتج وحالة السطح.</p></div>
-  <div id="calc-unit" class="tab-pane"><div class="fields-grid"><div class="field"><label data-i18n="unitValue">القيمة المراد تحويلها</label><input id="unitValue" type="number" step="any" value="1"></div><div class="field"><label data-i18n="fromUnit">من وحدة</label><select id="fromUnit"><option value="m">متر (m)</option><option value="cm">سنتيمتر (cm)</option><option value="mm">ملليمتر (mm)</option><option value="km">كيلومتر (km)</option></select></div><div class="field"><label data-i18n="toUnit">إلى وحدة</label><select id="toUnit"><option value="mm">ملليمتر (mm)</option><option value="cm">سنتيمتر (cm)</option><option value="m">متر (m)</option><option value="km">كيلومتر (km)</option></select></div></div><button class="btn primary" id="convertBtn" style="width:100%" data-i18n="convert">إجراء التحويل</button><div class="result"><span data-i18n="conversionResult">النتيجة</span><strong id="unitResult">1000 mm</strong></div></div>
- </div><p class="small" style="text-align:center;margin-top:20px" data-i18n="localSave">يتم حفظ مدخلات الحاسبات على هذا الجهاز فقط.</p>
-</div></div></section>
-<section class="section reveal" id="cv"><div class="container"><h2 class="heading" data-i18n="cvTitle">السيرة الذاتية</h2><p class="subheading" data-i18n="cvSub">نسخة مختصرة قابلة للطباعة والحفظ بصيغة PDF.</p><div class="panel cv-box"><div><h3 data-i18n="name">يوسف عمر رياض</h3><p data-i18n="cvDesc">طالب بقسم الهندسة المدنية، كلية الهندسة، جامعة الفيوم.</p><p class="small" data-i18n="cvHint">استخدم زر الطباعة ثم اختر Save as PDF. أضف بياناتك وخبراتك الفعلية قبل الإرسال الرسمي.</p></div><button class="btn primary" id="downloadCv" data-i18n="downloadCV">تحميل / حفظ CV PDF</button></div><div class="panel cv-print-note" style="display:none;margin-top:15px"><h2>يوسف عمر رياض | Youssef Omer Riyad</h2><p>طالب بقسم الهندسة المدنية — كلية الهندسة، جامعة الفيوم</p><h3>النبذة المهنية</h3><p>طالب هندسة مدنية مهتم بالإنشاءات والمساحة ومواد البناء والجيوتقنية وتطوير الأدوات الرقمية الهندسية.</p><h3>المهارات</h3><p>AutoCAD 2D، أساسيات SAP2000، أساسيات الهندسة المدنية، الرسم الهندسي، المساحة، HTML، CSS، JavaScript.</p><p>ملاحظة: أضف بيانات التواصل والتعليم والتدريب الفعلي قبل استخدام السيرة الذاتية رسميًا.</p></div></div></section>
-<section class="section reveal" id="contact"><div class="container"><div class="contact"><h2 class="heading" data-i18n="contactTitle">لنتواصل معًا</h2><p class="subheading" style="margin-bottom:18px" data-i18n="contactSub">جاهز لمناقشة المشاريع، وتبادل المعرفة الهندسية والبرمجية.</p><div class="actions"><a class="btn primary" href="https://wa.me/201155475166" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp">راسلني عبر واتساب 💬</a><button class="btn" id="shareBtn" data-i18n="share">مشاركة الموقع ↗</button><button class="btn" id="copyLink" data-i18n="copyLink">نسخ رابط الموقع</button></div></div></div></section>
-</main>
-<a class="whatsapp-float" href="https://wa.me/201155475166" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">☏</a><div class="toast" id="toast" role="status" aria-live="polite"></div>
-<footer>© <span id="year"></span> <span data-i18n="footer">يوسف عمر رياض • طالب هندسة مدنية - جامعة الفيوم</span> · <a href="#home" data-i18n="top">العودة للأعلى ↑</a></footer>
-<dialog id="projectDialog" style="max-width:520px;width:calc(100% - 30px);border:1px solid var(--border);border-radius:16px;background:var(--panel);color:var(--text);padding:25px"><button id="closeDialog" class="btn" style="float:inline-end">✕</button><h2 id="dialogTitle"></h2><p id="dialogText" class="muted"></p><p class="small" data-i18n="projectDialogNote">يمكنك إضافة صور ورسومات فعلية لكل مشروع عند توفرها.</p></dialog>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag" data-i18n="heroTag">طالب هندسة مدنية</span>
+        <h1>
+          <span data-i18n="heroHello">أهلاً، أنا</span>
+          <br>
+          <span class="highlight">يوسف عمر رياض</span>
+        </h1>
+        <p class="lead" data-i18n="heroLead">
+          طالب بكلية الهندسة جامعة الفيوم، مهتم بالإنشاءات والتصميم
+          الهندسي والتكنولوجيا، وأسعى لتطوير مهاراتي والمشاركة في
+          مشروعات هندسية عملية.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="#projects" data-i18n="viewProjects">استكشف مشروعاتي</a>
+          <a class="btn" href="#contact" data-i18n="contactMe">تواصل معي</a>
+          <button class="btn" type="button" id="downloadCV" data-i18n="downloadCV">تحميل CV PDF</button>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat">
+            <b>02 / 05</b>
+            <span data-i18n="studyYears">سنوات الدراسة</span>
+          </div>
+          <div class="stat">
+            <b data-i18n="civil">مدني</b>
+            <span data-i18n="specialty">التخصص</span>
+          </div>
+          <div class="stat">
+            <b>FAYOUM</b>
+            <span data-i18n="university">الجامعة</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">
+          <img
+            src="profile.jpg"
+            alt="صورة يوسف عمر رياض"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
+          <div class="avatar-fallback" style="display:none">👷</div>
+        </div>
+        <h3 data-i18n="profileName">يوسف عمر رياض</h3>
+        <small data-i18n="profileTitle">طالب الهندسة المدنية</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="heading" data-i18n="aboutTitle">نبذة عني</h2>
+      <p class="subheading" data-i18n="aboutSub">رحلتي في الهندسة المدنية</p>
+
+      <div class="panel">
+        <p data-i18n="aboutText">
+          أنا يوسف عمر رياض، طالب بقسم الهندسة المدنية بكلية الهندسة
+          جامعة الفيوم. أهتم بفهم أساسيات التصميم الإنشائي، وحساب
+          الكميات، والمساحة، والتربة، وتطبيق البرامج الهندسية في
+          المشروعات الأكاديمية والعملية.
+        </p>
+        <p class="muted" style="margin-top:12px" data-i18n="aboutNote">
+          يتم تحديث هذا القسم باستمرار لإضافة الخبرات والمشروعات
+          والكورسات الجديدة.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="heading" data-i18n="projectsTitle">المشروعات الهندسية</h2>
+      <p class="subheading" data-i18n="projectsSub">
+        نماذج ومشروعات تعليمية يمكنك تطويرها وإضافة أعمالك إليها
+      </p>
+
+      <div class="searchbar">
+        <input
+          type="search"
+          id="projectSearch"
+          placeholder="ابحث عن مشروع..."
+          data-i18n-placeholder="searchPlaceholder"
+          aria-label="البحث في المشروعات"
+        >
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <article class="card project-item" data-search="truss جمالون steel structure">
+          <div class="card-img">🏗️</div>
+          <div class="card-body">
+            <h3 data-i18n="project1Title">تحليل الجمالونات</h3>
+            <p data-i18n="project1Text">
+              نموذج تعليمي لفهم العناصر الإنشائية والقوى المؤثرة
+              في الجمالونات.
+            </p>
+            <span class="pill">Structural Engineering</span>
+            <button class="project-more" type="button" data-project="truss" data-i18n="viewModel">
+              عرض النموذج ثلاثي الأبعاد ←
+            </button>
+          </div>
+        </article>
+
+        <article class="card project-item" data-search="concrete خرسانة quantities كميات">
+          <div class="card-img">🧱</div>
+          <div class="card-body">
+            <h3 data-i18n="project2Title">حساب كميات الخرسانة</h3>
+            <p data-i18n="project2Text">
+              تطبيق مبسط لحساب حجم الخرسانة للعناصر الهندسية
+              مع إضافة نسبة الهالك.
+            </p>
+            <span class="pill">Quantity Surveying</span>
+            <button class="project-more" type="button" data-go-tools="concrete" data-i18n="openCalculator">
+              افتح الحاسبة ←
+            </button>
+          </div>
+        </article>
+
+        <article class="card project-item" data-search="surveying مساحة geodesy coordinates">
+          <div class="card-img">📐</div>
+          <div class="card-body">
+            <h3 data-i18n="project3Title">المساحة والإحداثيات</h3>
+            <p data-i18n="project3Text">
+              أدوات تعليمية لتحويل الوحدات ومراجعة بعض الحسابات
+              المستخدمة في المساحة.
+            </p>
+            <span class="pill">Surveying</span>
+            <button class="project-more" type="button" data-go-tools="units" data-i18n="openCalculator">
+              افتح الحاسبة ←
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <p class="small" style="margin-top:15px" data-i18n="sampleNote">
+        ملاحظة: النماذج المعروضة أمثلة تعليمية أولية وليست مشروعات
+        تنفيذية معتمدة.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="model">
+    <div class="container">
+      <h2 class="heading" data-i18n="modelTitle">معرض ثلاثي الأبعاد</h2>
+      <p class="subheading" data-i18n="modelSub">
+        نموذج جمالون إنشائي قابل للتدوير والتكبير
+      </p>
+
+      <div class="panel">
+        <div id="truss3d">
+          <div class="viewer-fallback">
+            🏗️
+            <span data-i18n="modelLoading">
+              جاري تجهيز النموذج ثلاثي الأبعاد...
+            </span>
+          </div>
+        </div>
+
+        <div class="model-actions">
+          <button class="btn" type="button" id="resetModel" data-i18n="resetModel">
+            إعادة ضبط العرض
+          </button>
+          <button class="btn" type="button" id="rotateModel" data-i18n="rotateModel">
+            تشغيل / إيقاف الدوران
+          </button>
+        </div>
+
+        <p class="small" style="margin-top:12px" data-i18n="modelNote">
+          يحتاج العرض ثلاثي الأبعاد إلى اتصال بالإنترنت لتحميل مكتبة
+          Three.js. يمكن سحب النموذج بالماوس أو باللمس للتدوير.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="heading" data-i18n="skillsTitle">المهارات الهندسية</h2>
+      <p class="subheading" data-i18n="skillsSub">
+        المهارات والبرامج التي يمكنك توثيق مستواك فيها
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 data-i18n="skill1Title">التخصصات الهندسية</h3>
+          <div class="skills-list">
+            <span class="skill">Structural Engineering</span>
+            <span class="skill">Concrete</span>
+            <span class="skill">Surveying</span>
+            <span class="skill">Geotechnical</span>
+            <span class="skill">Quantity Surveying</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-i18n="skill2Title">البرامج الهندسية</h3>
+          <div class="skills-list">
+            <span class="skill">AutoCAD</span>
+            <span class="skill">ETABS</span>
+            <span class="skill">SAP2000</span>
+            <span class="skill">Revit</span>
+          </div>
+          <p class="small" style="margin-top:12px" data-i18n="skillsDisclaimer">
+            احتفظ فقط بالبرامج التي تعلمتها بالفعل.
+          </p>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-i18n="skill3Title">مهارات العمل</h3>
+          <div class="skills-list">
+            <span class="skill" data-i18n="skillTeam">العمل الجماعي</span>
+            <span class="skill" data-i18n="skillProblem">حل المشكلات</span>
+            <span class="skill" data-i18n="skillResearch">البحث والتعلم</span>
+            <span class="skill" data-i18n="skillPlanning">التخطيط</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tools">
+    <div class="container">
+      <h2 class="heading" data-i18n="toolsTitle">الحاسبات الهندسية</h2>
+      <p class="subheading" data-i18n="toolsSub">
+        حاسبات تعليمية مبسطة — راجع الافتراضات قبل استخدام النتائج
+      </p>
+
+      <div class="tabs-header" role="tablist">
+        <button class="tab-btn active" type="button" data-tab="concrete" data-i18n="tabConcrete">الخرسانة</button>
+        <button class="tab-btn" type="button" data-tab="rebar" data-i18n="tabRebar">حديد التسليح</button>
+        <button class="tab-btn" type="button" data-tab="bricks" data-i18n="tabBricks">الطوب</button>
+        <button class="tab-btn" type="button" data-tab="plaster" data-i18n="tabPlaster">المحارة</button>
+        <button class="tab-btn" type="button" data-tab="paint" data-i18n="tabPaint">الدهانات</button>
+        <button class="tab-btn" type="button" data-tab="units" data-i18n="tabUnits">تحويل الوحدات</button>
+      </div>
+
+      <div class="panel calculator-layout">
+        <div class="tab-pane active" id="tab-concrete">
+          <h3 data-i18n="concreteTitle">حساب حجم الخرسانة</h3>
+          <p class="muted" data-i18n="concreteDesc">
+            أدخل أبعاد العنصر بالمتر لحساب الحجم ونسبة الهالك.
+          </p>
+
+          <div class="fields-grid">
+            <div class="field">
+              <label for="conLength" data-i18n="length">الطول (متر)</label>
+              <input type="number" id="conLength" min="0" step="any" value="5">
+            </div>
+            <div class="field">
+              <label for="conWidth" data-i18n="width">العرض (متر)</label>
+              <input type="number" id="conWidth" min="0" step="any" value="3">
+            </div>
+            <div class="field">
+              <label for="conHeight" data-i18n="height">الارتفاع / السمك (متر)</label>
+              <input type="number" id="conHeight" min="0" step="any" value="0.15">
+            </div>
+            <div class="field">
+              <label for="conWaste" data-i18n="waste">الهالك (%)</label>
+              <input type="number" id="conWaste" min="0" max="100" step="any" value="5">
+            </div>
+          </div>
+
+          <button class="btn primary" type="button" id="calcConcrete" data-i18n="calculate">احسب</button>
+          <div class="result" id="concreteResult" aria-live="polite">
+            <span data-i18n="resultLabel">النتيجة</span>
+            <strong>2.3625 م³</strong>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tab-rebar">
+          <h3 data-i18n="rebarTitle">تقدير وزن حديد التسليح</h3>
+          <p class="muted" data-i18n="rebarDesc">
+            تقدير وزن القضبان باستخدام الكثافة التقريبية للحديد.
+          </p>
+
+          <div class="fields-grid">
+            <div class="field">
+              <label for="barDiameter" data-i18n="diameter">قطر السيخ (مم)</label>
+              <input type="number" id="barDiameter" min="1" max="100" step="any" value="12">
+            </div>
+            <div class="field">
+              <label for="barLength" data-i18n="barLength">طول السيخ (متر)</label>
+              <input type="number" id="barLength" min="0" step="any" value="12">
+            </div>
+            <div class="field">
+              <label for="barCount" data-i18n="barCount">عدد الأسياخ</label>
+              <input type="number" id="barCount" min="1" step="1" value="20">
+            </div>
+          </div>
+
+          <button class="btn primary" type="button" id="calcRebar" data-i18n="calculate">احسب</button>
+          <div class="result" id="rebarResult" aria-live="polite">
+            <span data-i18n="resultLabel">النتيجة</span>
+            <strong>213.33 كجم تقريبًا</strong>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tab-bricks">
+          <h3 data-i18n="bricksTitle">حساب عدد الطوب</h3>
+          <p class="muted" data-i18n="bricksDesc">
+            تقدير عدد الطوب حسب مساحة الحائط وأبعاد الطوبة والفاصل.
+          </p>
+
+          <div class="fields-grid">
+            <div class="field">
+              <label for="wallLength" data-i18n="wallLength">طول الحائط (متر)</label>
+              <input type="number" id="wallLength" min="0" step="any" value="5">
+            </div>
+            <div class="field">
+              <label for="wallHeight" data-i18n="wallHeight">ارتفاع الحائط (متر)</label>
+              <input type="number" id="wallHeight" min="0" step="any" value="3">
+            </div>
+            <div class="field">
+              <label for="brickLength" data-i18n="brickLength">طول الطوبة (سم)</label>
+              <input type="number" id="brickLength" min="1" step="any" value="25">
+            </div>
+            <div class="field">
+              <label for="brickHeight" data-i18n="brickHeight">ارتفاع الطوبة (سم)</label>
+              <input type="number" id="brickHeight" min="1" step="any" value="6">
+            </div>
+            <div class="field">
+              <label for="brickJoint" data-i18n="brickJoint">سمك الفاصل (سم)</label>
+              <input type="number" id="brickJoint" min="0" step="any" value="1">
+            </div>
+            <div class="field">
+              <label for="brickWaste" data-i18n="waste">الهالك (%)</label>
+              <input type="number" id="brickWaste" min="0" max="100" step="any" value="5">
+            </div>
+          </div>
+
+          <button class="btn primary" type="button" id="calcBricks" data-i18n="calculate">احسب</button>
+          <div class="result" id="bricksResult" aria-live="polite">
+            <span data-i18n="resultLabel">النتيجة</span>
+            <strong>العدد التقديري يظهر هنا</strong>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tab-plaster">
+          <h3 data-i18n="plasterTitle">تقدير مواد المحارة</h3>
+          <p class="muted" data-i18n="plasterDesc">
+            تقدير حجم المونة الجاف والأسمنت والرمل حسب السمك والنسبة.
+          </p>
+
+          <div class="fields-grid">
+            <div class="field">
+              <label for="plasterArea" data-i18n="area">المساحة (م²)</label>
+              <input type="number" id="plasterArea" min="0" step="any" value="50">
+            </div>
+            <div class="field">
+              <label for="plasterThickness" data-i18n="plasterThickness">السمك (مم)</label>
+              <input type="number" id="plasterThickness" min="1" step="any" value="15">
+            </div>
+            <div class="field">
+              <label for="cementParts" data-i18n="cementParts">أجزاء الأسمنت</label>
+              <input type="number" id="cementParts" min="1" step="any" value="1">
+            </div>
+            <div class="field">
+              <label for="sandParts" data-i18n="sandParts">أجزاء الرمل</label>
+              <input type="number" id="sandParts" min="1" step="any" value="4">
+            </div>
+          </div>
+
+          <button class="btn primary" type="button" id="calcPlaster" data-i18n="calculate">احسب</button>
+          <div class="result" id="plasterResult" aria-live="polite">
+            <span data-i18n="resultLabel">النتيجة</span>
+            <strong>تظهر تقديرات المواد هنا</strong>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tab-paint">
+          <h3 data-i18n="paintTitle">تقدير كمية الدهانات</h3>
+          <p class="muted" data-i18n="paintDesc">
+            يعتمد التقدير على مساحة الدهان وعدد الأوجه وتغطية اللتر.
+          </p>
+
+          <div class="fields-grid">
+            <div class="field">
+              <label for="paintArea" data-i18n="area">المساحة (م²)</label>
+              <input type="number" id="paintArea" min="0" step="any" value="100">
+            </div>
+            <div class="field">
+              <label for="paintCoats" data-i18n="paintCoats">عدد الأوجه</label>
+              <input type="number" id="paintCoats" min="1" step="1" value="2">
+            </div>
+            <div class="field">
+              <label for="paintCoverage" data-i18n="paintCoverage">تغطية اللتر (م²)</label>
+              <input type="number" id="paintCoverage" min="0.1" step="any" value="10">
+            </div>
+            <div class="field">
+              <label for="paintWaste" data-i18n="waste">الهالك (%)</label>
+              <input type="number" id="paintWaste" min="0" max="100" step="any" value="10">
+            </div>
+          </div>
+
+          <button class="btn primary" type="button" id="calcPaint" data-i18n="calculate">احسب</button>
+          <div class="result" id="paintResult" aria-live="polite">
+            <span data-i18n="resultLabel">النتيجة</span>
+            <strong>تظهر كمية الدهان هنا</strong>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tab-units">
+          <h3 data-i18n="unitsTitle">تحويل الوحدات</h3>
+          <p class="muted" data-i18n="unitsDesc">
+            تحويل وحدات الأطوال والمساحات والأحجام والكتلة.
+          </p>
+
+          <div class="field">
+            <label for="unitType" data-i18n="unitType">نوع الوحدة</label>
+            <select id="unitType">
+              <option value="length" data-i18n="lengthType">الطول</option>
+              <option value="area" data-i18n="areaType">المساحة</option>
+              <option value="volume" data-i18n="volumeType">الحجم</option>
+              <option value="mass" data-i18n="massType">الكتلة</option>
+            </select>
+          </div>
+
+          <div class="fields-grid">
+            <div class="field">
+              <label for="unitValue" data-i18n="value">القيمة</label>
+              <input type="number" id="unitValue" step="any" value="1">
+            </div>
+            <div class="field">
+              <label for="unitFrom" data-i18n="fromUnit">من</label>
+              <select id="unitFrom"></select>
+            </div>
+            <div class="field">
+              <label for="unitTo" data-i18n="toUnit">إلى</label>
+              <select id="unitTo"></select>
+            </div>
+          </div>
+
+          <button class="btn primary" type="button" id="convertUnits" data-i18n="convert">حوّل</button>
+          <div class="result" id="unitsResult" aria-live="polite">
+            <span data-i18n="resultLabel">النتيجة</span>
+            <strong>1</strong>
+          </div>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:15px" data-i18n="calculatorDisclaimer">
+        النتائج تقديرية وتعليمية، ولا تغني عن اللوائح والكود الهندسي
+        والمراجعة المهنية قبل التنفيذ.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="courses">
+    <div class="container">
+      <h2 class="heading" data-i18n="coursesTitle">الكورسات والشهادات</h2>
+      <p class="subheading" data-i18n="coursesSub">
+        سجّل الدورات التي أكملتها والشهادات التي حصلت عليها
+      </p>
+
+      <div class="projects-grid" id="coursesGrid">
+        <div class="card" style="padding:22px">
+          <div class="card-body">
+            <h3 data-i18n="noCourses">أضف أول كورس لك</h3>
+            <p data-i18n="noCoursesText">
+              يمكنك إضافة اسم الكورس والجهة المقدمة وتاريخ الإكمال
+              ورابط الشهادة من لوحة الإدارة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id
 <script>
-const $=id=>document.getElementById(id);
-const translations={
-ar:{title:"يوسف عمر رياض | طالب هندسة مدنية",navAbout:"من أنا",navProjects:"المشاريع",navSkills:"المهارات",navTools:"الحاسبات",navCV:"السيرة الذاتية",navContact:"التواصل",tag:"طالب بقسم الهندسة المدنية | جامعة الفيوم",hello:"أهلاً، أنا",name:"يوسف عمر رياض",lead:"أبني معرفتي في الهندسة المدنية خطوة بخطوة، وأهتم بالإنشاءات والمساحة والتصميم التقني.",explore:"استكشف أعمالي ↓",calcBtn:"الحاسبات الهندسية",university:"جامعة الفيوم - قسم الهندسة المدنية",studyYears:"سنوات الدراسة",toolsCount:"حاسبات هندسية",aboutTitle:"من أنا؟",aboutSub:"مقدمة عن رحلتي الأكاديمية",aboutText:"أنا طالب في قسم الهندسة المدنية بكلية الهندسة، جامعة الفيوم. أعمل على تطوير معرفتي في مجالات الإنشاءات والمساحة وخواص مواد البناء والجيوتقنية. أؤمن بأن التعلم المستمر والدمج بين البرمجيات الحديثة والمبادئ الهندسية هما أساس بناء مهندس ناجح، وأسعى لتوثيق هذا التطور من خلال مشاريعي وموقعي الشخصي.",projectsTitle:"معرض المشاريع",projectsSub:"أمثلة تطبيقية لدراستي وتدريباتي الهندسية",search:"بحث",searchPlaceholder:"ابحث في الموقع عن مشروع أو مهارة أو حاسبة...",proj1:"المنشآت الإنشائية",proj1Text:"مساحة لعرض نماذج الجمالونات والرسومات الإنشائية، وتحليل القوى للأعضاء المختلفة.",proj1Tag:"تصميم إنشائي",proj2:"أعمال المساحة",proj2Text:"تطبيقات الإحداثيات، الرفع المساحي، وحساب المسافات والزوايا باستخدام الأجهزة.",proj2Tag:"مساحة وجيوديسيا",proj3:"اختبارات المواد",proj3Text:"تقارير ومشروعات تعليمية في الجيوتقنية وتحديد الخواص الفيزيائية لمواد البناء.",proj3Tag:"مواد وتربة",details:"عرض التفاصيل ←",skillsTitle:"المهارات التقنية والهندسية",skillsSub:"تم تصنيفها بناءً على التخصصات",skillCat1:"💻 برمجيات هندسية",skillCat2:"🏗️ مجالات التخصص",skillCat3:"🌐 تطوير الويب",skill1:"أساسيات الهندسة المدنية",skill2:"الرسم الهندسي",skill3:"المساحة",skill4:"حصر الكميات (مبدئي)",toolsTitle:"لوحة الحاسبات الهندسية",toolsSub:"نتائج تقديرية للتعلم والحصر المبدئي، وليست بديلًا عن الرسومات والمواصفات المعتمدة.",tabConcrete:"حجم الخرسانة",tabSteel:"وزن الحديد",tabBrick:"كميات الطوب",tabPlaster:"المحارة",tabPaint:"الدهانات",tabUnit:"تحويل الوحدات",length:"الطول (متر)",width:"العرض (متر)",thickness:"السمك (متر)",waste:"هالك إضافي (%)",calcConcrete:"احسب حجم الصبة",netVolume:"الحجم الصافي",concreteNote:"لا يشمل خصم الفتحات أو اختلافات الموقع.",diameter:"قطر السيخ (مم)",totalLength:"الطول الإجمالي للأسياخ (متر)",steelWaste:"هالك (%)",calcSteel:"احسب الوزن",estimatedWeight:"الوزن التقريبي",steelNote:"المعادلة التقريبية: القطر² ÷ 162 كجم/متر. راجع جدول المورد والمواصفات.",wallArea:"مساحة الحائط الصافية (م²)",wallType:"نوع البناء",brickWaste:"هالك (%)",calcBrick:"احسب العدد",brickCount:"العدد التقريبي",brickNote:"العدد يتغير حسب مقاس الطوبة والمونة وطريقة الرص.",plasterArea:"مساحة المحارة (م²)",plasterThick:"سمك المحارة (مم)",plasterWaste:"هالك (%)",calcPlaster:"احسب حجم المونة",mortarVolume:"حجم المونة التقريبي",plasterNote:"الحساب للحجم الهندسي فقط ولا يحسب نسب الأسمنت والرمل أو الانكماش.",paintArea:"مساحة الدهان (م²)",coverage:"تغطية اللتر (م²/لتر/وجه)",coats:"عدد الأوجه",paintWaste:"هالك (%)",calcPaint:"احسب كمية الدهان",paintAmount:"الكمية التقريبية المطلوبة",paintNote:"اعتمد على معدل التغطية المكتوب على عبوة المنتج وحالة السطح.",unitValue:"القيمة المراد تحويلها",fromUnit:"من وحدة",toUnit:"إلى وحدة",convert:"إجراء التحويل",conversionResult:"النتيجة",localSave:"يتم حفظ مدخلات الحاسبات على هذا الجهاز فقط.",cvTitle:"السيرة الذاتية",cvSub:"نسخة مختصرة قابلة للطباعة والحفظ بصيغة PDF.",cvDesc:"طالب بقسم الهندسة المدنية، كلية الهندسة، جامعة الفيوم.",cvHint:"استخدم زر الطباعة ثم اختر Save as PDF. أضف بياناتك وخبراتك الفعلية قبل الإرسال الرسمي.",downloadCV:"تحميل / حفظ CV PDF",contactTitle:"لنتواصل معًا",contactSub:"جاهز لمناقشة المشاريع، وتبادل المعرفة الهندسية والبرمجية.",whatsapp:"راسلني عبر واتساب 💬",share:"مشاركة الموقع ↗",copyLink:"نسخ رابط الموقع",footer:"يوسف عمر رياض • طالب هندسة مدنية - جامعة الفيوم",top:"العودة للأعلى ↑",projectDialogNote:"يمكنك إضافة صور ورسومات فعلية لكل مشروع عند توفرها.",dialogDetails:["يعرض هذا القسم نماذج الجمالونات والرسومات الإنشائية وتحليل القوى. أضف صور أعمالك الفعلية وملفات PDF عند توفرها.","يتناول هذا القسم الإحداثيات والرفع المساحي وحساب المسافات والزوايا. أضف تقارير القياس أو الرسومات الخاصة بك.","يعرض هذا القسم تقارير تعليمية عن خواص مواد البناء والتربة. أضف نتائج التجارب والصور مع توضيح أنها أعمال دراسية."],noResults:"لا توجد نتائج مطابقة.",emptyInput:"أدخل قيمًا موجبة وصحيحة في الحقول.",copied:"تم نسخ الرابط",shareError:"تعذر مشاركة الرابط على هذا المتصفح.",searchTitle:"نتائج البحث",themeLight:"☀️ فاتح",themeDark:"🌙 داكن",cvPrint:"ستفتح نافذة الطباعة. اختر Save as PDF لحفظ السيرة الذاتية.",saved:"تم حفظ الإعدادات تلقائيًا."},
-en:{title:"Youssef Omer Riyad | Civil Engineering Student",navAbout:"About",navProjects:"Projects",navSkills:"Skills",navTools:"Calculators",navCV:"CV",navContact:"Contact",tag:"Civil Engineering Student | Fayoum University",hello:"Hello, I'm",name:"Youssef Omer Riyad",lead:"Building my civil engineering knowledge step by step, with interests in structures, surveying, and technical design.",explore:"Explore my work ↓",calcBtn:"Engineering calculators",university:"Fayoum University · Civil Engineering",studyYears:"Years completed",toolsCount:"Calculators",aboutTitle:"About Me",aboutSub:"A brief introduction to my academic journey",aboutText:"I am a civil engineering student at the Faculty of Engineering, Fayoum University. I am developing my knowledge of structures, surveying, construction materials, and geotechnical engineering. I believe continuous learning and combining modern software with engineering fundamentals are key to becoming a successful engineer, and I document this progress through my projects and personal website.",projectsTitle:"Project Gallery",projectsSub:"Examples from my studies and engineering practice",search:"Search",searchPlaceholder:"Search projects, skills, or calculators...",proj1:"Structural Systems",proj1Text:"A space for truss models, structural drawings, and member-force analysis.",proj1Tag:"Structural Design",proj2:"Surveying",proj2Text:"Coordinate applications, land surveying, and distance and angle calculations.",proj2Tag:"Surveying & Geodesy",proj3:"Materials Testing",proj3Text:"Educational reports on geotechnics and physical properties of construction materials.",proj3Tag:"Materials & Soil",details:"View details →",skillsTitle:"Technical & Engineering Skills",skillsSub:"Grouped by area of study",skillCat1:"💻 Engineering Software",skillCat2:"🏗️ Core Areas",skillCat3:"🌐 Web Development",skill1:"Civil Engineering Fundamentals",skill2:"Engineering Drawing",skill3:"Surveying",skill4:"Quantity Takeoff (Basic)",toolsTitle:"Engineering Calculators",toolsSub:"Estimates for learning and preliminary quantity checks; not a substitute for approved drawings or specifications.",tabConcrete:"Concrete Volume",tabSteel:"Rebar Weight",tabBrick:"Brick Quantity",tabPlaster:"Plaster",tabPaint:"Paint",tabUnit:"Unit Converter",length:"Length (m)",width:"Width (m)",thickness:"Thickness (m)",waste:"Extra allowance (%)",calcConcrete:"Calculate concrete",netVolume:"Net volume",concreteNote:"Does not deduct openings or account for site variations.",diameter:"Bar diameter (mm)",totalLength:"Total bar length (m)",steelWaste:"Waste (%)",calcSteel:"Calculate weight",estimatedWeight:"Estimated weight",steelNote:"Approximate formula: diameter² ÷ 162 kg/m. Check supplier tables and specifications.",wallArea:"Net wall area (m²)",wallType:"Wall type",brickWaste:"Waste (%)",calcBrick:"Calculate count",brickCount:"Estimated quantity",brickNote:"Actual count depends on brick size, mortar joints, and laying pattern.",plasterArea:"Plaster area (m²)",plasterThick:"Plaster thickness (mm)",plasterWaste:"Waste (%)",calcPlaster:"Calculate mortar volume",mortarVolume:"Estimated mortar volume",plasterNote:"Geometric volume only; excludes cement/sand mix ratios and shrinkage.",paintArea:"Paint area (m²)",coverage:"Coverage (m²/L/coat)",coats:"Number of coats",paintWaste:"Waste (%)",calcPaint:"Calculate paint",paintAmount:"Estimated paint required",paintNote:"Use the coverage stated on the product container and consider surface condition.",unitValue:"Value to convert",fromUnit:"From unit",toUnit:"To unit",convert:"Convert",conversionResult:"Result",localSave:"Calculator inputs are saved only on this device.",cvTitle:"Curriculum Vitae",cvSub:"A concise version that can be printed or saved as a PDF.",cvDesc:"Civil Engineering student, Faculty of Engineering, Fayoum University.",cvHint:"Choose Print, then Save as PDF. Add your real contact details and experience before official use.",downloadCV:"Print / Save CV PDF",contactTitle:"Let's Connect",contactSub:"Open to discussing projects and sharing engineering and programming knowledge.",whatsapp:"Message me on WhatsApp 💬",share:"Share website ↗",copyLink:"Copy website link",footer:"Youssef Omer Riyad • Civil Engineering Student · Fayoum University",top:"Back to top ↑",projectDialogNote:"Add your real project images and drawings when available.",dialogDetails:["Showcase truss models, structural drawings, and member-force analysis. Add your own project images and PDFs when available.","Explore coordinates, surveying, and distance/angle calculations. Add your own survey reports or drawings.","Present educational reports on construction materials and soil. Add experiment results and images, clearly identifying coursework."],noResults:"No matching results found.",emptyInput:"Enter valid positive values in the fields.",copied:"Link copied",shareError:"This browser could not share the link.",searchTitle:"Search results",themeLight:"☀️ Light",themeDark:"🌙 Dark",cvPrint:"The print window will open. Choose Save as PDF to save your CV.",saved:"Settings are saved automatically."}
-};
-let lang=localStorage.getItem("youssef-lang")||"ar";
-let theme=localStorage.getItem("youssef-theme")||"dark";
+"use strict";
 
-function setLang(next){
-  lang=next;
-  document.documentElement.lang=lang;
-  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
-  document.body.classList.toggle("en",lang==="en");
-  document.title=translations[lang].title;
+/* ==========================================
+   1. أدوات عامة وحفظ البيانات
+========================================== */
 
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const k=el.dataset.i18n;
-    if(translations[lang][k])el.textContent=translations[lang][k];
-  });
+const $ = (id) => document.getElementById(id);
 
-  $("siteSearch").placeholder=translations[lang].searchPlaceholder;
-  $("langBtn").textContent=lang==="ar"?"EN":"عربي";
+const STORAGE_KEY = "youssefCivilPortfolioDataV1";
+const SETTINGS_KEY = "youssefCivilPortfolioSettingsV1";
 
-  document.querySelectorAll("#wallType option").forEach((o,i)=>{
-    o.textContent=lang==="ar"
-      ?(i===0?"نصف طوبة — تقديريًا 58 طوبة/م²":"طوبة كاملة — تقديريًا 116 طوبة/م²")
-      :(i===0?"Half-brick wall — approx. 58 bricks/m²":"Full-brick wall — approx. 116 bricks/m²");
-  });
+let currentLang = "ar";
+let modelRotation = true;
+let threeRenderer = null;
+let threeScene = null;
+let threeCamera = null;
+let threeControls = null;
+let threeAnimationId = null;
 
-  updateThemeLabel();
-  localStorage.setItem("youssef-lang",lang);
-  recalculateAll();
+function numberValue(id) {
+  const el = $(id);
+  if (!el) return NaN;
+  return Number(el.value);
 }
 
-function updateThemeLabel(){
-  document.body.classList.toggle("light",theme==="light");
-  $("themeBtn").textContent=theme==="light"
-    ?translations[lang].themeDark
-    :translations[lang].themeLight;
-  localStorage.setItem("youssef-theme",theme);
-}
-
-$("langBtn").addEventListener("click",()=>setLang(lang==="ar"?"en":"ar"));
-
-$("themeBtn").addEventListener("click",()=>{
-  theme=theme==="dark"?"light":"dark";
-  updateThemeLabel();
-});
-
-function showToast(msg){
-  const t=$("toast");
-  t.textContent=msg;
-  t.classList.add("show");
-  clearTimeout(showToast.timer);
-  showToast.timer=setTimeout(()=>t.classList.remove("show"),2200);
-}
-
-function num(id){return Number($(id).value)}
-
-function validPositive(ids){
-  return ids.every(id=>Number.isFinite(num(id))&&num(id)>0);
-}
-
-function pct(id){
-  const v=num(id);
-  return Number.isFinite(v)&&v>=0&&v<=100?v:null;
-}
-
-function fmt(v,d=3){
-  return new Intl.NumberFormat(lang==="ar"?"ar-EG":"en-US",{
-    maximumFractionDigits:d
-  }).format(v);
-}
-
-function invalidResult(id){
-  $(id).textContent=translations[lang].emptyInput;
-}
-
-function saveInputs(){
-  const data={};
-  document.querySelectorAll("#tools input,#tools select").forEach(el=>{
-    data[el.id]=el.value;
-  });
-  try{
-    localStorage.setItem("youssef-calculator-inputs",JSON.stringify(data));
-  }catch(e){}
-}
-
-function loadInputs(){
-  try{
-    const data=JSON.parse(localStorage.getItem("youssef-calculator-inputs")||"{}");
-    Object.entries(data).forEach(([id,value])=>{
-      if($(id))$(id).value=value;
-    });
-  }catch(e){}
-}
-
-function calculateConcrete(){
-  if(!validPositive(["length","width","height"])||pct("concreteWaste")===null){
-    invalidResult("concreteResult");
-    return;
-  }
-
-  const base=num("length")*num("width")*num("height");
-  $("concreteResult").textContent=fmt(base)+" m³";
-  $("concreteExtra").textContent=(lang==="ar"?"مع الهالك: ":"With allowance: ")+
-    fmt(base*(1+pct("concreteWaste")/100))+" m³";
-  saveInputs();
-}
-
-function calculateSteel(){
-  if(!validPositive(["steelDia","steelLen"])||pct("steelWaste")===null){
-    invalidResult("steelResult");
-    return;
-  }
-
-  const kg=(num("steelDia")**2/162)*num("steelLen");
-  $("steelResult").textContent=fmt(kg,2)+(lang==="ar"?" كجم":" kg");
-  $("steelExtra").textContent=(lang==="ar"?"بالوزن مع الهالك: ":"With allowance: ")+
-    fmt(kg*(1+pct("steelWaste")/100),2)+(lang==="ar"?" كجم":" kg");
-  saveInputs();
-}
-
-function calculateBricks(){
-  if(!validPositive(["wallArea","wallType"])||pct("brickWaste")===null){
-    invalidResult("brickResult");
-    return;
-  }
-
-  const n=Math.ceil(num("wallArea")*num("wallType"));
-  $("brickResult").textContent=fmt(n,0)+(lang==="ar"?" طوبة":" bricks");
-  $("brickExtra").textContent=(lang==="ar"?"مع الهالك: ":"With allowance: ")+
-    fmt(Math.ceil(n*(1+pct("brickWaste")/100)),0)+(lang==="ar"?" طوبة":" bricks");
-  saveInputs();
-}
-
-function calculatePlaster(){
-  if(!validPositive(["plasterArea","plasterThick"])||pct("plasterWaste")===null){
-    invalidResult("plasterResult");
-    return;
-  }
-
-  const v=num("plasterArea")*num("plasterThick")/1000;
-  $("plasterResult").textContent=fmt(v)+" m³";
-  $("plasterExtra").textContent=(lang==="ar"?"مع الهالك: ":"With allowance: ")+
-    fmt(v*(1+pct("plasterWaste")/100))+" m³";
-  saveInputs();
-}
-
-function calculatePaint(){
-  if(!validPositive(["paintArea","coverage","coats"])||
-     pct("paintWaste")===null||!Number.isInteger(num("coats"))){
-    invalidResult("paintResult");
-    return;
-  }
-
-  const liters=num("paintArea")/num("coverage")*num("coats");
-  $("paintResult").textContent=fmt(liters*(1+pct("paintWaste")/100),2)+
-    (lang==="ar"?" لتر":" L");
-  $("paintExtra").textContent=(lang==="ar"?"قبل إضافة الهالك: ":"Before allowance: ")+
-    fmt(liters,2)+(lang==="ar"?" لتر":" L");
-  saveInputs();
-}
-
-const units={m:1,cm:.01,mm:.001,km:1000};
-
-function convertUnits(){
-  const v=num("unitValue");
-  const from=$("fromUnit").value;
-  const to=$("toUnit").value;
-
-  if(!Number.isFinite(v)){
-    invalidResult("unitResult");
-    return;
-  }
-
-  const result=v*units[from]/units[to];
-  $("unitResult").textContent=fmt(result,8)+" "+to;
-  saveInputs();
-}
-
-function recalculateAll(){
-  calculateConcrete();
-  calculateSteel();
-  calculateBricks();
-  calculatePlaster();
-  calculatePaint();
-  convertUnits();
-}
-
-document.querySelectorAll(".tab-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.querySelectorAll(".tab-btn").forEach(b=>
-      b.classList.toggle("active",b===btn)
-    );
-
-    document.querySelectorAll(".tab-pane").forEach(p=>
-      p.classList.toggle("active",p.id===btn.dataset.tab)
-    );
-
-    localStorage.setItem("youssef-active-tab",btn.dataset.tab);
-  });
-});
-
-$("concreteBtn").onclick=calculateConcrete;
-$("steelBtn").onclick=calculateSteel;
-$("brickBtn").onclick=calculateBricks;
-$("plasterBtn").onclick=calculatePlaster;
-$("paintBtn").onclick=calculatePaint;
-$("convertBtn").onclick=convertUnits;
-
-["length","width","height","concreteWaste"].forEach(id=>
-  $(id).addEventListener("input",calculateConcrete)
-);
-
-["steelDia","steelLen","steelWaste"].forEach(id=>
-  $(id).addEventListener("input",calculateSteel)
-);
-
-["wallArea","wallType","brickWaste"].forEach(id=>
-  $(id).addEventListener("input",calculateBricks)
-);
-
-["plasterArea","plasterThick","plasterWaste"].forEach(id=>
-  $(id).addEventListener("input",calculatePlaster)
-);
-
-["paintArea","coverage","coats","paintWaste"].forEach(id=>
-  $(id).addEventListener("input",calculatePaint)
-);
-
-["unitValue","fromUnit","toUnit"].forEach(id=>
-  $(id).addEventListener("input",convertUnits)
-);
-
-$("year").textContent=new Date().getFullYear();
-
-$("downloadCv").addEventListener("click",()=>{
-  showToast(translations[lang].cvPrint);
-  window.print();
-});
-
-$("copyLink").addEventListener("click",async()=>{
-  try{
-    await navigator.clipboard.writeText(location.href);
-    showToast(translations[lang].copied);
-  }catch(e){
-    const ta=document.createElement("textarea");
-    ta.value=location.href;
-    document.body.appendChild(ta);
-    ta.select();
-
-    try{
-      document.execCommand("copy");
-      showToast(translations[lang].copied);
-    }catch(_){
-      showToast(location.href);
+function formatNumber(value, digits = 3) {
+  if (!Number.isFinite(value)) return "—";
+  return value.toLocaleString(
+    currentLang === "ar" ? "ar-EG" : "en-US",
+    {
+      maximumFractionDigits: digits
     }
-
-    ta.remove();
-  }
-});
-
-$("shareBtn").addEventListener("click",async()=>{
-  try{
-    if(navigator.share){
-      await navigator.share({
-        title:document.title,
-        text:translations[lang].lead,
-        url:location.href
-      });
-    }else{
-      await navigator.clipboard.writeText(location.href);
-      showToast(translations[lang].copied);
-    }
-  }catch(e){
-    if(e.name!=="AbortError")showToast(translations[lang].shareError);
-  }
-});
-
-function doSearch(){
-  const q=$("siteSearch").value.trim().toLowerCase();
-  const box=$("searchResults");
-  box.innerHTML="";
-
-  if(!q){
-    box.classList.remove("show");
-    return;
-  }
-
-  const candidates=[...document.querySelectorAll(".searchable")];
-  const matches=candidates.filter(el=>
-    (el.innerText+" "+(el.dataset.search||"")).toLowerCase().includes(q)
   );
-
-  if(!matches.length){
-    box.textContent=translations[lang].noResults;
-  }else{
-    matches.forEach(el=>{
-      const a=document.createElement("a");
-      a.className="search-result";
-      a.href="#"+(el.closest("section")?.id||"projects");
-      a.textContent=el.querySelector("h3")?.innerText||el.innerText.slice(0,70);
-      a.addEventListener("click",()=>box.classList.remove("show"));
-      box.appendChild(a);
-    });
-  }
-
-  box.classList.add("show");
 }
 
-$("searchBtn").addEventListener("click",doSearch);
+function getText(ar, en) {
+  return currentLang === "ar" ? ar : en;
+}
 
-$("siteSearch").addEventListener("keydown",e=>{
-  if(e.key==="Enter")doSearch();
+function showToast(message) {
+  const toast = $("toast");
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2800);
+}
+
+function showResult(id, title, value, note = "") {
+  const target = $(id);
+  if (!target) return;
+
+  target.replaceChildren();
+
+  const label = document.createElement("span");
+  label.textContent = title;
+
+  const strong = document.createElement("strong");
+  strong.textContent = value;
+
+  target.append(label, strong);
+
+  if (note) {
+    const details = document.createElement("div");
+    details.className = "small";
+    details.textContent = note;
+    target.appendChild(details);
+  }
+}
+
+function readSavedData() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return { projects: [], courses: [] };
+
+    const data = JSON.parse(raw);
+
+    return {
+      projects: Array.isArray(data.projects) ? data.projects : [],
+      courses: Array.isArray(data.courses) ? data.courses : []
+    };
+  } catch (error) {
+    console.error("Could not read saved data", error);
+    return { projects: [], courses: [] };
+  }
+}
+
+function saveData(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    renderProjects();
+    renderCourses();
+    renderAdminLists();
+    return true;
+  } catch (error) {
+    showToast(
+      getText(
+        "تعذر حفظ البيانات. تحقق من مساحة المتصفح.",
+        "Could not save data. Check browser storage."
+      )
+    );
+    return false;
+  }
+}
+
+let siteData = readSavedData();
+
+/* ==========================================
+   2. تبديل اللغة والمظهر
+========================================== */
+
+const translations = {
+  ar: {
+    navHome: "الرئيسية",
+    navAbout: "عني",
+    navProjects: "المشروعات",
+    navSkills: "المهارات",
+    navTools: "الحاسبات",
+    navCourses: "الكورسات",
+    navContact: "تواصل معي",
+    heroTag: "طالب هندسة مدنية",
+    heroHello: "أهلاً، أنا",
+    heroLead: "طالب بكلية الهندسة جامعة الفيوم، مهتم بالإنشاءات والتصميم الهندسي والتكنولوجيا.",
+    viewProjects: "استكشف مشروعاتي",
+    contactMe: "تواصل معي",
+    downloadCV: "تحميل CV PDF",
+    studyYears: "سنوات الدراسة",
+    civil: "مدني",
+    specialty: "التخصص",
+    university: "الجامعة",
+    profileName: "يوسف عمر رياض",
+    profileTitle: "طالب الهندسة المدنية",
+    aboutTitle: "نبذة عني",
+    aboutSub: "رحلتي في الهندسة المدنية",
+    aboutText: "أنا يوسف عمر رياض، طالب بقسم الهندسة المدنية بكلية الهندسة جامعة الفيوم. أهتم بفهم أساسيات التصميم الإنشائي وحساب الكميات والمساحة والتربة.",
+    aboutNote: "يتم تحديث هذا القسم باستمرار لإضافة الخبرات والمشروعات والكورسات الجديدة.",
+    projectsTitle: "المشروعات الهندسية",
+    projectsSub: "نماذج ومشروعات تعليمية يمكنك تطويرها وإضافة أعمالك إليها",
+    searchPlaceholder: "ابحث عن مشروع...",
+    project1Title: "تحليل الجمالونات",
+    project1Text: "نموذج تعليمي لفهم العناصر الإنشائية والقوى المؤثرة في الجمالونات.",
+    project2Title: "حساب كميات الخرسانة",
+    project2Text: "تطبيق مبسط لحساب حجم الخرسانة للعناصر الهندسية.",
+    project3Title: "المساحة والإحداثيات",
+    project3Text: "أدوات تعليمية لتحويل الوحدات ومراجعة بعض الحسابات المستخدمة في المساحة.",
+    viewModel: "عرض النموذج ثلاثي الأبعاد ←",
+    openCalculator: "افتح الحاسبة ←",
+    sampleNote: "ملاحظة: النماذج أمثلة تعليمية وليست مشروعات تنفيذية معتمدة.",
+    modelTitle: "معرض ثلاثي الأبعاد",
+    modelSub: "نموذج جمالون إنشائي قابل للتدوير والتكبير",
+    modelLoading: "جاري تجهيز النموذج ثلاثي الأبعاد...",
+    resetModel: "إعادة ضبط العرض",
+    rotateModel: "تشغيل / إيقاف الدوران",
+    modelNote: "يحتاج العرض ثلاثي الأبعاد إلى اتصال بالإنترنت لتحميل مكتبة Three.js.",
+    skillsTitle: "المهارات الهندسية",
+    skillsSub: "المهارات والبرامج التي يمكنك توثيق مستواك فيها",
+    skill1Title: "التخصصات الهندسية",
+    skill2Title: "البرامج الهندسية",
+    skill3Title: "مهارات العمل",
+    skillTeam: "العمل الجماعي",
+    skillProblem: "حل المشكلات",
+    skillResearch: "البحث والتعلم",
+    skillPlanning: "التخطيط",
+    skillsDisclaimer: "احتفظ فقط بالبرامج التي تعلمتها بالفعل.",
+    toolsTitle: "الحاسبات الهندسية",
+    toolsSub: "حاسبات تعليمية مبسطة — راجع الافتراضات قبل استخدام النتائج",
+    tabConcrete: "الخرسانة",
+    tabRebar: "حديد التسليح",
+    tabBricks: "الطوب",
+    tabPlaster: "المحارة",
+    tabPaint: "الدهانات",
+    tabUnits: "تحويل الوحدات",
+    concreteTitle: "حساب حجم الخرسانة",
+    concreteDesc: "أدخل أبعاد العنصر بالمتر لحساب الحجم ونسبة الهالك.",
+    length: "الطول (متر)",
+    width: "العرض (متر)",
+    height: "الارتفاع / السمك (متر)",
+    waste: "الهالك (%)",
+    calculate: "احسب",
+    resultLabel: "النتيجة",
+    rebarTitle: "تقدير وزن حديد التسليح",
+    rebarDesc: "تقدير وزن القضبان باستخدام العلاقة التقريبية للحديد.",
+    diameter: "قطر السيخ (مم)",
+    barLength: "طول السيخ (متر)",
+    barCount: "عدد الأسياخ",
+    bricksTitle: "حساب عدد الطوب",
+    bricksDesc: "تقدير عدد الطوب حسب مساحة الحائط وأبعاد الطوبة والفاصل.",
+    wallLength: "طول الحائط (متر)",
+    wallHeight: "ارتفاع الحائط (متر)",
+    brickLength: "طول الطوبة (سم)",
+    brickHeight: "ارتفاع الطوبة (سم)",
+    brickJoint: "سمك الفاصل (سم)",
+    plasterTitle: "تقدير مواد المحارة",
+    plasterDesc: "تقدير حجم المونة الجاف والأسمنت والرمل حسب السمك والنسبة.",
+    area: "المساحة (م²)",
+    plasterThickness: "السمك (مم)",
+    cementParts: "أجزاء الأسمنت",
+    sandParts: "أجزاء الرمل",
+    paintTitle: "تقدير كمية الدهانات",
+    paintDesc: "يعتمد التقدير على المساحة وعدد الأوجه وتغطية اللتر.",
+    paintCoats: "عدد الأوجه",
+    paintCoverage: "تغطية اللتر (م²)",
+    unitsTitle: "تحويل الوحدات",
+    unitsDesc: "تحويل وحدات الأطوال والمساحات والأحجام والكتلة.",
+    unitType: "نوع الوحدة",
+    lengthType: "الطول",
+    areaType: "المساحة",
+    volumeType: "الحجم",
+    massType: "الكتلة",
+    value: "القيمة",
+    fromUnit: "من",
+    toUnit: "إلى",
+    convert: "حوّل",
+    calculatorDisclaimer: "النتائج تقديرية وتعليمية ولا تغني عن الكود الهندسي والمراجعة المهنية.",
+    coursesTitle: "الكورسات والشهادات",
+    coursesSub: "سجّل الدورات التي أكملتها والشهادات التي حصلت عليها",
+    noCourses: "أضف أول كورس لك",
+    noCoursesText: "يمكنك إضافة اسم الكورس والجهة المقدمة وتاريخ الإكمال ورابط الشهادة من لوحة الإدارة.",
+    cvTitle: "السيرة الذاتية",
+    cvText: "أنشئ نسخة مناسبة للطباعة أو الحفظ بصيغة PDF.",
+    adminTitle: "لوحة إدارة المحتوى",
+    adminSub: "إدارة المشروعات والكورسات وحفظ نسخة احتياطية",
+    adminWarning: "تنبيه: هذه لوحة محلية وليست نظام دخول آمنًا. البيانات تُحفظ على هذا المتصفح فقط.",
+    addProjectTitle: "إضافة مشروع",
+    projectName: "اسم المشروع",
+    projectDescription: "وصف المشروع",
+    projectCategory: "التخصص / التصنيف",
+    addProject: "إضافة المشروع",
+    addCourseTitle: "إضافة كورس أو شهادة",
+    courseName: "اسم الكورس",
+    courseProvider: "الجهة المقدمة",
+    courseDate: "تاريخ الإكمال",
+    certificateLink: "رابط الشهادة (اختياري)",
+    addCourse: "إضافة الكورس",
+    backupTitle: "النسخ الاحتياطي",
+    backupText: "صدّر بيانات مشروعاتك وكورساتك إلى JSON أو استورد نسخة محفوظة.",
+    exportData: "تصدير البيانات",
+    importData: "استيراد البيانات",
+    resetData: "إعادة ضبط المحتوى",
+    contactTitle: "خلّينا نتواصل",
+    contactText: "للتواصل بخصوص المشروعات أو التعاون الهندسي.",
+    whatsapp: "تواصل عبر واتساب",
+    shareSite: "مشاركة الموقع",
+    footerText: "© يوسف عمر رياض — البورتفوليو الشخصي للهندسة المدنية",
+    footerNote: "صُنع للتعلم والتطوير الهندسي.",
+    projectAdded: "تمت إضافة المشروع.",
+    courseAdded: "تمت إضافة الكورس.",
+    enterProject: "اكتب اسم المشروع والوصف أولًا.",
+    enterCourse: "اكتب اسم الكورس أولًا.",
+    delete: "حذف",
+    projectDeleted: "تم حذف المشروع.",
+    courseDeleted: "تم حذف الكورس.",
+    invalidValues: "يرجى إدخال قيم صحيحة أكبر من الصفر.",
+    invalidWaste: "نسبة الهالك يجب أن تكون بين 0 و100.",
+    noResults: "لا توجد نتائج مطابقة.",
+    noProjects: "لم تتم إضافة مشروعات بعد.",
+    noCoursesSaved: "لم تتم إضافة كورسات بعد.",
+    exportDone: "تم تجهيز النسخة الاحتياطية.",
+    importDone: "تم استيراد البيانات.",
+    importError: "ملف JSON غير صالح.",
+    resetConfirm: "هل تريد حذف كل المشروعات والكورسات المحفوظة؟",
+    resetDone: "تمت إعادة ضبط المحتوى.",
+    copied: "تم نسخ الرابط.",
+    shareError: "لم تنجح المشاركة تلقائيًا. يمكنك نسخ رابط الموقع يدويًا.",
+    kg: "كجم",
+    cubicMeter: "م³",
+    liters: "لتر",
+    bricks: "طوبة تقريبًا",
+    cementBags: "شيكارة تقريبًا",
+    sand: "م³ رمل تقريبًا",
+    cvTitlePrint: "السيرة الذاتية",
+    cvEducation: "التعليم",
+    cvEducationText: "طالب بقسم الهندسة المدنية، كلية الهندسة، جامعة الفيوم.",
+    cvInterests: "الاهتمامات",
+    cvInterestsText: "الهندسة الإنشائية، حساب الكميات، المساحة، وتطوير المهارات الهندسية.",
+    cvContact: "بيانات التواصل",
+    cvContactText: "أضف بريدك الإلكتروني ورقم التواصل قبل استخدام هذه النسخة.",
+    modelUnavailable: "تعذر تحميل العرض ثلاثي الأبعاد. تحقق من اتصال الإنترنت.",
+    copiedResult: "تم نسخ النتيجة.",
+    unitError: "تعذر تحويل هذه الوحدة."
+  },
+
+  en: {
+    navHome: "Home",
+    navAbout: "About",
+    navProjects: "Projects",
+    navSkills: "Skills",
+    navTools: "Calculators",
+    navCourses: "Courses",
+    navContact: "Contact",
+    heroTag: "Civil Engineering Student",
+    heroHello: "Hello, I'm",
+    heroLead: "A civil engineering student at Fayoum University interested in construction, engineering design and technology.",
+    viewProjects: "Explore Projects",
+    contactMe: "Contact Me",
+    downloadCV: "Download CV PDF",
+    studyYears: "Years of Study",
+    civil: "Civil",
+    specialty: "Specialization",
+    university: "University",
+    profileName: "Youssef Omar Riyad",
+    profileTitle: "Civil Engineering Student",
+    aboutTitle: "About Me",
+    aboutSub: "My Civil Engineering Journey",
+    aboutText: "I'm Youssef Omar Riyad, a civil engineering student at Fayoum University. I am interested in structural design, quantity surveying, surveying and geotechnical engineering.",
+    aboutNote: "This section can be updated with new experience, projects and courses.",
+    projectsTitle: "Engineering Projects",
+    projectsSub: "Educational models and projects you can extend with your own work",
+    searchPlaceholder: "Search projects...",
+    project1Title: "Truss Analysis",
+    project1Text: "An educational model for understanding structural members and forces in trusses.",
+    project2Title: "Concrete Quantity Calculation",
+    project2Text: "A simple tool for estimating concrete volume.",
+    project3Title: "Surveying and Coordinates",
+    project3Text: "Educational unit conversion and surveying calculation tools.",
+    viewModel: "View 3D Model ←",
+    openCalculator: "Open Calculator ←",
+    sampleNote: "Note: These are educational examples, not approved construction designs.",
+    modelTitle: "3D Gallery",
+    modelSub: "A rotatable and zoomable structural truss model",
+    modelLoading: "Loading 3D model...",
+    resetModel: "Reset View",
+    rotateModel: "Toggle Rotation",
+    modelNote: "The 3D viewer requires an internet connection to load Three.js.",
+    skillsTitle: "Engineering Skills",
+    skillsSub: "Document your skills and software proficiency",
+    skill1Title: "Engineering Subjects",
+    skill2Title: "Engineering Software",
+    skill3Title: "Work Skills",
+    skillTeam: "Teamwork",
+    skillProblem: "Problem Solving",
+    skillResearch: "Research and Learning",
+    skillPlanning: "Planning",
+    skillsDisclaimer: "Keep only the software you have actually learned.",
+    toolsTitle: "Engineering Calculators",
+    toolsSub: "Educational calculators — review assumptions before using results",
+    tabConcrete: "Concrete",
+    tabRebar: "Rebar",
+    tabBricks: "Bricks",
+    tabPlaster: "Plaster",
+    tabPaint: "Paint",
+    tabUnits: "Unit Conversion",
+    concreteTitle: "Concrete Volume",
+    concreteDesc: "Enter element dimensions in meters.",
+    length: "Length (m)",
+    width: "Width (m)",
+    height: "Height / Thickness (m)",
+    waste: "Waste (%)",
+    calculate: "Calculate",
+    resultLabel: "Result",
+    rebarTitle: "Rebar Weight Estimate",
+    rebarDesc: "Estimate bar weight using an approximate steel formula.",
+    diameter: "Bar Diameter (mm)",
+    barLength: "Bar Length (m)",
+    barCount: "Number of Bars",
+    bricksTitle: "Brick Count Estimate",
+    bricksDesc: "Estimate brick count using wall and brick dimensions.",
+    wallLength: "Wall Length (m)",
+    wallHeight: "Wall Height (m)",
+    brickLength: "Brick Length (cm)",
+    brickHeight: "Brick Height (cm)",
+    brickJoint: "Joint Thickness (cm)",
+    plasterTitle: "Plaster Material Estimate",
+    plasterDesc: "Estimate dry mortar, cement and sand based on thickness and mix.",
+    area: "Area (m²)",
+    plasterThickness: "Thickness (mm)",
+    cementParts: "Cement Parts",
+    sandParts: "Sand Parts",
+    paintTitle: "Paint Estimate",
+    paintDesc: "Based on area, coats and coverage per liter.",
+    paintCoats: "Number of Coats",
+    paintCoverage: "Coverage per Liter (m²)",
+    unitsTitle: "Unit Conversion",
+    unitsDesc: "Convert length, area, volume and mass units.",
+    unitType: "Unit Type",
+    lengthType: "Length",
+    areaType: "Area",
+    volumeType: "Volume",
+    massType: "Mass",
+    value: "Value",
+    fromUnit: "From",
+    toUnit: "To",
+    convert: "Convert",
+    calculatorDisclaimer: "Results are estimates for learning and do not replace engineering codes or professional review.",
+    coursesTitle: "Courses and Certificates",
+    coursesSub: "Record completed courses and certificates",
+    noCourses: "Add your first course",
+    noCoursesText: "Add course name, provider, completion date and certificate link from the admin panel.",
+    cvTitle: "Curriculum Vitae",
+    cvText: "Prepare a version for printing or saving as PDF.",
+    adminTitle: "Content Management",
+    adminSub: "Manage projects and courses and back up your content",
+    adminWarning: "This is a local panel, not a secure login system. Data is saved only in this browser.",
+    addProjectTitle: "Add Project",
+    projectName: "Project Name",
+    projectDescription: "Project Description",
+    projectCategory: "Category",
+    addProject: "Add Project",
+    addCourseTitle: "Add Course or Certificate",
+    courseName: "Course Name",
+    courseProvider: "Provider",
+    courseDate: "Completion Date",
+    certificateLink: "Certificate Link (Optional)",
+    addCourse: "Add Course",
+    backupTitle: "Backup",
+    backupText: "Export projects and courses to JSON or import a saved backup.",
+    exportData: "Export Data",
+    importData: "Import Data",
+    resetData: "Reset Content",
+    contactTitle: "Let's Connect",
+    contactText: "Contact me about projects or engineering collaboration.",
+    whatsapp: "Contact on WhatsApp",
+    shareSite: "Share Website",
+    footerText: "© Youssef Omar Riyad — Civil Engineering Portfolio",
+    footerNote: "Built for learning and engineering development.",
+    projectAdded: "Project added.",
+    courseAdded: "Course added.",
+    enterProject: "Enter a project name and description.",
+    enterCourse: "Enter a course name.",
+    delete: "Delete",
+    projectDeleted: "Project deleted.",
+    courseDeleted: "Course deleted.",
+    invalidValues: "Enter valid values greater than zero.",
+    invalidWaste: "Waste must be between 0 and 100.",
+    noResults: "No matching results.",
+    noProjects: "No projects have been added yet.",
+    noCoursesSaved: "No courses have been added yet.",
+    exportDone: "Backup file is ready.",
+    importDone: "Data imported.",
+    importError: "Invalid JSON file.",
+    resetConfirm: "Delete all saved projects and courses?",
+    resetDone: "Content reset.",
+    copied: "Link copied.",
+    shareError: "Automatic sharing failed. Copy the website URL manually.",
+    kg: "kg",
+    cubicMeter: "m³",
+    liters: "liters",
+    bricks: "bricks approx.",
+    cementBags: "cement bags approx.",
+    sand: "m³ sand approx.",
+    cvTitlePrint: "Curriculum Vitae",
+    cvEducation: "Education",
+    cvEducationText: "Civil Engineering Student, Faculty of Engineering, Fayoum University.",
+    cvInterests: "Interests",
+    cvInterestsText: "Structural engineering, quantity surveying, surveying and engineering skills development.",
+    cvContact: "Contact",
+    cvContactText: "Add your email and contact number before using this version.",
+    modelUnavailable: "Could not load the 3D viewer. Check your internet connection.",
+    copiedResult: "Result copied.",
+    unitError: "Could not convert this unit."
+  }
+};
+
+/* ==========================================
+   3. تطبيق اللغة على الصفحة
+========================================== */
+
+function setLanguage(lang) {
+  currentLang = lang === "en" ? "en" : "ar";
+
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.body.classList.toggle("en", currentLang === "en");
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    const translated = translations[currentLang][key];
+
+    if (typeof translated === "string") {
+      element.textContent = translated;
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder");
+    const translated = translations[currentLang][key];
+
+    if (typeof translated === "string") {
+      element.placeholder = translated;
+    }
+  });
+
+  $("langBtn").textContent = currentLang === "ar" ? "EN" : "عربي";
+
+  try {
+    const settings = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
+    settings.lang = currentLang;
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+  } catch (_) {}
+
+  renderProjects();
+  renderCourses();
+  renderAdminLists();
+}
+
+$("langBtn").addEventListener("click", () => {
+  setLanguage(currentLang === "ar" ? "en" : "ar");
 });
 
-$("siteSearch").addEventListener("input",()=>{
-  if(!$("siteSearch").value.trim())$("searchResults").classList.remove("show");
+$("themeBtn").addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  const isLight = document.body.classList.contains("light");
+  $("themeBtn").textContent = isLight ? "☾" : "☀";
+
+  try {
+    const settings = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
+    settings.light = isLight;
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+  } catch (_) {}
 });
 
-const dialog=$("projectDialog");
+/* ==========================================
+   4. تبويبات الحاسبات
+========================================== */
 
-document.querySelectorAll("[data-project]").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const i=Number(btn.dataset.project)-1;
-    $("dialogTitle").textContent=translations[lang]["proj"+(i+1)];
-    $("dialogText").textContent=translations[lang].dialogDetails[i];
+function openTab(name) {
+  document.querySelectorAll(".tab-btn").forEach((button) => {
+    button.classList.toggle("active", button.dataset.tab === name);
+  });
 
-    if(dialog.showModal)dialog.showModal();
-    else alert($("dialogText").textContent);
+  document.querySelectorAll(".tab-pane").forEach((pane) => {
+    pane.classList.toggle("active", pane.id === "tab-" + name);
+  });
+}
+
+document.querySelectorAll(".tab-btn").forEach((button) => {
+  button.addEventListener("click", () => openTab(button.dataset.tab));
+});
+
+document.querySelectorAll("[data-go-tools]").forEach((button) => {
+  button.addEventListener("click", () => {
+    openTab(button.dataset.goTools);
+    $("tools").scrollIntoView({ behavior: "smooth" });
   });
 });
 
-$("closeDialog").addEventListener("click",()=>dialog.close());
+/* ==========================================
+   5. حساب حجم الخ
+// ================================
+// FINAL FEATURES
+// ================================
 
-dialog.addEventListener("click",e=>{
-  if(e.target===dialog)dialog.close();
+// 1) CV: Print or save as PDF
+function downloadCV() {
+  window.print();
+}
+
+document.querySelectorAll(
+  '#downloadCV, #printCV, [data-action="download-cv"]'
+).forEach(function (button) {
+  button.addEventListener('click', downloadCV);
 });
 
-if("IntersectionObserver"in window){
-  const observer=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add("visible");
-        observer.unobserve(e.target);
+// 2) Share website
+async function shareWebsite() {
+  const shareData = {
+    title: 'Youssef Omar Riyad | Civil Engineering',
+    text: 'Explore my civil engineering portfolio and engineering tools.',
+    url: window.location.href
+  };
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+    } else if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(shareData.url);
+      showToast('Website link copied!');
+    } else {
+      window.prompt('Copy website link:', shareData.url);
+    }
+  } catch (error) {
+    if (error.name !== 'AbortError') {
+      window.prompt('Copy website link:', shareData.url);
+    }
+  }
+}
+
+document.querySelectorAll(
+  '#shareBtn, [data-action="share"]'
+).forEach(function (button) {
+  button.addEventListener('click', shareWebsite);
+});
+
+// 3) Animated sections
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
       }
     });
-  },{threshold:.12});
+  }, { threshold: 0.12 });
 
-  document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-}else{
-  document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
+  document.querySelectorAll(
+    '.reveal, .project-card, .course-card, .tool-card'
+  ).forEach(function (element) {
+    revealObserver.observe(element);
+  });
 }
 
-loadInputs();
-setLang(lang);
+// 4) Real 3D truss model using Three.js
+(function setupTrussViewer() {
+  const canvas = document.getElementById('trussCanvas');
+  if (!canvas) return;
 
-theme=localStorage.getItem("youssef-theme")||"dark";
-updateThemeLabel();
+  function showFallback() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
 
-const savedTab=localStorage.getItem("youssef-active-tab");
+    parent.innerHTML = `
+      <div style="
+        min-height:280px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        gap:12px;
+        padding:24px;
+        text-align:center;
+        color:var(--text,#fff);
+        background:var(--card,#151515);
+        border-radius:16px">
+        <div style="font-size:42px">🏗️</div>
+        <strong>3D Truss Viewer</strong>
+        <p>Connect to the internet to load the interactive 3D model.</p>
+      </div>`;
+  }
 
-if(savedTab&&$(savedTab)){
-  document.querySelectorAll(".tab-btn").forEach(b=>
-    b.classList.toggle("active",b.dataset.tab===savedTab)
-  );
+  function loadThreeJS(callback) {
+    if (window.THREE) {
+      callback();
+      return;
+    }
 
-  document.querySelectorAll(".tab-pane").forEach(p=>
-    p.classList.toggle("active",p.id===savedTab)
-  );
-}
+    const script = document.createElement('script');
+    script.src =
+      'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
 
-recalculateAll();
-</script>
-</body>
-</html>
+    script.onload = callback;
+    script.onerror = showFallback;
+    document.head.appendChild(script);
+  }
+
+  loadThreeJS(function () {
+    if (!window.THREE) {
+      showFallback();
+      return;
+    }
+
+    const THREE = window.THREE;
+    const parent = canvas.parentElement || canvas;
+    let width = parent.clientWidth || 600;
+    let height = 360;
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x10141d);
+
+    const camera = new THREE.PerspectiveCamera(
+      45, width / height, 0.1, 1000
+    );
+    camera.position.set(8, 5, 10);
+    camera.lookAt(0, 1.5, 0);
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      antialias: true,
+      alpha: false
+    });
+
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(width, height, false);
+
+    scene.add(new THREE.AmbientLight(0xffffff, 1.4));
+
+    const light = new THREE.DirectionalLight(0xffffff, 2);
+    light.position.set(5, 10, 7);
+    scene.add(light);
+
+    const truss = new THREE.Group();
+    scene.add(truss);
+
+    const goldMaterial = new THREE.MeshStandardMaterial({
+      color: 0xe0ad45,
+      metalness: 0.55,
+      roughness: 0.35
+    });
+
+    const steelMaterial = new THREE.MeshStandardMaterial({
+      color: 0x9ba9ba,
+      metalness: 0.65,
+      roughness: 0.4
+    });
+
+    function addBar(start, end, material, thickness) {
+      const a = new THREE.Vector3(start[0], start[1], start[2]);
+      const b = new THREE.Vector3(end[0], end[1], end[2]);
+
+      const direction = new THREE.Vector3().subVectors(b, a);
+      const length = direction.length();
+
+      const geometry = new THREE.CylinderGeometry(
+        thickness, thickness, length, 8
+      );
+
+      const mesh = new THREE.Mesh(geometry, material);
+      mesh.position.copy(a).add(b).multiplyScalar(0.5);
+      mesh.quaternion.setFromUnitVectors(
+        new THREE.Vector3(0, 1, 0),
+        direction.normalize()
+      );
+
+      truss.add(mesh);
+    }
+
+    // Warren-style truss geometry
+    const span = 8;
+    const panels = 8;
+    const heightTruss = 2.2;
+    const depth = 1.5;
+
+    const bottom = [];
+    const top = [];
+
+    for (let i = 0; i <= panels; i++) {
+      const x = -span / 2 + (span / panels) * i;
+      bottom.push([x, 0, -depth / 2]);
+      top.push([x, heightTruss, -depth / 2]);
+    }
+
+    // Side trusses
+    [-depth / 2, depth / 2].forEach(function (z) {
+      for (let i = 0; i <= panels; i++) {
+        const x = -span / 2 + (span / panels) * i;
+        const lower = [x, 0, z];
+        const upper = [x, heightTruss, z];
+
+        addBar(lower, upper, steelMaterial, 0.045);
+
+        if (i < panels) {
+          const nextX = -span / 2 + (span / panels) * (i + 1);
+          const nextLower = [nextX, 0, z];
+          const nextUpper = [nextX, heightTruss, z];
+
+          addBar(lower, nextLower, goldMaterial, 0.055);
+          addBar(upper, nextUpper, goldMaterial, 0.055);
+
+          if (i % 2 === 0) {
+            addBar(lower, nextUpper, steelMaterial, 0.035);
+          } else {
+            addBar(upper, nextLower, steelMaterial, 0.035);
+          }
+        }
+      }
+    });
+
+    // Transverse connections between both sides
+    for (let i = 0; i <= panels; i++) {
+      const x = -span / 2 + (span / panels) * i;
+
+      addBar(
+        [x, 0, -depth / 2],
+        [x, 0, depth / 2],
+        goldMaterial,
+        0.04
+      );
+
+      addBar(
+        [x, heightTruss, -depth / 2],
+        [x, heightTruss, depth / 2],
+        steelMaterial,
+        0.035
+      );
+    }
+
+    // Top cross-bracing
+    for (let i = 0; i < panels; i++) {
+      const x1 = -span / 2 + (span / panels) * i;
+      const x2 = -span / 2 + (span / panels) * (i + 1);
+
+      addBar(
+        [x1, heightTruss, -depth / 2],
+        [x2, heightTruss, depth / 2],
+        steelMaterial,
+        0.025
+      );
+
+      addBar(
+        [x1, heightTruss, depth / 2],
+        [x2, heightTruss, -depth / 2],
+        steelMaterial,
+        0.025
+      );
+    }
+
+    // Ground grid
+    const grid = new THREE.GridHelper(12, 24, 0x555b68, 0x303642);
+    grid.position.y = -0.08;
+    scene.add(grid);
+
+    let dragging = false;
+    let previousX = 0;
+    let previousY = 0;
+    let rotationY = 0;
+    let rotationX = 0;
+
+    canvas.style.cursor = 'grab';
+    canvas.style.touchAction = 'pan-y';
+
+    canvas.addEventListener('pointerdown', function (event) {
+      dragging = true;
+      previousX = event.clientX;
+      previousY = event.clientY;
+      canvas.style.cursor = 'grabbing';
+      if (canvas.setPointerCapture) {
+        canvas.setPointerCapture(event.pointerId);
+      }
+    });
+
+    canvas.addEventListener('pointermove', function (event) {
+      if (!dragging) return;
+
+      const dx = event.clientX - previousX;
+      const dy = event.clientY - previousY;
+
+      rotationY += dx * 0.01;
+      rotationX += dy * 0.005;
+      rotationX = Math.max(-0.7, Math.min(0.7, rotationX));
+
+      truss.rotation.y = rotationY;
+      truss.rotation.x = rotationX;
+
+      previousX = event.clientX;
+      previousY = event.clientY;
+    });
+
+    function stopDragging() {
+      dragging = false;
+      canvas.style.cursor = 'grab';
+    }
+
+    canvas.addEventListener('pointerup', stopDragging);
+    canvas.addEventListener('pointercancel', stopDragging);
+    canvas.addEventListener('pointerleave', stopDragging);
+
+    const resetButton = document.getElementById('resetTrussView');
+    if (resetButton) {
+      resetButton.addEventListener('click', function () {
+        truss.rotation.set(0, 0, 0);
+        camera.position.set(8, 5, 10);
+        camera.lookAt(0, 1.5, 0);
+        rotationX = 0;
+        rotationY = 0;
+      });
+    }
+
+    function resizeViewer() {
+      width = parent.clientWidth || 600;
+      height = 360;
+
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height, false);
+    }
+
+    if ('ResizeObserver' in window) {
+      const resizeObserver = new ResizeObserver(resizeViewer);
+      resizeObserver.observe(parent);
+    } else {
+      window.addEventListener('resize', resizeViewer);
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  });
+})();
