@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -170,7 +169,6 @@ h1{
   text-align:center;
 }
 
-/* الصورة الشخصية - بدون حروف خلفها */
 .avatar{
   width:175px;
   height:175px;
@@ -324,6 +322,18 @@ footer{
   font-size:13px;
 }
 
+/* تأثيرات التمرير (Scroll Animations) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media(max-width:720px){
   .nav{
     align-items:flex-start;
@@ -401,7 +411,7 @@ footer{
 </nav>
 
 <header class="hero" id="home">
-  <div class="container hero-grid">
+  <div class="container hero-grid fade-in">
 
     <div>
       <span class="tag">طالب هندسة مدنية | جامعة الفيوم</span>
@@ -437,7 +447,7 @@ footer{
 <main>
 
 <section id="about">
-  <div class="container">
+  <div class="container fade-in">
     <h2 class="heading">من أنا؟</h2>
     <p class="subheading">رحلتي في الهندسة والتعلم</p>
 
@@ -452,48 +462,37 @@ footer{
 </section>
 
 <section id="projects">
-  <div class="container">
+  <div class="container fade-in">
     <h2 class="heading">المشاريع الهندسية</h2>
     <p class="subheading">أمثلة تعليمية يمكنك استبدالها بأعمالك الحقيقية</p>
 
     <div class="grid">
-
       <article class="card">
         <div class="card-icon">🏗️</div>
         <h3>المنشآت الإنشائية</h3>
-        <p>
-          مساحة لعرض نماذج الجمالونات والرسومات الإنشائية
-          والمشروعات الدراسية.
-        </p>
+        <p>مساحة لعرض نماذج الجمالونات والرسومات الإنشائية والمشروعات الدراسية.</p>
         <span class="pill">إنشاءات</span>
       </article>
 
       <article class="card">
         <div class="card-icon">📐</div>
         <h3>المساحة والجيوديسيا</h3>
-        <p>
-          تطبيقات الإحداثيات وحساب المسافات والزوايا
-          والتمارين المساحية.
-        </p>
+        <p>تطبيقات الإحداثيات وحساب المسافات والزوايا والتمارين المساحية.</p>
         <span class="pill">مساحة</span>
       </article>
 
       <article class="card">
         <div class="card-icon">🧱</div>
         <h3>التربة ومواد البناء</h3>
-        <p>
-          ملاحظات ومشروعات تعليمية في الجيوتقنية
-          وخواص مواد البناء.
-        </p>
+        <p>ملاحظات ومشروعات تعليمية في الجيوتقنية وخواص مواد البناء.</p>
         <span class="pill">جيوتقنية</span>
       </article>
-
     </div>
   </div>
 </section>
 
 <section id="skills">
-  <div class="container">
+  <div class="container fade-in">
     <h2 class="heading">المهارات ومجالات التعلم</h2>
     <p class="subheading">حدّث هذه القائمة كلما اكتسبت مهارة جديدة</p>
 
@@ -502,6 +501,7 @@ footer{
       <span class="skill">الرسم الهندسي</span>
       <span class="skill">المساحة</span>
       <span class="skill">التحليل الإنشائي</span>
+      <span class="skill">حصر الكميات</span>
       <span class="skill">HTML</span>
       <span class="skill">CSS</span>
       <span class="skill">JavaScript</span>
@@ -510,50 +510,84 @@ footer{
 </section>
 
 <section id="tools">
-  <div class="container">
+  <div class="container fade-in">
     <h2 class="heading">الحاسبات الهندسية</h2>
-    <p class="subheading">أدوات تعليمية بسيطة تعمل داخل الموقع</p>
+    <p class="subheading">أدوات تعليمية بسيطة تعمل داخل الموقع لتسهيل الحسابات</p>
 
     <div class="calculator">
 
+      <!-- حاسبة الخرسانة -->
       <div class="panel">
         <h3>حاسبة حجم الخرسانة</h3>
         <p>أدخل الأبعاد بالمتر لحساب حجم متوازي المستطيلات.</p>
-
         <div class="field">
           <label for="length">الطول (متر)</label>
           <input id="length" type="number" min="0" step="any" value="5">
         </div>
-
         <div class="field">
           <label for="width">العرض (متر)</label>
           <input id="width" type="number" min="0" step="any" value="3">
         </div>
-
         <div class="field">
           <label for="height">الارتفاع أو السمك (متر)</label>
           <input id="height" type="number" min="0" step="any" value="0.15">
         </div>
-
-        <button class="btn primary" id="concreteBtn" type="button">
-          احسب الحجم
-        </button>
-
+        <button class="btn primary" id="concreteBtn" type="button">احسب الحجم</button>
         <div class="result" aria-live="polite">
           الحجم: <strong id="concreteResult">2.25 م³</strong>
-          <div class="small">لا يشمل الهالك أو أي إضافات تصميمية.</div>
+          <div class="small">لا يشمل الهالك أو أي إضافات.</div>
         </div>
       </div>
 
+      <!-- حاسبة وزن الحديد الجديدة -->
+      <div class="panel">
+        <h3>حاسبة وزن الحديد</h3>
+        <p>احسب وزن أسياخ التسليح التقريبي.</p>
+        <div class="field">
+          <label for="steelDia">قطر السيخ (مم)</label>
+          <input id="steelDia" type="number" min="1" step="any" value="12">
+        </div>
+        <div class="field">
+          <label for="steelLen">الطول الكلي (متر)</label>
+          <input id="steelLen" type="number" min="1" step="any" value="12">
+        </div>
+        <button class="btn primary" id="steelBtn" type="button">احسب الوزن</button>
+        <div class="result" aria-live="polite">
+          الوزن: <strong id="steelResult">10.67 كجم</strong>
+          <div class="small">بناءً على المعادلة (D²/162) × الطول.</div>
+        </div>
+      </div>
+
+      <!-- حاسبة كميات الطوب الجديدة -->
+      <div class="panel">
+        <h3>حاسبة كميات الطوب</h3>
+        <p>احسب العدد التقريبي للطوب اللازم للحوائط.</p>
+        <div class="field">
+          <label for="wallArea">مساحة الحائط (م²)</label>
+          <input id="wallArea" type="number" min="1" step="any" value="10">
+        </div>
+        <div class="field">
+          <label for="wallType">سمك الحائط</label>
+          <select id="wallType">
+            <option value="60">نصف طوبة (12 سم) - ~60 طوبة/م²</option>
+            <option value="120">طوبة كاملة (25 سم) - ~120 طوبة/م²</option>
+          </select>
+        </div>
+        <button class="btn primary" id="brickBtn" type="button">احسب الكمية</button>
+        <div class="result" aria-live="polite">
+          العدد: <strong id="brickResult">600 طوبة</strong>
+          <div class="small">لا يشمل نسبة الهالك المعتادة.</div>
+        </div>
+      </div>
+
+      <!-- محول الوحدات -->
       <div class="panel">
         <h3>محوّل الوحدات</h3>
         <p>حوّل الأطوال بين المتر والملليمتر والسنتيمتر والكيلومتر.</p>
-
         <div class="field">
           <label for="unitValue">القيمة</label>
           <input id="unitValue" type="number" step="any" value="1">
         </div>
-
         <div class="field">
           <label for="fromUnit">من</label>
           <select id="fromUnit">
@@ -563,7 +597,6 @@ footer{
             <option value="km">كيلومتر (km)</option>
           </select>
         </div>
-
         <div class="field">
           <label for="toUnit">إلى</label>
           <select id="toUnit">
@@ -573,11 +606,7 @@ footer{
             <option value="km">كيلومتر (km)</option>
           </select>
         </div>
-
-        <button class="btn primary" id="convertBtn" type="button">
-          حوّل الوحدات
-        </button>
-
+        <button class="btn primary" id="convertBtn" type="button">حوّل الوحدات</button>
         <div class="result" aria-live="polite">
           الناتج: <strong id="unitResult">1000 mm</strong>
         </div>
@@ -588,20 +617,13 @@ footer{
 </section>
 
 <section id="contact">
-  <div class="container">
+  <div class="container fade-in">
     <div class="contact">
       <h2 class="heading">لنتواصل معًا</h2>
-      <p class="subheading">
-        يسعدني التواصل مع المهتمين بالهندسة والتعلم والمشروعات.
-      </p>
-
-      <a class="btn primary"
-         href="https://wa.me/201155475166"
-         target="_blank"
-         rel="noopener">
+      <p class="subheading">يسعدني التواصل مع المهتمين بالهندسة والتعلم والمشروعات.</p>
+      <a class="btn primary" href="https://wa.me/201155475166" target="_blank" rel="noopener">
         تواصل معي عبر واتساب 💬
       </a>
-
       <p class="small">اضغط على الزر لفتح محادثة واتساب مباشرة.</p>
     </div>
   </div>
@@ -618,46 +640,59 @@ const $ = id => document.getElementById(id);
 
 $("year").textContent = new Date().getFullYear();
 
+// تبديل المظهر
 $("themeBtn").addEventListener("click", () => {
   document.body.classList.toggle("light");
-
-  $("themeBtn").textContent =
-    document.body.classList.contains("light")
-      ? "🌙 المظهر"
-      : "☀️ المظهر";
+  $("themeBtn").textContent = document.body.classList.contains("light") ? "🌙 المظهر" : "☀️ المظهر";
 });
 
+// حاسبة الخرسانة
 function calculateConcrete(){
   const l = Number($("length").value);
   const w = Number($("width").value);
   const h = Number($("height").value);
 
-  if(
-    ["length","width","height"].some(id => $(id).value.trim() === "") ||
-    ![l,w,h].every(Number.isFinite) ||
-    [l,w,h].some(v => v <= 0)
-  ){
+  if(["length","width","height"].some(id => $(id).value.trim() === "") || ![l,w,h].every(Number.isFinite) || [l,w,h].some(v => v <= 0)){
     $("concreteResult").textContent = "أدخل أبعادًا موجبة";
     return;
   }
-
-  $("concreteResult").textContent =
-    (l*w*h).toLocaleString("en-US",{maximumFractionDigits:4}) + " م³";
+  $("concreteResult").textContent = (l*w*h).toLocaleString("en-US",{maximumFractionDigits:4}) + " م³";
 }
-
 $("concreteBtn").addEventListener("click",calculateConcrete);
+["length","width","height"].forEach(id => $(id).addEventListener("input",calculateConcrete));
 
-["length","width","height"].forEach(id =>
-  $(id).addEventListener("input",calculateConcrete)
-);
+// حاسبة وزن الحديد
+function calculateSteel(){
+  const d = Number($("steelDia").value);
+  const l = Number($("steelLen").value);
 
-const units = {
-  m:1,
-  cm:0.01,
-  mm:0.001,
-  km:1000
-};
+  if(d <= 0 || l <= 0 || !Number.isFinite(d) || !Number.isFinite(l)){
+    $("steelResult").textContent = "أدخل قيماً صحيحة";
+    return;
+  }
+  const weight = (d * d / 162) * l;
+  $("steelResult").textContent = weight.toLocaleString("en-US",{maximumFractionDigits:2}) + " كجم";
+}
+$("steelBtn").addEventListener("click", calculateSteel);
+["steelDia", "steelLen"].forEach(id => $(id).addEventListener("input", calculateSteel));
 
+// حاسبة كميات الطوب
+function calculateBricks(){
+  const area = Number($("wallArea").value);
+  const rate = Number($("wallType").value);
+
+  if(area <= 0 || !Number.isFinite(area)){
+    $("brickResult").textContent = "أدخل مساحة صحيحة";
+    return;
+  }
+  const bricks = area * rate;
+  $("brickResult").textContent = Math.ceil(bricks).toLocaleString("en-US") + " طوبة";
+}
+$("brickBtn").addEventListener("click", calculateBricks);
+["wallArea", "wallType"].forEach(id => $(id).addEventListener("input", calculateBricks));
+
+// محول الوحدات
+const units = { m:1, cm:0.01, mm:0.001, km:1000 };
 function convertUnits(){
   const raw = $("unitValue").value;
   const value = Number(raw);
@@ -668,22 +703,27 @@ function convertUnits(){
     $("unitResult").textContent = "أدخل قيمة صحيحة";
     return;
   }
-
-  $("unitResult").textContent =
-    (value*units[from]/units[to]).toLocaleString(
-      "en-US",
-      {maximumFractionDigits:8}
-    ) + " " + to;
+  $("unitResult").textContent = (value*units[from]/units[to]).toLocaleString("en-US", {maximumFractionDigits:8}) + " " + to;
 }
-
 $("convertBtn").addEventListener("click",convertUnits);
+["unitValue","fromUnit","toUnit"].forEach(id => $(id).addEventListener("input",convertUnits));
 
-["unitValue","fromUnit","toUnit"].forEach(id =>
-  $(id).addEventListener("input",convertUnits)
-);
-
+// تشغيل الحاسبات عند فتح الموقع
 calculateConcrete();
+calculateSteel();
+calculateBricks();
 convertUnits();
+
+// تأثيرات التمرير (Scroll Animation Observer)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
 </body>
