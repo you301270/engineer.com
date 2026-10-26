@@ -14,26 +14,24 @@
 
 <style>
 :root {
-  /* المظهر الداكن (الافتراضي) - طابع هندسي Blueprint */
-  --bg: #0B132B; /* كحلي داكن جداً */
-  --panel: #1C2541; /* كحلي أفتح */
+  --bg: #0B132B;
+  --panel: #1C2541;
   --panel2: #2A3654;
   --text: #F0F4F8;
   --muted: #8E9DB0;
-  --accent: #F5D547; /* أصفر هندسي (Safety Yellow) */
-  --accent-text: #0B132B; /* لون النص فوق اللون الأصفر */
+  --accent: #F5D547;
+  --accent-text: #0B132B;
   --border: rgba(255, 255, 255, 0.08);
   --grid-color: rgba(255, 255, 255, 0.03);
 }
 
 body.light {
-  /* المظهر الفاتح */
   --bg: #F4F7F6;
   --panel: #FFFFFF;
   --panel2: #E9EDF0;
   --text: #1A2639;
   --muted: #5C6B7A;
-  --accent: #0B132B; /* كحلي داكن */
+  --accent: #0B132B;
   --accent-text: #FFFFFF;
   --border: rgba(0, 0, 0, 0.1);
   --grid-color: rgba(0, 0, 0, 0.04);
@@ -47,15 +45,13 @@ body.light {
 body {
   margin: 0;
   background-color: var(--bg);
-  /* خلفية المربعات الهندسية */
   background-image: 
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 30px 30px;
   background-attachment: fixed;
-  
   color: var(--text);
-  font-family: 'Cairo', Arial, sans-serif; /* تفعيل الخط الجديد */
+  font-family: 'Cairo', Arial, sans-serif;
   line-height: 1.8;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -263,7 +259,6 @@ section {
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-/* تعديل شكل كروت المشاريع */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -296,7 +291,6 @@ section {
   border-bottom: 1px solid var(--border);
   position: relative;
 }
-/* إذا أردت وضع صورة حقيقية مستقبلاً، استبدل الـ div بالأسفل بوسم img */
 .card-img img {
   width: 100%;
   height: 100%;
@@ -333,7 +327,6 @@ section {
   border: 1px solid var(--border);
 }
 
-/* تقسيم قسم المهارات */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -370,7 +363,6 @@ section {
   font-weight: 600;
 }
 
-/* نظام التبويبات للحاسبات */
 .tabs-header {
   display: flex;
   gap: 10px;
@@ -486,17 +478,6 @@ footer {
   background: var(--panel);
 }
 
-/* تأثيرات التمرير */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 @media(max-width: 768px){
   .nav {
     flex-direction: column;
@@ -540,7 +521,7 @@ footer {
 </nav>
 
 <header class="hero" id="home">
-  <div class="container hero-grid fade-in">
+  <div class="container hero-grid">
     <div>
       <span class="tag">طالب هندسة مدنية | جامعة الفيوم</span>
       <h1>
@@ -558,7 +539,6 @@ footer {
     </div>
     <div class="profile">
       <div class="avatar">
-        <!-- ضع مسار صورتك الشخصية هنا -->
         <img src="profile.jpg" alt="صورة يوسف عمر رياض">
       </div>
       <h3>يوسف رياض</h3>
@@ -570,7 +550,7 @@ footer {
 <main>
 
 <section id="about">
-  <div class="container fade-in">
+  <div class="container">
     <h2 class="heading">من أنا؟</h2>
     <p class="subheading">مقدمة عن رحلتي الأكاديمية</p>
     <div class="panel">
@@ -580,17 +560,13 @@ footer {
 </section>
 
 <section id="projects">
-  <div class="container fade-in">
+  <div class="container">
     <h2 class="heading">معرض المشاريع</h2>
     <p class="subheading">أمثلة تطبيقية لدراستي وتدريباتي الهندسية</p>
 
     <div class="projects-grid">
-      <!-- كارت المشروع الأول -->
       <article class="card">
-        <div class="card-img">
-          🏗️
-          <!-- مستقبلاً: <img src="truss.jpg" alt="مشروع جمالون"> -->
-        </div>
+        <div class="card-img">🏗️</div>
         <div class="card-body">
           <h3>المنشآت الإنشائية</h3>
           <p>مساحة لعرض نماذج الجمالونات والرسومات الإنشائية، وتحليل القوى للأعضاء المختلفة.</p>
@@ -598,11 +574,8 @@ footer {
         </div>
       </article>
 
-      <!-- كارت المشروع الثاني -->
       <article class="card">
-        <div class="card-img">
-          📐
-        </div>
+        <div class="card-img">📐</div>
         <div class="card-body">
           <h3>أعمال المساحة</h3>
           <p>تطبيقات الإحداثيات، الرفع المساحي، وحساب المسافات والزوايا باستخدام الأجهزة.</p>
@@ -610,11 +583,8 @@ footer {
         </div>
       </article>
 
-      <!-- كارت المشروع الثالث -->
       <article class="card">
-        <div class="card-img">
-          🧱
-        </div>
+        <div class="card-img">🧱</div>
         <div class="card-body">
           <h3>اختبارات المواد</h3>
           <p>تقارير ومشروعات تعليمية في الجيوتقنية وتحديد الخواص الفيزيائية لمواد البناء.</p>
@@ -626,12 +596,11 @@ footer {
 </section>
 
 <section id="skills">
-  <div class="container fade-in">
+  <div class="container">
     <h2 class="heading">المهارات التقنية والهندسية</h2>
     <p class="subheading">تم تصنيفها بناءً على التخصصات</p>
 
     <div class="skills-grid">
-      <!-- فئة البرمجيات -->
       <div class="skill-category">
         <h3>💻 برمجيات هندسية</h3>
         <div class="skills-list">
@@ -641,7 +610,6 @@ footer {
         </div>
       </div>
 
-      <!-- فئة التخصصات -->
       <div class="skill-category">
         <h3>🏗️ مجالات التخصص</h3>
         <div class="skills-list">
@@ -652,7 +620,6 @@ footer {
         </div>
       </div>
 
-      <!-- فئة البرمجة -->
       <div class="skill-category">
         <h3>🌐 تطوير الويب</h3>
         <div class="skills-list">
@@ -667,12 +634,11 @@ footer {
 </section>
 
 <section id="tools">
-  <div class="container fade-in">
+  <div class="container">
     <h2 class="heading">لوحة الحاسبات (Dashboard)</h2>
     <p class="subheading">أدوات برمجتها بنفسي لتسريع الحسابات الهندسية الشائعة</p>
 
     <div class="panel">
-      <!-- شريط التبويبات -->
       <div class="tabs-header">
         <button class="tab-btn active" data-target="calc-concrete">حجم الخرسانة</button>
         <button class="tab-btn" data-target="calc-steel">وزن الحديد</button>
@@ -680,10 +646,8 @@ footer {
         <button class="tab-btn" data-target="calc-unit">محول الوحدات</button>
       </div>
 
-      <!-- محتوى التبويبات -->
       <div class="calculator-layout">
         
-        <!-- حاسبة الخرسانة -->
         <div id="calc-concrete" class="tab-pane active">
           <div class="field">
             <label for="length">الطول (متر)</label>
@@ -705,7 +669,6 @@ footer {
           </div>
         </div>
 
-        <!-- حاسبة الحديد -->
         <div id="calc-steel" class="tab-pane">
           <div class="field">
             <label for="steelDia">قطر السيخ Φ (مم)</label>
@@ -731,7 +694,6 @@ footer {
           </div>
         </div>
 
-        <!-- حاسبة الطوب -->
         <div id="calc-brick" class="tab-pane">
           <div class="field">
             <label for="wallArea">مساحة الحائط الصافية (متر مربع)</label>
@@ -752,7 +714,6 @@ footer {
           </div>
         </div>
 
-        <!-- محول الوحدات -->
         <div id="calc-unit" class="tab-pane">
           <div class="field">
             <label for="unitValue">القيمة المراد تحويلها</label>
@@ -791,7 +752,7 @@ footer {
 </section>
 
 <section id="contact">
-  <div class="container fade-in">
+  <div class="container">
     <div class="contact">
       <h2 class="heading">لنتواصل معًا</h2>
       <p class="subheading" style="margin-bottom:20px;">جاهز لمناقشة المشاريع، وتبادل المعرفة الهندسية والبرمجية.</p>
@@ -811,21 +772,60 @@ footer {
 <script>
 const $ = id => document.getElementById(id);
 
-// السنة التلقائية في الفوتر
 $("year").textContent = new Date().getFullYear();
 
-// تبديل المظهر (Dark/Light)
 $("themeBtn").addEventListener("click", () => {
   document.body.classList.toggle("light");
   $("themeBtn").textContent = document.body.classList.contains("light") ? "🌙 المظهر الداكن" : "☀️ المظهر الفاتح";
 });
 
-// نظام التبويبات (Tabs Logic)
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanes = document.querySelectorAll('.tab-pane');
 
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    // إزالة التفعيل من جميع الأزرار والتبويبات
     tabBtns.forEach(b => b.classList.remove('active'));
-    ta
+    tabPanes.forEach(p => p.classList.remove('active'));
+    
+    btn.classList.add('active');
+    $(btn.dataset.target).classList.add('active');
+  });
+});
+
+function calculateConcrete(){
+  const l = Number($("length").value);
+  const w = Number($("width").value);
+  const h = Number($("height").value);
+
+  if(["length","width","height"].some(id => $(id).value.trim() === "") || ![l,w,h].every(Number.isFinite) || [l,w,h].some(v => v <= 0)){
+    $("concreteResult").textContent = "بيانات غير صالحة";
+    return;
+  }
+  $("concreteResult").textContent = (l*w*h).toLocaleString("en-US",{maximumFractionDigits:3}) + " م³";
+}
+
+function calculateSteel(){
+  const d = Number($("steelDia").value);
+  const l = Number($("steelLen").value);
+
+  if(l <= 0 || !Number.isFinite(l)){
+    $("steelResult").textContent = "طول غير صالح";
+    return;
+  }
+  const weight = (d * d / 162) * l;
+  $("steelResult").textContent = weight.toLocaleString("en-US",{maximumFractionDigits:2}) + " كجم";
+}
+
+function calculateBricks(){
+  const area = Number($("wallArea").value);
+  const rate = Number($("wallType").value);
+
+  if(area <= 0 || !Number.isFinite(area)){
+    $("brickResult").textContent = "مساحة غير صالحة";
+    return;
+  }
+  const bricks = area * rate;
+  $("brickResult").textContent = Math.ceil(bricks).toLocaleString("en-US") + " طوبة";
+}
+
+const units = { m:1, cm:0.01, m
