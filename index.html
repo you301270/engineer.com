@@ -7,7 +7,7 @@
 <meta name="description" content="الموقع الشخصي للمهندس يوسف عمر رياض، مهندس مدني.">
 <title>يوسف عمر رياض | مهندس مدني</title>
 
-<!-- إضافة خط Cairo الاحترافي -->
+<!-- خط Cairo -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -291,11 +291,6 @@ section {
   border-bottom: 1px solid var(--border);
   position: relative;
 }
-.card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .card-body {
   padding: 20px;
@@ -402,6 +397,12 @@ section {
 
 .tab-pane.active {
   display: block !important;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .calculator-layout {
@@ -636,10 +637,10 @@ footer {
     <div class="panel">
       <!-- أزرار التبويبات -->
       <div class="tabs-header">
-        <button class="tab-btn active" onclick="switchTab(event, 'calc-concrete')">حجم الخرسانة</button>
-        <button class="tab-btn" onclick="switchTab(event, 'calc-steel')">وزن الحديد</button>
-        <button class="tab-btn" onclick="switchTab(event, 'calc-brick')">كميات الطوب</button>
-        <button class="tab-btn" onclick="switchTab(event, 'calc-unit')">محول الوحدات</button>
+        <button class="tab-btn active" data-target="calc-concrete">حجم الخرسانة</button>
+        <button class="tab-btn" data-target="calc-steel">وزن الحديد</button>
+        <button class="tab-btn" data-target="calc-brick">كميات الطوب</button>
+        <button class="tab-btn" data-target="calc-unit">محول الوحدات</button>
       </div>
 
       <div class="calculator-layout">
@@ -661,7 +662,7 @@ footer {
           <button class="btn primary" id="concreteBtn" type="button" style="width:100%; margin-top:10px;">احسب حجم الصبة</button>
           <div class="result">
             الحجم الصافي:
-            <strong id="concreteResult">3.00 م³</strong>
+            <strong id="concreteResult">3.000 م³</strong>
             <div class="small">الناتج هندسي ولا يشمل نسب الهالك التنفيذية.</div>
           </div>
         </div>
@@ -770,57 +771,55 @@ footer {
 </footer>
 
 <script>
-const $ = id => document.getElementById(id);
+// تغليف الكود بالكامل لضمان تحميل الصفحة أولاً (مهم جداً ليعمل على GitHub Pages وكل المتصفحات)
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // دالة مساعدة لاختيار العناصر
+  function $(id) { return document.getElementById(id); }
 
-$("year").textContent = new Date().getFullYear();
-
-// تبديل المظهر
-$("themeBtn").addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  $("themeBtn").textContent = document.body.classList.contains("light") ? "🌙 المظهر الداكن" : "☀️ المظهر الفاتح";
-});
-
-// دالة التبديل بين التبويبات مباشرة
-function switchTab(evt, tabId) {
-  const panes = document.getElementsByClassName("tab-pane");
-  for (let i = 0; i < panes.length; i++) {
-    panes[i].classList.remove("active");
+  // 1. تحديث السنة
+  if($("year")) {
+    $("year").textContent = new Date().getFullYear();
   }
 
-  const btns = document.getElementsByClassName("tab-btn");
-  for (let i = 0; i < btns.length; i++) {
-    btns[i].classList.remove("active");
+  // 2. زر المظهر (الداكن/الفاتح)
+  if($("themeBtn")) {
+    $("themeBtn").addEventListener("click", function() {
+      document.body.classList.toggle("light");
+      this.textContent = document.body.classList.contains("light") ? "🌙 المظهر الداكن" : "☀️ المظهر الفاتح";
+    });
   }
 
-  document.getElementById(tabId).classList.add("active");
-  evt.currentTarget.classList.add("active");
-}
+  // 3. التبويبات (Tabs Logic)
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  var tabPanes = document.querySelectorAll('.tab-pane');
 
-// معادلات الحاسبات
-function calculateConcrete(){
-  const l = Number($("length").value);
-  const w = Number($("width").value);
-  const h = Number($("height").value);
+  tabBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      // إزالة التفعيل من جميع الأزرار واللوحات
+      tabBtns.forEach(function(b) { b.classList.remove('active'); });
+      tabPanes.forEach(function(p) { p.classList.remove('active'); });
+      
+      // تفعيل الزر المختار واللوحة الخاصة به
+      this.classList.add('active');
+      var targetId = this.getAttribute('data-target');
+      if($(targetId)) {
+        $(targetId).classList.add('active');
+      }
+    });
+  });
 
-  if(["length","width","height"].some(id => $(id).value.trim() === "") || ![l,w,h].every(Number.isFinite) || [l,w,h].some(v => v <= 0)){
-    $("concreteResult").textContent = "بيانات غير صالحة";
-    return;
+  // 4. دوال الحسابات
+  function calculateConcrete() {
+    var l = parseFloat($("length").value);
+    var w = parseFloat($("width").value);
+    var h = parseFloat($("height").value);
+
+    if (isNaN(l) || isNaN(w) || isNaN(h) || l <= 0 || w <= 0 || h <= 0) {
+      $("concreteResult").textContent = "بيانات غير صالحة";
+      return;
+    }
+    $("concreteResult").textContent = (l * w * h).toFixed(3) + " م³";
   }
-  $("concreteResult").textContent = (l*w*h).toLocaleString("en-US",{maximumFractionDigits:3}) + " م³";
-}
 
-function calculateSteel(){
-  const d = Number($("steelDia").value);
-  const l = Number($("steelLen").value);
-
-  if(l <= 0 || !Number.isFinite(l)){
-    $("steelResult").textContent = "طول غير صالح";
-    return;
-  }
-  const weight = (d * d / 162) * l;
-  $("steelResult").textContent = weight.toLocaleString("en-US",{maximumFractionDigits:2}) + " كجم";
-}
-
-function calculateBricks(){
-  const area = Number($("wallArea").value);
-  const r
+  function cal
