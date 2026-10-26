@@ -7,6 +7,7 @@
 <meta name="description" content="الموقع الشخصي للمهندس يوسف عمر رياض، مهندس مدني.">
 <title>يوسف عمر رياض | مهندس مدني</title>
 
+<!-- خط Cairo -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -117,7 +118,8 @@ section { padding: 70px 0; }
 }
 
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; display: flex; flex-direction: column; }
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; transition: 0.3s; }
+.card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
 .card-img { height: 160px; background: var(--panel2); display: flex; align-items: center; justify-content: center; font-size: 50px; border-bottom: 1px solid var(--border); }
 .card-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
 .card-body h3 { margin: 0 0 10px; font-size: 20px; }
@@ -136,11 +138,10 @@ section { padding: 70px 0; }
 
 .tab-btn {
   background: var(--panel2); border: 1px solid var(--border); color: var(--text);
-  padding: 12px 20px; border-radius: 8px; font-weight: 700; white-space: nowrap; font-size: 15px;
+  padding: 12px 20px; border-radius: 8px; font-weight: 700; white-space: nowrap; font-size: 15px; transition: 0.2s;
 }
-.tab-btn.active {
-  background: var(--accent); color: var(--accent-text); border-color: var(--accent);
-}
+.tab-btn:hover { border-color: var(--accent); }
+.tab-btn.active { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
 
 .tab-pane { display: none; }
 #calc-concrete { display: block; } /* تفعيل الخرسانة افتراضياً */
@@ -150,7 +151,7 @@ section { padding: 70px 0; }
 .field label { font-weight: 600; font-size: 15px; }
 .field input, .field select {
   width: 100%; padding: 12px; background: var(--bg); color: var(--text);
-  border: 1px solid var(--border); border-radius: 8px; outline: none;
+  border: 1px solid var(--border); border-radius: 8px; outline: none; transition: 0.2s;
 }
 .field input:focus, .field select:focus { border-color: var(--accent); }
 
@@ -194,7 +195,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
 <header class="hero" id="home">
   <div class="container hero-grid">
     <div>
-      <span class="tag">طالب هندسة مدنية | جامعة الفيوم</span>
+      <span class="tag">طالب بقسم الهندسة المدنية | جامعة الفيوم</span>
       <h1>أهلاً، أنا<br><span class="highlight">يوسف عمر رياض</span></h1>
       <p class="lead">أبني معرفتي في الهندسة المدنية خطوة بخطوة، وأهتم بالإنشاءات والمساحة والتصميم التقني.</p>
       <div class="actions">
@@ -205,7 +206,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
     <div class="profile">
       <div class="avatar"><img src="profile.jpg" alt="صورة يوسف عمر رياض"></div>
       <h3>يوسف عمر رياض</h3>
-      <small>جامعة الفيوم - قسم الهندسة المدنية </small>
+      <small>  جامعة الفيوم - قسم الهندسة المدنية </small>
     </div>
   </div>
 </header>
@@ -215,7 +216,81 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
   <div class="container">
     <h2 class="heading">من أنا؟</h2>
     <p class="subheading">مقدمة عن رحلتي الأكاديمية</p>
-    <div class="panel">أنا طالب في قسم الهندسة المدنية بكلية الهندسة، جامعة الفيوم...</div>
+    <div class="panel">
+      أنا طالب في قسم الهندسة المدنية بكلية الهندسة، جامعة الفيوم. أعمل على تطوير معرفتي في مجالات الإنشاءات والمساحة وخواص مواد البناء والجيوتقنية. أؤمن بأن التعلم المستمر والدمج بين البرمجيات الحديثة والمبادئ الهندسية هما أساس بناء مهندس ناجح، وأسعى لتوثيق هذا التطور من خلال مشاريعي وموقعي الشخصي.
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2 class="heading">معرض المشاريع</h2>
+    <p class="subheading">أمثلة تطبيقية لدراستي وتدريباتي الهندسية</p>
+    <div class="projects-grid">
+      <article class="card">
+        <div class="card-img">🏗️</div>
+        <div class="card-body">
+          <h3>المنشآت الإنشائية</h3>
+          <p>مساحة لعرض نماذج الجمالونات والرسومات الإنشائية، وتحليل القوى للأعضاء المختلفة.</p>
+          <span class="pill">تصميم إنشائي</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img">📐</div>
+        <div class="card-body">
+          <h3>أعمال المساحة</h3>
+          <p>تطبيقات الإحداثيات، الرفع المساحي، وحساب المسافات والزوايا باستخدام الأجهزة.</p>
+          <span class="pill">مساحة وجيوديسيا</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img">🧱</div>
+        <div class="card-body">
+          <h3>اختبارات المواد</h3>
+          <p>تقارير ومشروعات تعليمية في الجيوتقنية وتحديد الخواص الفيزيائية لمواد البناء.</p>
+          <span class="pill">مواد وتربة</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2 class="heading">المهارات التقنية والهندسية</h2>
+    <p class="subheading">تم تصنيفها بناءً على التخصصات</p>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>💻 برمجيات هندسية</h3>
+        <div class="skills-list">
+          <span class="skill">AutoCAD (2D)</span>
+          <span class="skill">SAP2000 (أساسيات)</span>
+          <span class="skill">Excel (للمهندسين)</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>🏗️ مجالات التخصص</h3>
+        <div class="skills-list">
+          <span class="skill">أساسيات الهندسة المدنية</span>
+          <span class="skill">الرسم الهندسي</span>
+          <span class="skill">المساحة</span>
+          <span class="skill">حصر الكميات (مبدئي)</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>🌐 تطوير الويب</h3>
+        <div class="skills-list">
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">UI/UX Basics</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -223,9 +298,8 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
   <div class="container">
     <h2 class="heading">لوحة الحاسبات (Dashboard)</h2>
     <p class="subheading">أدوات برمجتها بنفسي لتسريع الحسابات الهندسية الشائعة</p>
-
     <div class="panel">
-      <!-- أزرار التبويبات تم تحديثها لتعمل مباشرة -->
+      <!-- أزرار التبويبات -->
       <div class="tabs-header">
         <button class="tab-btn active" onclick="openTab('calc-concrete', this)">حجم الخرسانة</button>
         <button class="tab-btn" onclick="openTab('calc-steel', this)">وزن الحديد</button>
@@ -259,8 +333,12 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
             <label>قطر السيخ Φ (مم)</label>
             <select id="steelDia">
               <option value="8">8 مم (كانات)</option>
+              <option value="10">10 مم</option>
               <option value="12" selected>12 مم</option>
+              <option value="14">14 مم</option>
               <option value="16">16 مم</option>
+              <option value="18">18 مم</option>
+              <option value="22">22 مم</option>
             </select>
           </div>
           <div class="field">
@@ -297,11 +375,21 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <div style="display:flex; gap:10px;">
             <div class="field" style="flex:1;">
               <label>من وحدة</label>
-              <select id="fromUnit"><option value="m">متر (m)</option><option value="mm">ملليمتر (mm)</option></select>
+              <select id="fromUnit">
+                <option value="m">متر (m)</option>
+                <option value="cm">سنتيمتر (cm)</option>
+                <option value="mm">ملليمتر (mm)</option>
+                <option value="km">كيلومتر (km)</option>
+              </select>
             </div>
             <div class="field" style="flex:1;">
               <label>إلى وحدة</label>
-              <select id="toUnit"><option value="mm">ملليمتر (mm)</option><option value="m">متر (m)</option></select>
+              <select id="toUnit">
+                <option value="mm">ملليمتر (mm)</option>
+                <option value="cm">سنتيمتر (cm)</option>
+                <option value="m">متر (m)</option>
+                <option value="km">كيلومتر (km)</option>
+              </select>
             </div>
           </div>
           <button class="btn primary" id="convertBtn" style="width:100%; margin-top:10px;">إجراء التحويل</button>
@@ -312,10 +400,22 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
     </div>
   </div>
 </section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <h2 class="heading">لنتواصل معًا</h2>
+      <p class="subheading" style="margin-bottom:20px;">جاهز لمناقشة المشاريع، وتبادل المعرفة الهندسية والبرمجية.</p>
+      <a class="btn primary" href="https://wa.me/201155475166" target="_blank" rel="noopener" style="font-size:18px; padding:15px 30px;">
+        راسلني عبر واتساب 💬
+      </a>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
-  © <span id="year"></span> يوسف عمر رياض • طالب هندسة مدنية
+  © <span id="year"></span> يوسف عمر رياض • طالب هندسة مدنية - جامعة الفيوم
 </footer>
 
 <script>
@@ -353,7 +453,7 @@ function calculateBricks() {
   const a = parseFloat($("wallArea").value), r = parseFloat($("wallType").value);
   if(a>0) $("brickResult").textContent = Math.ceil(a*r) + " طوبة";
 }
-const units = { m:1, mm:0.001 };
+const units = { m:1, cm:0.01, mm:0.001, km:1000 };
 function convertUnits() {
   const v = parseFloat($("unitValue").value), from = $("fromUnit").value, to = $("toUnit").value;
   if(v) $("unitResult").textContent = ((v*units[from])/units[to]) + " " + to;
