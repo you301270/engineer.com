@@ -363,6 +363,7 @@ section {
   font-weight: 600;
 }
 
+/* تنسيق التبويبات */
 .tabs-header {
   display: flex;
   gap: 10px;
@@ -374,15 +375,15 @@ section {
 .tabs-header::-webkit-scrollbar-thumb { background: var(--border); }
 
 .tab-btn {
-  background: var(--panel);
+  background: var(--panel2);
   border: 1px solid var(--border);
   color: var(--text);
-  padding: 12px 25px;
+  padding: 12px 20px;
   border-radius: 8px;
   font-weight: 700;
   white-space: nowrap;
   transition: 0.2s;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .tab-btn:hover {
@@ -390,23 +391,17 @@ section {
 }
 
 .tab-btn.active {
-  background: var(--accent);
-  color: var(--accent-text);
-  border-color: var(--accent);
+  background: var(--accent) !important;
+  color: var(--accent-text) !important;
+  border-color: var(--accent) !important;
 }
 
 .tab-pane {
   display: none;
-  animation: fadeIn 0.4s ease-out;
 }
 
 .tab-pane.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  display: block !important;
 }
 
 .calculator-layout {
@@ -639,15 +634,17 @@ footer {
     <p class="subheading">أدوات برمجتها بنفسي لتسريع الحسابات الهندسية الشائعة</p>
 
     <div class="panel">
+      <!-- أزرار التبويبات -->
       <div class="tabs-header">
-        <button class="tab-btn active" data-target="calc-concrete">حجم الخرسانة</button>
-        <button class="tab-btn" data-target="calc-steel">وزن الحديد</button>
-        <button class="tab-btn" data-target="calc-brick">كميات الطوب</button>
-        <button class="tab-btn" data-target="calc-unit">محول الوحدات</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'calc-concrete')">حجم الخرسانة</button>
+        <button class="tab-btn" onclick="switchTab(event, 'calc-steel')">وزن الحديد</button>
+        <button class="tab-btn" onclick="switchTab(event, 'calc-brick')">كميات الطوب</button>
+        <button class="tab-btn" onclick="switchTab(event, 'calc-unit')">محول الوحدات</button>
       </div>
 
       <div class="calculator-layout">
         
+        <!-- حاسبة الخرسانة -->
         <div id="calc-concrete" class="tab-pane active">
           <div class="field">
             <label for="length">الطول (متر)</label>
@@ -661,7 +658,7 @@ footer {
             <label for="height">السمك (متر)</label>
             <input id="height" type="number" min="0" step="any" value="0.20">
           </div>
-          <button class="btn primary" id="concreteBtn" style="width:100%; margin-top:10px;">احسب حجم الصبة</button>
+          <button class="btn primary" id="concreteBtn" type="button" style="width:100%; margin-top:10px;">احسب حجم الصبة</button>
           <div class="result">
             الحجم الصافي:
             <strong id="concreteResult">3.00 م³</strong>
@@ -669,6 +666,7 @@ footer {
           </div>
         </div>
 
+        <!-- حاسبة الحديد -->
         <div id="calc-steel" class="tab-pane">
           <div class="field">
             <label for="steelDia">قطر السيخ Φ (مم)</label>
@@ -686,7 +684,7 @@ footer {
             <label for="steelLen">الطول الكلي للأسياخ (متر)</label>
             <input id="steelLen" type="number" min="1" step="any" value="12">
           </div>
-          <button class="btn primary" id="steelBtn" style="width:100%; margin-top:10px;">احسب الوزن</button>
+          <button class="btn primary" id="steelBtn" type="button" style="width:100%; margin-top:10px;">احسب الوزن</button>
           <div class="result">
             الوزن التقريبي:
             <strong id="steelResult">10.67 كجم</strong>
@@ -694,6 +692,7 @@ footer {
           </div>
         </div>
 
+        <!-- حاسبة الطوب -->
         <div id="calc-brick" class="tab-pane">
           <div class="field">
             <label for="wallArea">مساحة الحائط الصافية (متر مربع)</label>
@@ -706,7 +705,7 @@ footer {
               <option value="116">طوبة كاملة (سمك 25 سم) - معدل ~116 طوبة/م²</option>
             </select>
           </div>
-          <button class="btn primary" id="brickBtn" style="width:100%; margin-top:10px;">احسب العدد</button>
+          <button class="btn primary" id="brickBtn" type="button" style="width:100%; margin-top:10px;">احسب العدد</button>
           <div class="result">
             العدد المطلوب:
             <strong id="brickResult">580 طوبة</strong>
@@ -714,6 +713,7 @@ footer {
           </div>
         </div>
 
+        <!-- محول الوحدات -->
         <div id="calc-unit" class="tab-pane">
           <div class="field">
             <label for="unitValue">القيمة المراد تحويلها</label>
@@ -739,7 +739,7 @@ footer {
               </select>
             </div>
           </div>
-          <button class="btn primary" id="convertBtn" style="width:100%; margin-top:10px;">إجراء التحويل</button>
+          <button class="btn primary" id="convertBtn" type="button" style="width:100%; margin-top:10px;">إجراء التحويل</button>
           <div class="result">
             النتيجة:
             <strong id="unitResult">1000 mm</strong>
@@ -774,24 +774,29 @@ const $ = id => document.getElementById(id);
 
 $("year").textContent = new Date().getFullYear();
 
+// تبديل المظهر
 $("themeBtn").addEventListener("click", () => {
   document.body.classList.toggle("light");
   $("themeBtn").textContent = document.body.classList.contains("light") ? "🌙 المظهر الداكن" : "☀️ المظهر الفاتح";
 });
 
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabPanes = document.querySelectorAll('.tab-pane');
+// دالة التبديل بين التبويبات مباشرة
+function switchTab(evt, tabId) {
+  const panes = document.getElementsByClassName("tab-pane");
+  for (let i = 0; i < panes.length; i++) {
+    panes[i].classList.remove("active");
+  }
 
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabBtns.forEach(b => b.classList.remove('active'));
-    tabPanes.forEach(p => p.classList.remove('active'));
-    
-    btn.classList.add('active');
-    $(btn.dataset.target).classList.add('active');
-  });
-});
+  const btns = document.getElementsByClassName("tab-btn");
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("active");
+  }
 
+  document.getElementById(tabId).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+
+// معادلات الحاسبات
 function calculateConcrete(){
   const l = Number($("length").value);
   const w = Number($("width").value);
@@ -818,14 +823,4 @@ function calculateSteel(){
 
 function calculateBricks(){
   const area = Number($("wallArea").value);
-  const rate = Number($("wallType").value);
-
-  if(area <= 0 || !Number.isFinite(area)){
-    $("brickResult").textContent = "مساحة غير صالحة";
-    return;
-  }
-  const bricks = area * rate;
-  $("brickResult").textContent = Math.ceil(bricks).toLocaleString("en-US") + " طوبة";
-}
-
-const units = { m:1, cm:0.01, m
+  const r
