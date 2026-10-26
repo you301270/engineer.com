@@ -95,7 +95,6 @@ h1 { font-size: clamp(35px, 5vw, 55px); line-height: 1.3; margin: 18px 0 10px; f
 .btn {
   display: inline-block; padding: 12px 22px; border-radius: 8px;
   border: 1px solid var(--border); font-weight: 700; transition: 0.2s;
-  text-align: center;
 }
 .btn:hover { transform: translateY(-2px); }
 .primary { background: var(--accent); color: var(--accent-text); border: 0; }
@@ -133,28 +132,19 @@ section { padding: 70px 0; }
 .skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
 .skill { background: var(--panel2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; font-size: 14px; font-weight: 600; }
 
-/* تنسيق القائمة المنسدلة لاختيار الحاسبة */
-.calc-selector {
-  width: 100%;
-  padding: 15px;
-  background: var(--panel2);
-  color: var(--text);
-  border: 2px solid var(--accent);
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  outline: none;
-  cursor: pointer;
-}
+.tabs-header { display: flex; gap: 10px; margin-bottom: 25px; overflow-x: auto; padding-bottom: 10px; }
+.tabs-header::-webkit-scrollbar { height: 4px; }
+.tabs-header::-webkit-scrollbar-thumb { background: var(--border); }
 
-/* إخفاء الحاسبات وتفعيلها بالجافاسكريبت فقط */
-.tab-pane {
-  display: none;
+.tab-btn {
+  background: var(--panel2); border: 1px solid var(--border); color: var(--text);
+  padding: 12px 20px; border-radius: 8px; font-weight: 700; white-space: nowrap; font-size: 15px; transition: 0.2s;
 }
-#calc-concrete {
-  display: block;
-}
+.tab-btn:hover { border-color: var(--accent); }
+.tab-btn.active { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+
+.tab-pane { display: none; }
+#calc-concrete { display: block; } /* تفعيل الخرسانة افتراضياً */
 
 .calculator-layout { max-width: 600px; margin: auto; }
 .field { display: grid; gap: 8px; margin: 15px 0; }
@@ -175,18 +165,6 @@ section { padding: 70px 0; }
 .contact { text-align: center; background: var(--panel); border: 1px dashed var(--accent); border-radius: 12px; padding: 40px 20px; }
 footer { text-align: center; border-top: 1px solid var(--border); padding: 25px; color: var(--muted); font-size: 14px; font-weight: 600; background: var(--panel); }
 
-@media print {
-  body { background: #fff !important; color: #000 !important; }
-  nav, header, section:not(#tools), footer, .calc-selector, .btn, .theme { display: none !important; }
-  .panel { border: none !important; box-shadow: none !important; padding: 0 !important; }
-  #tools { padding: 0 !important; }
-  .heading, .subheading { text-align: center !important; color: #000 !important; }
-  .tab-pane { display: none !important; }
-  input, select { border: 1px solid #ccc !important; color: #000 !important; background: transparent !important; }
-  .result { border: 2px solid #000 !important; color: #000 !important; background: transparent !important; }
-  .result strong { color: #000 !important; }
-}
-
 @media(max-width: 768px){
   .nav { flex-direction: column; padding: 15px 0; }
   .links { width: 100%; overflow-x: auto; padding-bottom: 10px; justify-content: center; }
@@ -202,7 +180,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
 
 <nav>
   <div class="container nav">
-    <a class="brand" href="#home">Eng<span> Youssef</span></a>
+    <a class="brand" href="#home">Eng<span> Youssef Omer </span></a>
     <div class="links">
       <a href="#about">من أنا</a>
       <a href="#projects">المشاريع</a>
@@ -217,19 +195,18 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
 <header class="hero" id="home">
   <div class="container hero-grid">
     <div>
-      <span class="tag">طالب هندسة مدنية | جامعة الفيوم</span>
+      <span class="tag">طالب بقسم الهندسة المدنية | جامعة الفيوم</span>
       <h1>أهلاً، أنا<br><span class="highlight">يوسف عمر رياض</span></h1>
       <p class="lead">أبني معرفتي في الهندسة المدنية خطوة بخطوة، وأهتم بالإنشاءات والمساحة والتصميم التقني.</p>
       <div class="actions">
         <a class="btn primary" href="#projects">استكشف أعمالي ↓</a>
         <a class="btn" href="#tools">الحاسبات الهندسية</a>
-        <a class="btn" href="cv.pdf" download style="border-color: var(--accent); color: var(--accent);">تحميل السيرة الذاتية 📄</a>
       </div>
     </div>
     <div class="profile">
       <div class="avatar"><img src="profile.jpg" alt="صورة يوسف عمر رياض"></div>
-      <h3>يوسف رياض</h3>
-      <small>جامعة الفيوم - مدني</small>
+      <h3>يوسف عمر رياض</h3>
+      <small>  جامعة الفيوم - قسم الهندسة المدنية </small>
     </div>
   </div>
 </header>
@@ -258,6 +235,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="pill">تصميم إنشائي</span>
         </div>
       </article>
+
       <article class="card">
         <div class="card-img">📐</div>
         <div class="card-body">
@@ -266,6 +244,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="pill">مساحة وجيوديسيا</span>
         </div>
       </article>
+
       <article class="card">
         <div class="card-img">🧱</div>
         <div class="card-body">
@@ -291,6 +270,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="skill">Excel (للمهندسين)</span>
         </div>
       </div>
+
       <div class="skill-category">
         <h3>🏗️ مجالات التخصص</h3>
         <div class="skills-list">
@@ -300,6 +280,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
           <span class="skill">حصر الكميات (مبدئي)</span>
         </div>
       </div>
+
       <div class="skill-category">
         <h3>🌐 تطوير الويب</h3>
         <div class="skills-list">
@@ -318,15 +299,13 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
     <h2 class="heading">لوحة الحاسبات (Dashboard)</h2>
     <p class="subheading">أدوات برمجتها بنفسي لتسريع الحسابات الهندسية الشائعة</p>
     <div class="panel">
-      
-      <select id="calcSelector" class="calc-selector">
-        <option value="calc-concrete">حاسبة حجم الخرسانة</option>
-        <option value="calc-mix">حاسبة خلطة الخرسانة</option>
-        <option value="calc-steel">حاسبة وزن الحديد</option>
-        <option value="calc-brick">حاسبة كميات الطوب</option>
-        <option value="calc-stairs">حاسبة السلالم</option>
-        <option value="calc-unit">محول الوحدات</option>
-      </select>
+      <!-- أزرار التبويبات -->
+      <div class="tabs-header">
+        <button class="tab-btn active" onclick="openTab('calc-concrete', this)">حجم الخرسانة</button>
+        <button class="tab-btn" onclick="openTab('calc-steel', this)">وزن الحديد</button>
+        <button class="tab-btn" onclick="openTab('calc-brick', this)">كميات الطوب</button>
+        <button class="tab-btn" onclick="openTab('calc-unit', this)">محول الوحدات</button>
+      </div>
 
       <div class="calculator-layout">
         
@@ -344,30 +323,8 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
             <label>السمك (متر)</label>
             <input id="height" type="number" min="0" step="any" value="0.20">
           </div>
-          <div style="display: flex; gap: 10px; margin-top: 10px;">
-            <button class="btn primary" id="concreteBtn" style="flex: 2;">احسب حجم الصبة</button>
-            <button class="btn" onclick="window.print()" style="flex: 1; padding: 12px 10px; font-size: 14px;">🖨️ طباعة</button>
-          </div>
+          <button class="btn primary" id="concreteBtn" style="width:100%; margin-top:10px;">احسب حجم الصبة</button>
           <div class="result">الحجم الصافي:<strong id="concreteResult">3.000 م³</strong></div>
-        </div>
-
-        <!-- حاسبة مكونات الخلطة الخرسانية -->
-        <div id="calc-mix" class="tab-pane">
-          <div class="field">
-            <label>حجم الخرسانة المطلوب (متر مكعب)</label>
-            <input id="mixVolume" type="number" min="0.1" step="any" value="1">
-          </div>
-          <div style="display: flex; gap: 10px; margin-top: 10px;">
-            <button class="btn primary" id="mixBtn" style="flex: 2;">احسب المكونات</button>
-            <button class="btn" onclick="window.print()" style="flex: 1; padding: 12px 10px; font-size: 14px;">🖨️ طباعة</button>
-          </div>
-          <div class="result" style="text-align: right;">
-            <div style="margin-bottom: 8px;">الأسمنت: <strong id="mixCement" style="display:inline; font-size:18px;">7 شيكارة (350 كجم)</strong></div>
-            <div style="margin-bottom: 8px;">الرمل: <strong id="mixSand" style="display:inline; font-size:18px;">0.40 م³</strong></div>
-            <div style="margin-bottom: 8px;">الزلط: <strong id="mixGravel" style="display:inline; font-size:18px;">0.80 م³</strong></div>
-            <div style="margin-bottom: 8px;">الماء: <strong id="mixWater" style="display:inline; font-size:18px;">175 لتر</strong></div>
-            <div class="small" style="text-align:center; margin-top:15px;">نسب تقريبية لخرسانة مسلحة (محتوى أسمنتي 350 كجم/م³).</div>
-          </div>
         </div>
 
         <!-- حاسبة الحديد -->
@@ -388,10 +345,7 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
             <label>الطول الكلي للأسياخ (متر)</label>
             <input id="steelLen" type="number" min="1" step="any" value="12">
           </div>
-          <div style="display: flex; gap: 10px; margin-top: 10px;">
-            <button class="btn primary" id="steelBtn" style="flex: 2;">احسب الوزن</button>
-            <button class="btn" onclick="window.print()" style="flex: 1; padding: 12px 10px; font-size: 14px;">🖨️ طباعة</button>
-          </div>
+          <button class="btn primary" id="steelBtn" style="width:100%; margin-top:10px;">احسب الوزن</button>
           <div class="result">الوزن التقريبي:<strong id="steelResult">10.67 كجم</strong></div>
         </div>
 
@@ -408,32 +362,8 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
               <option value="116">طوبة كاملة (سمك 25 سم)</option>
             </select>
           </div>
-          <div style="display: flex; gap: 10px; margin-top: 10px;">
-            <button class="btn primary" id="brickBtn" style="flex: 2;">احسب العدد</button>
-            <button class="btn" onclick="window.print()" style="flex: 1; padding: 12px 10px; font-size: 14px;">🖨️ طباعة</button>
-          </div>
+          <button class="btn primary" id="brickBtn" style="width:100%; margin-top:10px;">احسب العدد</button>
           <div class="result">العدد المطلوب:<strong id="brickResult">580 طوبة</strong></div>
-        </div>
-
-        <!-- حاسبة السلالم -->
-        <div id="calc-stairs" class="tab-pane">
-          <div class="field">
-            <label>الارتفاع الكلي للدور (متر)</label>
-            <input id="stairsHeight" type="number" min="1" step="any" value="3">
-          </div>
-          <div class="field">
-            <label>الارتفاع المطلوب للقائمة (سم)</label>
-            <input id="stairsRiser" type="number" min="10" max="25" step="any" value="15">
-          </div>
-          <div style="display: flex; gap: 10px; margin-top: 10px;">
-            <button class="btn primary" id="stairsBtn" style="flex: 2;">احسب الدرج</button>
-            <button class="btn" onclick="window.print()" style="flex: 1; padding: 12px 10px; font-size: 14px;">🖨️ طباعة</button>
-          </div>
-          <div class="result" style="text-align: right;">
-            <div style="margin-bottom: 10px;">عدد القوائم (الدرجات): <strong id="stairsRiserCount" style="display:inline; font-size:22px;">20 قائمة</strong></div>
-            <div style="margin-bottom: 10px;">عدد النوائم: <strong id="stairsTreadCount" style="display:inline; font-size:22px;">19 نائمة</strong></div>
-            <div class="small" style="text-align:center; margin-top:10px;">عدد النوائم دائماً أقل من القوائم بدرجة واحدة في القلبة.</div>
-          </div>
         </div>
 
         <!-- محول الوحدات -->
@@ -471,4 +401,75 @@ footer { text-align: center; border-top: 1px solid var(--border); padding: 25px;
   </div>
 </section>
 
-<section id="con
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <h2 class="heading">لنتواصل معًا</h2>
+      <p class="subheading" style="margin-bottom:20px;">جاهز لمناقشة المشاريع، وتبادل المعرفة الهندسية والبرمجية.</p>
+      <a class="btn primary" href="https://wa.me/201155475166" target="_blank" rel="noopener" style="font-size:18px; padding:15px 30px;">
+        راسلني عبر واتساب 💬
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © <span id="year"></span> يوسف عمر رياض • طالب هندسة مدنية - جامعة الفيوم
+</footer>
+
+<script>
+// دالة التبويبات المباشرة (تخفي كل شيء وتظهر المطلوب فقط بقوة)
+function openTab(tabId, btnElement) {
+  var panes = document.getElementsByClassName("tab-pane");
+  for (var i = 0; i < panes.length; i++) {
+    panes[i].style.display = "none";
+  }
+  var btns = document.getElementsByClassName("tab-btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("active");
+  }
+  document.getElementById(tabId).style.display = "block";
+  btnElement.classList.add("active");
+}
+
+const $ = id => document.getElementById(id);
+$("year").textContent = new Date().getFullYear();
+
+$("themeBtn").addEventListener("click", function() {
+  document.body.classList.toggle("light");
+  this.textContent = document.body.classList.contains("light") ? "🌙 المظهر الداكن" : "☀️ المظهر الفاتح";
+});
+
+function calculateConcrete() {
+  const l = parseFloat($("length").value), w = parseFloat($("width").value), h = parseFloat($("height").value);
+  if(l>0 && w>0 && h>0) $("concreteResult").textContent = (l*w*h).toFixed(3) + " م³";
+}
+function calculateSteel() {
+  const d = parseFloat($("steelDia").value), l = parseFloat($("steelLen").value);
+  if(l>0 && d>0) $("steelResult").textContent = ((d*d/162)*l).toFixed(2) + " كجم";
+}
+function calculateBricks() {
+  const a = parseFloat($("wallArea").value), r = parseFloat($("wallType").value);
+  if(a>0) $("brickResult").textContent = Math.ceil(a*r) + " طوبة";
+}
+const units = { m:1, cm:0.01, mm:0.001, km:1000 };
+function convertUnits() {
+  const v = parseFloat($("unitValue").value), from = $("fromUnit").value, to = $("toUnit").value;
+  if(v) $("unitResult").textContent = ((v*units[from])/units[to]) + " " + to;
+}
+
+$("concreteBtn").onclick = calculateConcrete;
+$("steelBtn").onclick = calculateSteel;
+$("brickBtn").onclick = calculateBricks;
+$("convertBtn").onclick = convertUnits;
+
+["length","width","height"].forEach(id => $(id).oninput = calculateConcrete);
+["steelDia","steelLen"].forEach(id => $(id).oninput = calculateSteel);
+["wallArea","wallType"].forEach(id => $(id).oninput = calculateBricks);
+["unitValue","fromUnit","toUnit"].forEach(id => $(id).oninput = convertUnits);
+
+calculateConcrete(); calculateSteel(); calculateBricks(); convertUnits();
+</script>
+</body>
+</html>
