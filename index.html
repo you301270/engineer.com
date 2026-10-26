@@ -7,7 +7,6 @@
 <meta name="description" content="الموقع الشخصي للمهندس يوسف عمر رياض، مهندس مدني.">
 <title>يوسف عمر رياض | مهندس مدني</title>
 
-<!-- خط Cairo -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -37,10 +36,7 @@ body.light {
   --grid-color: rgba(0, 0, 0, 0.04);
 }
 
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -56,440 +52,123 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button, input, select {
-  font-family: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-.container {
-  width: min(1080px, 91%);
-  margin: auto;
-}
+a { color: inherit; text-decoration: none; }
+button, input, select { font-family: inherit; }
+button { cursor: pointer; }
+.container { width: min(1080px, 91%); margin: auto; }
 
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
+  position: sticky; top: 0; z-index: 20;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
 }
 
 .nav {
-  min-height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  min-height: 75px; display: flex;
+  align-items: center; justify-content: space-between; gap: 12px;
 }
 
-.brand {
-  font-weight: 800;
-  font-size: 20px;
-  white-space: nowrap;
-}
-
-.brand span {
-  color: var(--accent);
-}
-
-.links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.links a:hover {
-  color: var(--accent);
-}
+.brand { font-weight: 800; font-size: 20px; white-space: nowrap; }
+.brand span { color: var(--accent); }
+.links { display: flex; gap: 20px; align-items: center; font-size: 15px; font-weight: 600; }
+.links a:hover { color: var(--accent); }
 
 .theme {
-  background: var(--panel2);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-weight: 600;
-  transition: 0.2s;
+  background: var(--panel2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 6px 12px; font-weight: 600; transition: 0.2s;
 }
+.theme:hover { border-color: var(--accent); color: var(--accent); }
 
-.theme:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.hero {
-  padding: 80px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 0.8fr;
-  align-items: center;
-  gap: 40px;
-}
-
+.hero { padding: 80px 0; border-bottom: 1px solid var(--border); }
+.hero-grid { display: grid; grid-template-columns: 1.4fr 0.8fr; align-items: center; gap: 40px; }
 .tag {
-  display: inline-block;
-  padding: 4px 14px;
-  border-radius: 30px;
-  background: var(--panel);
-  color: var(--accent);
-  border: 1px solid var(--border);
-  font-size: 14px;
-  font-weight: 600;
+  display: inline-block; padding: 4px 14px; border-radius: 30px;
+  background: var(--panel); color: var(--accent);
+  border: 1px solid var(--border); font-size: 14px; font-weight: 600;
 }
-
-h1 {
-  font-size: clamp(35px, 5vw, 55px);
-  line-height: 1.3;
-  margin: 18px 0 10px;
-  font-weight: 800;
-}
-
-.highlight {
-  color: var(--accent);
-}
-
-.lead {
-  color: var(--muted);
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
+h1 { font-size: clamp(35px, 5vw, 55px); line-height: 1.3; margin: 18px 0 10px; font-weight: 800; }
+.highlight { color: var(--accent); }
+.lead { color: var(--muted); font-size: 18px; font-weight: 600; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 .btn {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  font-weight: 700;
-  transition: 0.2s;
+  display: inline-block; padding: 12px 22px; border-radius: 8px;
+  border: 1px solid var(--border); font-weight: 700; transition: 0.2s;
 }
+.btn:hover { transform: translateY(-2px); }
+.primary { background: var(--accent); color: var(--accent-text); border: 0; }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.primary {
-  background: var(--accent);
-  color: var(--accent-text);
-  border: 0;
-}
-.primary:hover {
-  box-shadow: 0 4px 15px rgba(245, 213, 71, 0.3);
-}
-
-.profile {
-  text-align: center;
-}
-
+.profile { text-align: center; }
 .avatar {
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  border-radius: 50%;
-  border: 4px dashed var(--accent);
-  background: var(--panel);
-  padding: 8px;
-  transition: 0.5s;
+  width: 200px; height: 200px; margin: auto; border-radius: 50%;
+  border: 4px dashed var(--accent); background: var(--panel); padding: 8px;
 }
-.avatar:hover {
-  transform: rotate(5deg);
-}
+.avatar img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.profile h3 { margin: 20px 0 5px; font-size: 22px; }
+.profile small { color: var(--muted); font-weight: 600; }
 
-.avatar img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.profile h3 {
-  margin: 20px 0 5px;
-  font-size: 22px;
-}
-
-.profile small {
-  color: var(--muted);
-  font-weight: 600;
-}
-
-section {
-  padding: 70px 0;
-}
-
-.heading {
-  font-size: 32px;
-  font-weight: 800;
-  margin: 0;
-  color: var(--accent);
-}
-
-.subheading {
-  color: var(--muted);
-  font-size: 16px;
-  margin: 5px 0 35px;
-  font-weight: 600;
-}
+section { padding: 70px 0; }
+.heading { font-size: 32px; font-weight: 800; margin: 0; color: var(--accent); }
+.subheading { color: var(--muted); font-size: 16px; margin: 5px 0 35px; font-weight: 600; }
 
 .panel {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 25px;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; display: flex; flex-direction: column; }
+.card-img { height: 160px; background: var(--panel2); display: flex; align-items: center; justify-content: center; font-size: 50px; border-bottom: 1px solid var(--border); }
+.card-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+.card-body h3 { margin: 0 0 10px; font-size: 20px; }
+.card-body p { color: var(--muted); font-size: 14px; margin-bottom: 15px; }
+.pill { margin-top: auto; align-self: flex-start; background: var(--panel2); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; border: 1px solid var(--border); }
 
-.card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-}
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.skill-category { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.skill-category h3 { margin: 0 0 15px 0; font-size: 18px; color: var(--accent); border-bottom: 2px dashed var(--border); padding-bottom: 10px; }
+.skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill { background: var(--panel2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; font-size: 14px; font-weight: 600; }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.card-img {
-  height: 160px;
-  background: var(--panel2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-
-.card-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-body h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-}
-
-.card-body p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.pill {
-  margin-top: auto;
-  align-self: flex-start;
-  background: var(--panel2);
-  color: var(--text);
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 700;
-  border: 1px solid var(--border);
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.skill-category {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-}
-
-.skill-category h3 {
-  margin: 0 0 15px 0;
-  font-size: 18px;
-  color: var(--accent);
-  border-bottom: 2px dashed var(--border);
-  padding-bottom: 10px;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill {
-  background: var(--panel2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* تنسيق التبويبات */
-.tabs-header {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-}
+.tabs-header { display: flex; gap: 10px; margin-bottom: 25px; overflow-x: auto; padding-bottom: 10px; }
 .tabs-header::-webkit-scrollbar { height: 4px; }
 .tabs-header::-webkit-scrollbar-thumb { background: var(--border); }
 
 .tab-btn {
-  background: var(--panel2);
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: 0.2s;
-  font-size: 15px;
+  background: var(--panel2); border: 1px solid var(--border); color: var(--text);
+  padding: 12px 20px; border-radius: 8px; font-weight: 700; white-space: nowrap; font-size: 15px;
 }
-
-.tab-btn:hover {
-  border-color: var(--accent);
-}
-
 .tab-btn.active {
-  background: var(--accent) !important;
-  color: var(--accent-text) !important;
-  border-color: var(--accent) !important;
+  background: var(--accent); color: var(--accent-text); border-color: var(--accent);
 }
 
-.tab-pane {
-  display: none;
-}
+.tab-pane { display: none; }
+#calc-concrete { display: block; } /* تفعيل الخرسانة افتراضياً */
 
-.tab-pane.active {
-  display: block !important;
-  animation: fadeIn 0.4s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.calculator-layout {
-  max-width: 600px;
-  margin: auto;
-}
-
-.field {
-  display: grid;
-  gap: 8px;
-  margin: 15px 0;
-}
-
-.field label {
-  font-weight: 600;
-  font-size: 15px;
-}
-
+.calculator-layout { max-width: 600px; margin: auto; }
+.field { display: grid; gap: 8px; margin: 15px 0; }
+.field label { font-weight: 600; font-size: 15px; }
 .field input, .field select {
-  width: 100%;
-  padding: 12px;
-  background: var(--bg);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  outline: none;
-  transition: 0.2s;
+  width: 100%; padding: 12px; background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px; outline: none;
 }
-.field input:focus, .field select:focus {
-  border-color: var(--accent);
-}
+.field input:focus, .field select:focus { border-color: var(--accent); }
 
 .result {
-  background: var(--bg);
-  border: 1px solid var(--accent);
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 20px;
-  text-align: center;
+  background: var(--bg); border: 1px solid var(--accent);
+  border-radius: 8px; padding: 20px; margin-top: 20px; text-align: center;
 }
+.result strong { color: var(--accent); font-size: 28px; display: block; margin: 5px 0; }
+.small { font-size: 13px; color: var(--muted); }
 
-.result strong {
-  color: var(--accent);
-  font-size: 28px;
-  display: block;
-  margin: 5px 0;
-}
-
-.small {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.contact {
-  text-align: center;
-  background: var(--panel);
-  border: 1px dashed var(--accent);
-  border-radius: 12px;
-  padding: 40px 20px;
-}
-
-footer {
-  text-align: center;
-  border-top: 1px solid var(--border);
-  padding: 25px;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 600;
-  background: var(--panel);
-}
+.contact { text-align: center; background: var(--panel); border: 1px dashed var(--accent); border-radius: 12px; padding: 40px 20px; }
+footer { text-align: center; border-top: 1px solid var(--border); padding: 25px; color: var(--muted); font-size: 14px; font-weight: 600; background: var(--panel); }
 
 @media(max-width: 768px){
-  .nav {
-    flex-direction: column;
-    padding: 15px 0;
-  }
-  .links {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    justify-content: center;
-  }
+  .nav { flex-direction: column; padding: 15px 0; }
+  .links { width: 100%; overflow-x: auto; padding-bottom: 10px; justify-content: center; }
   .hero { padding: 40px 0; }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
   .profile { grid-row: 1; }
   .actions { justify-content: center; }
 }
@@ -500,8 +179,7 @@ footer {
 
 <nav>
   <div class="container nav">
-    <a class="brand" href="#home">Eng<span>  Youssef</span></a>
-
+    <a class="brand" href="#home">Eng<span>. Youssef</span></a>
     <div class="links">
       <a href="#about">من أنا</a>
       <a href="#projects">المشاريع</a>
@@ -509,10 +187,7 @@ footer {
       <a href="#tools">الحاسبات</a>
       <a href="#contact">التواصل</a>
     </div>
-
-    <button class="theme" id="themeBtn" type="button">
-      ☀️ المظهر الفاتح
-    </button>
+    <button class="theme" id="themeBtn" type="button">☀️ المظهر الفاتح</button>
   </div>
 </nav>
 
@@ -520,23 +195,15 @@ footer {
   <div class="container hero-grid">
     <div>
       <span class="tag">طالب هندسة مدنية | جامعة الفيوم</span>
-      <h1>
-        أهلاً، أنا<br>
-        <span class="highlight">يوسف عمر رياض</span>
-      </h1>
-      <p class="lead">
-        أبني معرفتي في الهندسة المدنية خطوة بخطوة، 
-        وأهتم بالإنشاءات والمساحة والتصميم التقني.
-      </p>
+      <h1>أهلاً، أنا<br><span class="highlight">يوسف عمر رياض</span></h1>
+      <p class="lead">أبني معرفتي في الهندسة المدنية خطوة بخطوة، وأهتم بالإنشاءات والمساحة والتصميم التقني.</p>
       <div class="actions">
         <a class="btn primary" href="#projects">استكشف أعمالي ↓</a>
         <a class="btn" href="#tools">الحاسبات الهندسية</a>
       </div>
     </div>
     <div class="profile">
-      <div class="avatar">
-        <img src="profile.jpg" alt="صورة يوسف عمر رياض">
-      </div>
+      <div class="avatar"><img src="profile.jpg" alt="صورة يوسف عمر رياض"></div>
       <h3>يوسف رياض</h3>
       <small>جامعة الفيوم - مدني</small>
     </div>
@@ -544,88 +211,11 @@ footer {
 </header>
 
 <main>
-
 <section id="about">
   <div class="container">
     <h2 class="heading">من أنا؟</h2>
     <p class="subheading">مقدمة عن رحلتي الأكاديمية</p>
-    <div class="panel">
-      أنا طالب في قسم الهندسة المدنية بكلية الهندسة، جامعة الفيوم. أعمل على تطوير معرفتي في مجالات الإنشاءات والمساحة وخواص مواد البناء والجيوتقنية. أؤمن بأن التعلم المستمر والدمج بين البرمجيات الحديثة والمبادئ الهندسية هما أساس بناء مهندس ناجح، وأسعى لتوثيق هذا التطور من خلال مشاريعي وموقعي الشخصي.
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="container">
-    <h2 class="heading">معرض المشاريع</h2>
-    <p class="subheading">أمثلة تطبيقية لدراستي وتدريباتي الهندسية</p>
-
-    <div class="projects-grid">
-      <article class="card">
-        <div class="card-img">🏗️</div>
-        <div class="card-body">
-          <h3>المنشآت الإنشائية</h3>
-          <p>مساحة لعرض نماذج الجمالونات والرسومات الإنشائية، وتحليل القوى للأعضاء المختلفة.</p>
-          <span class="pill">تصميم إنشائي</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">📐</div>
-        <div class="card-body">
-          <h3>أعمال المساحة</h3>
-          <p>تطبيقات الإحداثيات، الرفع المساحي، وحساب المسافات والزوايا باستخدام الأجهزة.</p>
-          <span class="pill">مساحة وجيوديسيا</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">🧱</div>
-        <div class="card-body">
-          <h3>اختبارات المواد</h3>
-          <p>تقارير ومشروعات تعليمية في الجيوتقنية وتحديد الخواص الفيزيائية لمواد البناء.</p>
-          <span class="pill">مواد وتربة</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="container">
-    <h2 class="heading">المهارات التقنية والهندسية</h2>
-    <p class="subheading">تم تصنيفها بناءً على التخصصات</p>
-
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>💻 برمجيات هندسية</h3>
-        <div class="skills-list">
-          <span class="skill">AutoCAD (2D)</span>
-          <span class="skill">SAP2000 (أساسيات)</span>
-          <span class="skill">Excel (للمهندسين)</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>🏗️ مجالات التخصص</h3>
-        <div class="skills-list">
-          <span class="skill">أساسيات الهندسة المدنية</span>
-          <span class="skill">الرسم الهندسي</span>
-          <span class="skill">المساحة</span>
-          <span class="skill">حصر الكميات (مبدئي)</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>🌐 تطوير الويب</h3>
-        <div class="skills-list">
-          <span class="skill">HTML5</span>
-          <span class="skill">CSS3</span>
-          <span class="skill">JavaScript</span>
-          <span class="skill">UI/UX Basics</span>
-        </div>
-      </div>
-    </div>
+    <div class="panel">أنا طالب في قسم الهندسة المدنية بكلية الهندسة، جامعة الفيوم...</div>
   </div>
 </section>
 
@@ -635,191 +225,151 @@ footer {
     <p class="subheading">أدوات برمجتها بنفسي لتسريع الحسابات الهندسية الشائعة</p>
 
     <div class="panel">
-      <!-- أزرار التبويبات -->
+      <!-- أزرار التبويبات تم تحديثها لتعمل مباشرة -->
       <div class="tabs-header">
-        <button class="tab-btn active" data-target="calc-concrete">حجم الخرسانة</button>
-        <button class="tab-btn" data-target="calc-steel">وزن الحديد</button>
-        <button class="tab-btn" data-target="calc-brick">كميات الطوب</button>
-        <button class="tab-btn" data-target="calc-unit">محول الوحدات</button>
+        <button class="tab-btn active" onclick="openTab('calc-concrete', this)">حجم الخرسانة</button>
+        <button class="tab-btn" onclick="openTab('calc-steel', this)">وزن الحديد</button>
+        <button class="tab-btn" onclick="openTab('calc-brick', this)">كميات الطوب</button>
+        <button class="tab-btn" onclick="openTab('calc-unit', this)">محول الوحدات</button>
       </div>
 
       <div class="calculator-layout">
         
         <!-- حاسبة الخرسانة -->
-        <div id="calc-concrete" class="tab-pane active">
+        <div id="calc-concrete" class="tab-pane">
           <div class="field">
-            <label for="length">الطول (متر)</label>
+            <label>الطول (متر)</label>
             <input id="length" type="number" min="0" step="any" value="5">
           </div>
           <div class="field">
-            <label for="width">العرض (متر)</label>
+            <label>العرض (متر)</label>
             <input id="width" type="number" min="0" step="any" value="3">
           </div>
           <div class="field">
-            <label for="height">السمك (متر)</label>
+            <label>السمك (متر)</label>
             <input id="height" type="number" min="0" step="any" value="0.20">
           </div>
-          <button class="btn primary" id="concreteBtn" type="button" style="width:100%; margin-top:10px;">احسب حجم الصبة</button>
-          <div class="result">
-            الحجم الصافي:
-            <strong id="concreteResult">3.000 م³</strong>
-            <div class="small">الناتج هندسي ولا يشمل نسب الهالك التنفيذية.</div>
-          </div>
+          <button class="btn primary" id="concreteBtn" style="width:100%; margin-top:10px;">احسب حجم الصبة</button>
+          <div class="result">الحجم الصافي:<strong id="concreteResult">3.000 م³</strong></div>
         </div>
 
         <!-- حاسبة الحديد -->
         <div id="calc-steel" class="tab-pane">
           <div class="field">
-            <label for="steelDia">قطر السيخ Φ (مم)</label>
+            <label>قطر السيخ Φ (مم)</label>
             <select id="steelDia">
               <option value="8">8 مم (كانات)</option>
-              <option value="10">10 مم</option>
               <option value="12" selected>12 مم</option>
-              <option value="14">14 مم</option>
               <option value="16">16 مم</option>
-              <option value="18">18 مم</option>
-              <option value="22">22 مم</option>
             </select>
           </div>
           <div class="field">
-            <label for="steelLen">الطول الكلي للأسياخ (متر)</label>
+            <label>الطول الكلي للأسياخ (متر)</label>
             <input id="steelLen" type="number" min="1" step="any" value="12">
           </div>
-          <button class="btn primary" id="steelBtn" type="button" style="width:100%; margin-top:10px;">احسب الوزن</button>
-          <div class="result">
-            الوزن التقريبي:
-            <strong id="steelResult">10.67 كجم</strong>
-            <div class="small">تم الحساب باستخدام المعادلة التقريبية (D²/162) × الطول.</div>
-          </div>
+          <button class="btn primary" id="steelBtn" style="width:100%; margin-top:10px;">احسب الوزن</button>
+          <div class="result">الوزن التقريبي:<strong id="steelResult">10.67 كجم</strong></div>
         </div>
 
         <!-- حاسبة الطوب -->
         <div id="calc-brick" class="tab-pane">
           <div class="field">
-            <label for="wallArea">مساحة الحائط الصافية (متر مربع)</label>
+            <label>مساحة الحائط الصافية (متر مربع)</label>
             <input id="wallArea" type="number" min="1" step="any" value="10">
           </div>
           <div class="field">
-            <label for="wallType">سمك الحائط (نوع البناء)</label>
+            <label>سمك الحائط (نوع البناء)</label>
             <select id="wallType">
-              <option value="58">نصف طوبة (سمك 12 سم) - معدل ~58 طوبة/م²</option>
-              <option value="116">طوبة كاملة (سمك 25 سم) - معدل ~116 طوبة/م²</option>
+              <option value="58">نصف طوبة (سمك 12 سم)</option>
+              <option value="116">طوبة كاملة (سمك 25 سم)</option>
             </select>
           </div>
-          <button class="btn primary" id="brickBtn" type="button" style="width:100%; margin-top:10px;">احسب العدد</button>
-          <div class="result">
-            العدد المطلوب:
-            <strong id="brickResult">580 طوبة</strong>
-            <div class="small">بافتراض مقاس الطوبة النمطي 25×12×6 سم (بدون هالك).</div>
-          </div>
+          <button class="btn primary" id="brickBtn" style="width:100%; margin-top:10px;">احسب العدد</button>
+          <div class="result">العدد المطلوب:<strong id="brickResult">580 طوبة</strong></div>
         </div>
 
         <!-- محول الوحدات -->
         <div id="calc-unit" class="tab-pane">
           <div class="field">
-            <label for="unitValue">القيمة المراد تحويلها</label>
+            <label>القيمة المراد تحويلها</label>
             <input id="unitValue" type="number" step="any" value="1">
           </div>
           <div style="display:flex; gap:10px;">
             <div class="field" style="flex:1;">
-              <label for="fromUnit">من وحدة</label>
-              <select id="fromUnit">
-                <option value="m">متر (m)</option>
-                <option value="cm">سنتيمتر (cm)</option>
-                <option value="mm">ملليمتر (mm)</option>
-                <option value="km">كيلومتر (km)</option>
-              </select>
+              <label>من وحدة</label>
+              <select id="fromUnit"><option value="m">متر (m)</option><option value="mm">ملليمتر (mm)</option></select>
             </div>
             <div class="field" style="flex:1;">
-              <label for="toUnit">إلى وحدة</label>
-              <select id="toUnit">
-                <option value="mm">ملليمتر (mm)</option>
-                <option value="cm">سنتيمتر (cm)</option>
-                <option value="m">متر (m)</option>
-                <option value="km">كيلومتر (km)</option>
-              </select>
+              <label>إلى وحدة</label>
+              <select id="toUnit"><option value="mm">ملليمتر (mm)</option><option value="m">متر (m)</option></select>
             </div>
           </div>
-          <button class="btn primary" id="convertBtn" type="button" style="width:100%; margin-top:10px;">إجراء التحويل</button>
-          <div class="result">
-            النتيجة:
-            <strong id="unitResult">1000 mm</strong>
-          </div>
+          <button class="btn primary" id="convertBtn" style="width:100%; margin-top:10px;">إجراء التحويل</button>
+          <div class="result">النتيجة:<strong id="unitResult">1000 mm</strong></div>
         </div>
 
       </div>
     </div>
   </div>
 </section>
-
-<section id="contact">
-  <div class="container">
-    <div class="contact">
-      <h2 class="heading">لنتواصل معًا</h2>
-      <p class="subheading" style="margin-bottom:20px;">جاهز لمناقشة المشاريع، وتبادل المعرفة الهندسية والبرمجية.</p>
-      <a class="btn primary" href="https://wa.me/201155475166" target="_blank" rel="noopener" style="font-size:18px; padding:15px 30px;">
-        راسلني عبر واتساب 💬
-      </a>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer>
-  © <span id="year"></span> يوسف عمر رياض • طالب هندسة مدنية - جامعة الفيوم
+  © <span id="year"></span> يوسف عمر رياض • طالب هندسة مدنية
 </footer>
 
 <script>
-// تغليف الكود بالكامل لضمان تحميل الصفحة أولاً (مهم جداً ليعمل على GitHub Pages وكل المتصفحات)
-document.addEventListener('DOMContentLoaded', function() {
-  
-  // دالة مساعدة لاختيار العناصر
-  function $(id) { return document.getElementById(id); }
-
-  // 1. تحديث السنة
-  if($("year")) {
-    $("year").textContent = new Date().getFullYear();
+// دالة التبويبات المباشرة (تخفي كل شيء وتظهر المطلوب فقط بقوة)
+function openTab(tabId, btnElement) {
+  var panes = document.getElementsByClassName("tab-pane");
+  for (var i = 0; i < panes.length; i++) {
+    panes[i].style.display = "none";
   }
-
-  // 2. زر المظهر (الداكن/الفاتح)
-  if($("themeBtn")) {
-    $("themeBtn").addEventListener("click", function() {
-      document.body.classList.toggle("light");
-      this.textContent = document.body.classList.contains("light") ? "🌙 المظهر الداكن" : "☀️ المظهر الفاتح";
-    });
+  var btns = document.getElementsByClassName("tab-btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("active");
   }
+  document.getElementById(tabId).style.display = "block";
+  btnElement.classList.add("active");
+}
 
-  // 3. التبويبات (Tabs Logic)
-  var tabBtns = document.querySelectorAll('.tab-btn');
-  var tabPanes = document.querySelectorAll('.tab-pane');
+const $ = id => document.getElementById(id);
+$("year").textContent = new Date().getFullYear();
 
-  tabBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      // إزالة التفعيل من جميع الأزرار واللوحات
-      tabBtns.forEach(function(b) { b.classList.remove('active'); });
-      tabPanes.forEach(function(p) { p.classList.remove('active'); });
-      
-      // تفعيل الزر المختار واللوحة الخاصة به
-      this.classList.add('active');
-      var targetId = this.getAttribute('data-target');
-      if($(targetId)) {
-        $(targetId).classList.add('active');
-      }
-    });
-  });
+$("themeBtn").addEventListener("click", function() {
+  document.body.classList.toggle("light");
+  this.textContent = document.body.classList.contains("light") ? "🌙 المظهر الداكن" : "☀️ المظهر الفاتح";
+});
 
-  // 4. دوال الحسابات
-  function calculateConcrete() {
-    var l = parseFloat($("length").value);
-    var w = parseFloat($("width").value);
-    var h = parseFloat($("height").value);
+function calculateConcrete() {
+  const l = parseFloat($("length").value), w = parseFloat($("width").value), h = parseFloat($("height").value);
+  if(l>0 && w>0 && h>0) $("concreteResult").textContent = (l*w*h).toFixed(3) + " م³";
+}
+function calculateSteel() {
+  const d = parseFloat($("steelDia").value), l = parseFloat($("steelLen").value);
+  if(l>0 && d>0) $("steelResult").textContent = ((d*d/162)*l).toFixed(2) + " كجم";
+}
+function calculateBricks() {
+  const a = parseFloat($("wallArea").value), r = parseFloat($("wallType").value);
+  if(a>0) $("brickResult").textContent = Math.ceil(a*r) + " طوبة";
+}
+const units = { m:1, mm:0.001 };
+function convertUnits() {
+  const v = parseFloat($("unitValue").value), from = $("fromUnit").value, to = $("toUnit").value;
+  if(v) $("unitResult").textContent = ((v*units[from])/units[to]) + " " + to;
+}
 
-    if (isNaN(l) || isNaN(w) || isNaN(h) || l <= 0 || w <= 0 || h <= 0) {
-      $("concreteResult").textContent = "بيانات غير صالحة";
-      return;
-    }
-    $("concreteResult").textContent = (l * w * h).toFixed(3) + " م³";
-  }
+$("concreteBtn").onclick = calculateConcrete;
+$("steelBtn").onclick = calculateSteel;
+$("brickBtn").onclick = calculateBricks;
+$("convertBtn").onclick = convertUnits;
 
-  function cal
+["length","width","height"].forEach(id => $(id).oninput = calculateConcrete);
+["steelDia","steelLen"].forEach(id => $(id).oninput = calculateSteel);
+["wallArea","wallType"].forEach(id => $(id).oninput = calculateBricks);
+["unitValue","fromUnit","toUnit"].forEach(id => $(id).oninput = convertUnits);
+
+calculateConcrete(); calculateSteel(); calculateBricks(); convertUnits();
+</script>
+</body>
+</html>
